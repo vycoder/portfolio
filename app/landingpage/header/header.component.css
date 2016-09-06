@@ -1,0 +1,42 @@
+section.header.title-header{
+    text-align: center;
+}
+
+div .title-header-heading{
+    font-family: 'VT323', 'Courier New', 'Courier', serif;
+    font-size: 5em;
+}
+
+div .title-header-subheading{
+    font-family: 'Consolas', 'Times New Roman', Times, 'serif';
+}
+
+.bg-drawing{
+   /*empty for now */ 
+   z-index: -100;
+}
+
+.lang-keyword{
+    color:#F62459;
+}
+
+.lang-symbol{
+    color:#FFA400;
+}
+
+.lang-enum{
+    color:#4B77BE;
+}
+
+.lang-const{
+    color:#22A7F0;
+}
+
+.lang-string{
+    color: #26A65B;
+}
+
+p{
+    /*margin-top: 3em;*/
+    font-size: .75em;
+}

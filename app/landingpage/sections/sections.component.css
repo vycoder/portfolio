@@ -1,0 +1,65 @@
+#introduction article{
+    margin: 0 auto;
+    max-width: 470px;
+}
+
+#introduction{
+    padding: 0.4em 0 0;
+    margin: 0 0;
+}
+
+#whatICanDo{
+    padding: 3em 0;
+}
+
+#whatICanDo #manifesto{
+    margin: 3em 0 6em;
+    text-align: left;
+}
+
+#whatIcanDo .method{
+    padding: 0 0 0 1em;
+}
+
+#ppic{
+    margin: 0 auto;
+    max-width: 150px;
+}
+
+figure img.img{
+    margin: 0 auto;
+    max-width: 150px;
+}
+
+p{
+    margin: 0 0 10px;
+    text-align: center;
+    font-size: 1.3em;
+    font-family: 'Roboto Condensed';
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+    margin: 1em;
+    font-family: Consolas, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+h1{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1.superheader{
+    font-weight: 400;
+    font-size: 3.8em;
+}
+
+header{
+    padding: 2em 0;
+}
+
+.label{
+    font-family: 'Roboto Condensed';
+    font-size: .78em;
+}

@@ -1,0 +1,45 @@
+<section class="header title-header jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="title-header-heading">{{greet}}</h1>
+                <h3 class="title-header-subheading">
+                    <span class="lang-keyword">switch</span>
+                    <span class="lang-symbol">&#40;</span> time
+                    <span class="lang-symbol">&#41;</span> &#123;
+                    <span class="lang-keyword">case</span>
+                    <span class="lang-enum">CLOCK</span>.<span class="lang-const">DAY</span>:
+                    <span class="lang-keyword">case</span>
+                    <span class="lang-enum">CLOCK</span>.<span class="lang-const">DUSK</span>:
+                    <span class="lang-keyword">return </span>
+                    <span class="lang-string">"{{dusk}}"</span>;
+                    <span class="lang-keyword">case</span>
+                    <span class="lang-enum">CLOCK</span>.<span class="lang-const">NIGHT</span>:
+                    <span class="lang-keyword">return</span>
+                    <span class="lang-string">"{{night}}"</span>;
+                    <span class="lang-keyword">case</span>
+                    <span class="lang-enum">CLOCK</span>.<span class="lang-const">DAWN</span>:
+                    <span class="lang-keyword">return</span>
+                    <span class="lang-string">"{{dawn}}"</span>;
+                    <span class="lang-keyword">default</span>:
+                    <span class="lang-keyword">return</span>
+                    <span class="lang-string">"{{default}}"</span>; }
+                </h3>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <p>&copy; {{ date | date: 'yyyy'}} Joseph Harvey Angeles. All rights reserved.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="btn-group btn-group-sm" role="group">
+                <a href="https://wakatime.com/@yev" target="_blank" class="btn btn-default btn-lg" role="button"><i class="fa fa-clock-o"></i></a>
+                <a href="https://www.linkedin.com/in/josephharveyangeles" target="_blank" class="btn btn-default btn-lg" role="button"><i class="fa fa-linkedin"></i></a>
+                <a href="https://twitter.com/yev" target="_blank" class="btn btn-default btn-lg" role="button"><i class="fa fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="bg-drawing"></div>

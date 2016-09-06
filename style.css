@@ -1,0 +1,17 @@
+body{
+	background: #DFDFDF url('resources/images/bg.png') repeat-x fixed center;
+	margin: 0px auto;
+	width: 100%;
+}
+
+.color-swatch-bluegreen{
+	color: #72BAAC;
+}
+
+.color-swatch-darkgrey{
+	color: #5A5A5A;
+}
+
+.color-swatch-orange{
+	color: #EE7546;
+}
