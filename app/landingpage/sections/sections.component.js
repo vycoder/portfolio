@@ -9,16 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var sections_service_1 = require('./services/sections.service');
 var SectionsComponent = (function () {
-    function SectionsComponent() {
+    function SectionsComponent(sectionsService) {
+        this.sectionsService = sectionsService;
     }
+    SectionsComponent.prototype.ngOnInit = function () {
+        this.introductionSection = this.sectionsService.getIntroduction();
+        this.manifestoSection = this.sectionsService.getManifesto();
+        this.madskillzSection = this.sectionsService.getMadSkillz();
+    };
     SectionsComponent = __decorate([
         core_1.Component({
             selector: 'sections',
             templateUrl: 'app/landingpage/sections/sections.component.html',
-            styleUrls: ['app/landingpage/sections/sections.component.css']
+            styleUrls: ['app/landingpage/sections/sections.component.css'],
+            providers: [sections_service_1.SectionsService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [sections_service_1.SectionsService])
     ], SectionsComponent);
     return SectionsComponent;
 }());

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 import {SectionInterface} from '../services/sectioninterface';
 
@@ -8,13 +8,21 @@ import {SectionInterface} from '../services/sectioninterface';
     styleUrls: [
         'app/landingpage/sections/sections.component.css',
         'app/landingpage/sections/introduction/section-intro.component.css'
-        ]
+    ]
 })
 
-export class SectionIntroComponent implements SectionInterface {
-    
-    figureSource = "resources/images/profile.png";
-    title = "helloWorld";
-    content = "I am a software developer based in Quezon City, Philippines. I have a passion for creating software applications that help make human lives a little bit easier.";
-    
+export class SectionIntroComponent implements OnInit {
+
+    @Input() sectionData: SectionInterface;
+
+    imgsrc: string;
+    sectionName: string;
+    textContent: string;
+
+    ngOnInit(): void {
+        this.imgsrc = this.sectionData.figureSource;
+        this.sectionName = this.sectionData.title;
+        this.textContent = this.sectionData.content;
+    }
+
 }

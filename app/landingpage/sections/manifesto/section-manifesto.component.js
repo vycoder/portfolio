@@ -11,10 +11,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var SectionManifestoComponent = (function () {
     function SectionManifestoComponent() {
-        this.figureSource = "resources/images/profile.png";
-        this.title = "manifesto";
-        this.content = "Personally, I think that writing software applications is a discipline of both Science and Art mungled together in harmony. Creating software for people is more than that, It's a mixture of techninal excellence and two-way communication between the client and the engineer. I strive to give both.";
     }
+    SectionManifestoComponent.prototype.ngOnInit = function () {
+        this.imgsrc = this.sectionData.figureSource;
+        this.sectionName = this.sectionData.title;
+        this.textContent = this.sectionData.content;
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], SectionManifestoComponent.prototype, "sectionData", void 0);
     SectionManifestoComponent = __decorate([
         core_1.Component({
             selector: 'section-manifesto',

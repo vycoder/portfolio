@@ -11,10 +11,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var SectionIntroComponent = (function () {
     function SectionIntroComponent() {
-        this.figureSource = "resources/images/profile.png";
-        this.title = "helloWorld";
-        this.content = "I am a software developer based in Quezon City, Philippines. I have a passion for creating software applications that help make human lives a little bit easier.";
     }
+    SectionIntroComponent.prototype.ngOnInit = function () {
+        this.imgsrc = this.sectionData.figureSource;
+        this.sectionName = this.sectionData.title;
+        this.textContent = this.sectionData.content;
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], SectionIntroComponent.prototype, "sectionData", void 0);
     SectionIntroComponent = __decorate([
         core_1.Component({
             selector: 'section-intro',

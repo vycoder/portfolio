@@ -1,5 +1,4 @@
-import {Component} from '@angular/core';
-import {OnInit} from '@angular/core';
+import {Component, Input, OnInit, AfterViewInit } from '@angular/core';
 
 import {SectionInterface} from '../services/sectioninterface';
 
@@ -11,15 +10,23 @@ import {SectionInterface} from '../services/sectioninterface';
         'app/landingpage/sections/madskillz/section-madskillz.component.css'
     ]
 })
-export class SectionMadSkillzComponent implements SectionInterface, OnInit {
-    figureSource = "resources/images/profile.png";
-    title = "madSkillz";
-    content = "Java, C, C#, Python, HTML/CSS, Javascript, Typescript, Angular2, OOP, TDD, SOLID, agile, Windows/Linux, android, arduino, raspberry-pi, embedded-c, git/svn, Adobe Flash";
+export class SectionMadSkillzComponent implements OnInit {
 
-    skillz: string[];
+    @Input() sectionData: SectionInterface;
+
+    imgsrc: string;
+    sectionName: string;
+    textContent: string;
+
+    skillz: string[] = [];
 
     ngOnInit(): void {
-        this.skillz = this.content.split(',');
+        this.imgsrc = this.sectionData.figureSource;
+        this.sectionName = this.sectionData.title;
+        this.textContent = this.sectionData.content;
+        this.textContent.split(',').forEach(item => {
+            this.skillz.push(item);
+        });
     }
 
     getRandomClass(): string {

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 import {SectionInterface} from '../services/sectioninterface';
 
@@ -8,13 +8,21 @@ import {SectionInterface} from '../services/sectioninterface';
     styleUrls: [
         'app/landingpage/sections/sections.component.css',
         'app/landingpage/sections/manifesto/section-manifesto.component.css'
-        ]
+    ]
 })
 
-export class SectionManifestoComponent implements SectionInterface {
+export class SectionManifestoComponent implements OnInit {
     
-    figureSource = "resources/images/profile.png";
-    title = "manifesto";
-    content = "Personally, I think that writing software applications is a discipline of both Science and Art mungled together in harmony. Creating software for people is more than that, It's a mixture of techninal excellence and two-way communication between the client and the engineer. I strive to give both.";
-    
+    @Input() sectionData: SectionInterface;
+
+    imgsrc: string;
+    sectionName: string;
+    textContent: string;
+
+    ngOnInit(): void {
+        this.imgsrc = this.sectionData.figureSource;
+        this.sectionName = this.sectionData.title;
+        this.textContent = this.sectionData.content;
+    }
+
 }

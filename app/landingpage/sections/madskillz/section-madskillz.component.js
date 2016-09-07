@@ -11,12 +11,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var SectionMadSkillzComponent = (function () {
     function SectionMadSkillzComponent() {
-        this.figureSource = "resources/images/profile.png";
-        this.title = "madSkillz";
-        this.content = "Java, C, C#, Python, HTML/CSS, Javascript, Typescript, Angular2, OOP, TDD, SOLID, agile, Windows/Linux, android, arduino, raspberry-pi, embedded-c, git/svn, Adobe Flash";
+        this.skillz = [];
     }
     SectionMadSkillzComponent.prototype.ngOnInit = function () {
-        this.skillz = this.content.split(',');
+        var _this = this;
+        this.imgsrc = this.sectionData.figureSource;
+        this.sectionName = this.sectionData.title;
+        this.textContent = this.sectionData.content;
+        this.textContent.split(',').forEach(function (item) {
+            _this.skillz.push(item);
+        });
     };
     SectionMadSkillzComponent.prototype.getRandomClass = function () {
         var result = "label ";
@@ -43,6 +47,10 @@ var SectionMadSkillzComponent = (function () {
         }
         return result;
     };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], SectionMadSkillzComponent.prototype, "sectionData", void 0);
     SectionMadSkillzComponent = __decorate([
         core_1.Component({
             selector: 'section-madskillz',
