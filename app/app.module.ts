@@ -8,6 +8,7 @@ import {HeaderComponent} from './landingpage/header/header.component';
 import {SectionsComponent} from './landingpage/sections/sections.component';
 import {SectionIntroComponent} from './landingpage/sections/introduction/section-intro.component';
 import {SectionManifestoComponent} from './landingpage/sections/manifesto/section-manifesto.component';
+import {SectionMadSkillzComponent} from './landingpage/sections/madskillz/section-madskillz.component';
 
 @NgModule({
     imports:[
@@ -20,7 +21,8 @@ import {SectionManifestoComponent} from './landingpage/sections/manifesto/sectio
         HeaderComponent,
         SectionsComponent,
         SectionIntroComponent,
-        SectionManifestoComponent
+        SectionManifestoComponent,
+        SectionMadSkillzComponent
     ],
     bootstrap:[LandingPageComponent]
 })
