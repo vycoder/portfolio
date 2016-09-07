@@ -9,23 +9,23 @@ import {SectionInterface} from '../services/sectioninterface';
     styleUrls: [
         'app/landingpage/sections/sections.component.css',
         'app/landingpage/sections/madskillz/section-madskillz.component.css'
-        ]
+    ]
 })
-export class SectionMadSkillzComponent implements SectionInterface, OnInit{
+export class SectionMadSkillzComponent implements SectionInterface, OnInit {
     figureSource = "resources/images/profile.png";
     title = "madSkillz";
     content = "Java, C, C#, Python, HTML/CSS, Javascript, Typescript, Angular2, OOP, TDD, SOLID, agile, Windows/Linux, android, arduino, raspberry-pi, embedded-c, git/svn, Adobe Flash";
 
-    skillz:string[];
+    skillz: string[];
 
-    ngOnInit():void{
+    ngOnInit(): void {
         this.skillz = this.content.split(',');
     }
 
-    getRandomClass():string{
-        let result:string = "label ";
-        let index:number = Math.floor((Math.random() * 6) + 1);
-        switch(index){
+    getRandomClass(): string {
+        let result: string = "label ";
+        let index: number = Math.floor((Math.random() * 6) + 1);
+        switch (index) {
             case 1: result += "label-default";
                 break;
             case 2: result += "label-primary";

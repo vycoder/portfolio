@@ -11,11 +11,11 @@ import {SectionManifestoComponent} from './landingpage/sections/manifesto/sectio
 import {SectionMadSkillzComponent} from './landingpage/sections/madskillz/section-madskillz.component';
 
 @NgModule({
-    imports:[
+    imports: [
         BrowserModule,
         FormsModule,
     ],
-    declarations:[
+    declarations: [
         LandingPageComponent,
         NavButtonsComponent,
         HeaderComponent,
@@ -24,6 +24,6 @@ import {SectionMadSkillzComponent} from './landingpage/sections/madskillz/sectio
         SectionManifestoComponent,
         SectionMadSkillzComponent
     ],
-    bootstrap:[LandingPageComponent]
+    bootstrap: [LandingPageComponent]
 })
-export class AppModule{}
+export class AppModule { }
