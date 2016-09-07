@@ -7,3 +7,9 @@ section {
     padding: 0.4em 0 0;
     margin: 0 0;
 }
+
+img {
+    margin: 0 auto;
+    max-width: 150px;  
+    width: 150px;
+}

@@ -1,13 +1,3 @@
-#introduction article{
-    margin: 0 auto;
-    max-width: 470px;
-}
-
-#introduction{
-    padding: 0.4em 0 0;
-    margin: 0 0;
-}
-
 #whatICanDo{
     padding: 3em 0;
 }
@@ -17,21 +7,13 @@
     text-align: left;
 }
 
-#whatIcanDo .method{
+.method{
     padding: 0 0 0 1em;
 }
 
-#ppic{
-    margin: 0 auto;
-    max-width: 150px;
-}
 
-figure img.img{
-    margin: 0 auto;
-    max-width: 300px;
-}
 
-p{
+p {
     margin: 0 0 10px;
     text-align: center;
     font-size: 1.3em;

@@ -15,6 +15,8 @@ var landing_page_component_1 = require('./landingpage/landing-page.component');
 var nav_buttons_component_1 = require('./navigation/nav-buttons.component');
 var header_component_1 = require('./landingpage/header/header.component');
 var sections_component_1 = require('./landingpage/sections/sections.component');
+var section_intro_component_1 = require('./landingpage/sections/introduction/section-intro.component');
+var section_manifesto_component_1 = require('./landingpage/sections/manifesto/section-manifesto.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -29,6 +31,8 @@ var AppModule = (function () {
                 nav_buttons_component_1.NavButtonsComponent,
                 header_component_1.HeaderComponent,
                 sections_component_1.SectionsComponent,
+                section_intro_component_1.SectionIntroComponent,
+                section_manifesto_component_1.SectionManifestoComponent
             ],
             bootstrap: [landing_page_component_1.LandingPageComponent]
         }), 

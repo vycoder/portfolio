@@ -7,6 +7,7 @@ import {NavButtonsComponent} from './navigation/nav-buttons.component';
 import {HeaderComponent} from './landingpage/header/header.component';
 import {SectionsComponent} from './landingpage/sections/sections.component';
 import {SectionIntroComponent} from './landingpage/sections/introduction/section-intro.component';
+import {SectionManifestoComponent} from './landingpage/sections/manifesto/section-manifesto.component';
 
 @NgModule({
     imports:[
@@ -18,7 +19,8 @@ import {SectionIntroComponent} from './landingpage/sections/introduction/section
         NavButtonsComponent,
         HeaderComponent,
         SectionsComponent,
-        SectionIntroComponent
+        SectionIntroComponent,
+        SectionManifestoComponent
     ],
     bootstrap:[LandingPageComponent]
 })

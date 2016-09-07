@@ -9,24 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var SectionIntroComponent = (function () {
-    function SectionIntroComponent() {
+var SectionManifestoComponent = (function () {
+    function SectionManifestoComponent() {
         this.figureSource = "resources/images/profile.png";
-        this.title = "helloWorld";
-        this.content = "I am a software developer based in Quezon City, Philippines. I have a passion for creating software applications that help make human lives a little bit easier.";
+        this.title = "manifesto";
+        this.content = "Personally, I think that writing software applications is a discipline of both Science and Art mungled together in harmony. Creating software for people is more than that, It's a mixture of techninal excellence and two-way communication between the client and the engineer. I strive to give both.";
     }
-    SectionIntroComponent = __decorate([
+    SectionManifestoComponent = __decorate([
         core_1.Component({
-            selector: 'section-intro',
-            templateUrl: 'app/landingpage/sections/introduction/section-intro.component.html',
+            selector: 'section-manifesto',
+            templateUrl: 'app/landingpage/sections/manifesto/section-manifesto.component.html',
             styleUrls: [
                 'app/landingpage/sections/sections.component.css',
-                'app/landingpage/sections/introduction/section-intro.component.css'
+                'app/landingpage/sections/manifesto/section-manifesto.component.css'
             ]
         }), 
         __metadata('design:paramtypes', [])
-    ], SectionIntroComponent);
-    return SectionIntroComponent;
+    ], SectionManifestoComponent);
+    return SectionManifestoComponent;
 }());
-exports.SectionIntroComponent = SectionIntroComponent;
-//# sourceMappingURL=section-intro.component.js.map
+exports.SectionManifestoComponent = SectionManifestoComponent;
+//# sourceMappingURL=section-manifesto.component.js.map

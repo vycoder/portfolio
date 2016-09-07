@@ -6,6 +6,7 @@ import {SectionInterface} from '../services/sectioninterface';
     selector: 'section-intro',
     templateUrl: 'app/landingpage/sections/introduction/section-intro.component.html',
     styleUrls: [
+        'app/landingpage/sections/sections.component.css',
         'app/landingpage/sections/introduction/section-intro.component.css'
         ]
 })

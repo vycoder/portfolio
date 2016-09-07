@@ -1,0 +1,10 @@
+.row{
+    margin: 3em 0 6em;
+    text-align: left;
+}
+
+.img {
+    margin: 0 auto;
+    max-width: 300px;
+    width: 300px;
+}
