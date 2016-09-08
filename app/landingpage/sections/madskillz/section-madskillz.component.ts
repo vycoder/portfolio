@@ -24,16 +24,14 @@ export class SectionMadSkillzComponent implements OnInit {
         this.imgsrc = this.sectionData.figureSource;
         this.sectionName = this.sectionData.title;
         this.textContent = this.sectionData.content;
-        this.skillz = this.getSkillz();
+        this.initialize();
     }
 
-    getSkillz(): SkillComponent[] {
-        let sc : SkillComponent[] = [];
+    initialize(): void {
         let skills = this.sectionData.content.split(',');
         skills.forEach(item => {
-            sc.push({name:item, classStyle: this.getRandomClass()});
+            this.skillz.push({name:item, classStyle: this.getRandomClass()});
         });
-        return sc;
     }
 
     getRandomClass(): string {

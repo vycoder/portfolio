@@ -17,16 +17,14 @@ var SectionMadSkillzComponent = (function () {
         this.imgsrc = this.sectionData.figureSource;
         this.sectionName = this.sectionData.title;
         this.textContent = this.sectionData.content;
-        this.skillz = this.getSkillz();
+        this.initialize();
     };
-    SectionMadSkillzComponent.prototype.getSkillz = function () {
+    SectionMadSkillzComponent.prototype.initialize = function () {
         var _this = this;
-        var sc = [];
         var skills = this.sectionData.content.split(',');
         skills.forEach(function (item) {
-            sc.push({ name: item, classStyle: _this.getRandomClass() });
+            _this.skillz.push({ name: item, classStyle: _this.getRandomClass() });
         });
-        return sc;
     };
     SectionMadSkillzComponent.prototype.getRandomClass = function () {
         var result = "label ";
