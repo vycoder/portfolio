@@ -24,9 +24,11 @@ export class SectionMadSkillzComponent implements OnInit {
         this.imgsrc = this.sectionData.figureSource;
         this.sectionName = this.sectionData.title;
         this.textContent = this.sectionData.content;
-        this.textContent.split(',').forEach(item => {
-            this.skillz.push(item);
-        });
+        this.splitSkillz().then(skills => this.skillz = skills);
+    }
+
+    splitSkillz():Promise<string[]>{
+        return Promise.resolve(this.textContent.split(','));
     }
 
     getRandomClass(): string {

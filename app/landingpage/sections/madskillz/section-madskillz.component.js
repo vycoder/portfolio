@@ -18,9 +18,10 @@ var SectionMadSkillzComponent = (function () {
         this.imgsrc = this.sectionData.figureSource;
         this.sectionName = this.sectionData.title;
         this.textContent = this.sectionData.content;
-        this.textContent.split(',').forEach(function (item) {
-            _this.skillz.push(item);
-        });
+        this.splitSkillz().then(function (skills) { return _this.skillz = skills; });
+    };
+    SectionMadSkillzComponent.prototype.splitSkillz = function () {
+        return Promise.resolve(this.textContent.split(','));
     };
     SectionMadSkillzComponent.prototype.getRandomClass = function () {
         var result = "label ";
