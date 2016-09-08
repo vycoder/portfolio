@@ -18,17 +18,22 @@ export class SectionMadSkillzComponent implements OnInit {
     sectionName: string;
     textContent: string;
 
-    skillz: string[] = [];
+    skillz: SkillComponent[] = [];
 
     ngOnInit(): void {
         this.imgsrc = this.sectionData.figureSource;
         this.sectionName = this.sectionData.title;
         this.textContent = this.sectionData.content;
-        this.splitSkillz().then(skills => this.skillz = skills);
+        this.skillz = this.getSkillz();
     }
 
-    splitSkillz():Promise<string[]>{
-        return Promise.resolve(this.textContent.split(','));
+    getSkillz(): SkillComponent[] {
+        let sc : SkillComponent[] = [];
+        let skills = this.sectionData.content.split(',');
+        skills.forEach(item => {
+            sc.push({name:item, classStyle: this.getRandomClass()});
+        });
+        return sc;
     }
 
     getRandomClass(): string {
@@ -50,4 +55,11 @@ export class SectionMadSkillzComponent implements OnInit {
         }
         return result;
     }
+
+
+}
+
+interface SkillComponent {
+    name: string;
+    classStyle: string;
 }

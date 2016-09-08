@@ -13,7 +13,7 @@
         <p>
             return [
             <template ngFor let-item [ngForOf]="skillz">
-                <span class="{{getRandomClass()}}">{{item}}</span>
+                <span class="{{item.classStyle}}">{{item.name}}</span>
             </template>
             ];
         </p>

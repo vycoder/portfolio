@@ -14,14 +14,19 @@ var SectionMadSkillzComponent = (function () {
         this.skillz = [];
     }
     SectionMadSkillzComponent.prototype.ngOnInit = function () {
-        var _this = this;
         this.imgsrc = this.sectionData.figureSource;
         this.sectionName = this.sectionData.title;
         this.textContent = this.sectionData.content;
-        this.splitSkillz().then(function (skills) { return _this.skillz = skills; });
+        this.skillz = this.getSkillz();
     };
-    SectionMadSkillzComponent.prototype.splitSkillz = function () {
-        return Promise.resolve(this.textContent.split(','));
+    SectionMadSkillzComponent.prototype.getSkillz = function () {
+        var _this = this;
+        var sc = [];
+        var skills = this.sectionData.content.split(',');
+        skills.forEach(function (item) {
+            sc.push({ name: item, classStyle: _this.getRandomClass() });
+        });
+        return sc;
     };
     SectionMadSkillzComponent.prototype.getRandomClass = function () {
         var result = "label ";
