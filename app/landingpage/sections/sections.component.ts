@@ -13,6 +13,7 @@ export class SectionsComponent implements OnInit {
     introductionSection: SectionInterface;
     manifestoSection: SectionInterface;
     madskillzSection: SectionInterface;
+    contactSection;
 
     constructor(private sectionsService: SectionsService) { }
 
@@ -20,5 +21,6 @@ export class SectionsComponent implements OnInit {
         this.introductionSection = this.sectionsService.getIntroduction();
         this.manifestoSection = this.sectionsService.getManifesto();
         this.madskillzSection = this.sectionsService.getMadSkillz();
+        this.contactSection = this.sectionsService.getContactContent();
     }
 }

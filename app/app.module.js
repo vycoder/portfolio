@@ -18,6 +18,7 @@ var sections_component_1 = require('./landingpage/sections/sections.component');
 var section_intro_component_1 = require('./landingpage/sections/introduction/section-intro.component');
 var section_manifesto_component_1 = require('./landingpage/sections/manifesto/section-manifesto.component');
 var section_madskillz_component_1 = require('./landingpage/sections/madskillz/section-madskillz.component');
+var section_contact_component_1 = require('./landingpage/sections/contact/section-contact.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -34,7 +35,8 @@ var AppModule = (function () {
                 sections_component_1.SectionsComponent,
                 section_intro_component_1.SectionIntroComponent,
                 section_manifesto_component_1.SectionManifestoComponent,
-                section_madskillz_component_1.SectionMadSkillzComponent
+                section_madskillz_component_1.SectionMadSkillzComponent,
+                section_contact_component_1.SectionContactComponent
             ],
             bootstrap: [landing_page_component_1.LandingPageComponent]
         }), 

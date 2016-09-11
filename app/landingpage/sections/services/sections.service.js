@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var introduction_static_content_1 = require('./contents/introduction.static.content');
 var manifesto_static_content_1 = require('./contents/manifesto.static.content');
 var madskillz_static_content_1 = require('./contents/madskillz.static.content');
+var contact_static_content_1 = require('./contents/contact.static.content');
 var SectionsService = (function () {
     function SectionsService() {
     }
@@ -23,6 +24,9 @@ var SectionsService = (function () {
     };
     SectionsService.prototype.getMadSkillz = function () {
         return madskillz_static_content_1.MADSKILLZ;
+    };
+    SectionsService.prototype.getContactContent = function () {
+        return contact_static_content_1.CONTACT;
     };
     SectionsService = __decorate([
         core_1.Injectable(), 

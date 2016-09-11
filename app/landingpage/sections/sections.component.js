@@ -18,6 +18,7 @@ var SectionsComponent = (function () {
         this.introductionSection = this.sectionsService.getIntroduction();
         this.manifestoSection = this.sectionsService.getManifesto();
         this.madskillzSection = this.sectionsService.getMadSkillz();
+        this.contactSection = this.sectionsService.getContactContent();
     };
     SectionsComponent = __decorate([
         core_1.Component({
