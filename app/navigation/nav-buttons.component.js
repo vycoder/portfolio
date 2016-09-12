@@ -16,8 +16,20 @@ var NavButtonsComponent = (function () {
         core_1.Component({
             selector: 'nav-buttons',
             templateUrl: 'app/navigation/nav-buttons.component.html',
-            styles: [
-                "#sidebar{\n            postion: fixed;\n            margin-top: 5%;\n            z-index: 980;\n            // display: float;\n        }"
+            styleUrls: ['app/navigation/nav-buttons.component.css'],
+            animations: [
+                core_1.trigger('buttonState', [
+                    core_1.state('inactive', core_1.style({
+                        backgroundColor: '#eee',
+                        transform: 'scale(2)'
+                    })),
+                    core_1.state('active', core_1.style({
+                        backgroundColor: '#cfd8dc',
+                        transform: 'scale(2.1)'
+                    })),
+                    core_1.transition('inactive => active', core_1.animate('100ms ease-in')),
+                    core_1.transition('active => inactive', core_1.animate('100ms ease-out'))
+                ])
             ]
         }), 
         __metadata('design:paramtypes', [])
