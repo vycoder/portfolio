@@ -1,1 +1,1 @@
-{"version":3,"file":"manifesto.static.content.js","sourceRoot":"","sources":["manifesto.static.content.ts"],"names":[],"mappings":";AAAa,iBAAS,GAAG;IACrB,YAAY,EAAE,2BAA2B;IACzC,KAAK,EAAE,WAAW;IAClB,OAAO,EAAE,0SAA0S;CACtT,CAAA"}
+{"version":3,"file":"manifesto.static.content.js","sourceRoot":"","sources":["manifesto.static.content.ts"],"names":[],"mappings":";AAAa,iBAAS,GAAG;IACrB,YAAY,EAAE,2BAA2B;IACzC,KAAK,EAAE,WAAW;IAClB,OAAO,EAAE,yUAAyU;CACrV,CAAA"}
