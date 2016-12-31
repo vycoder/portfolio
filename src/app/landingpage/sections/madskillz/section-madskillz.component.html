@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-4 col-md-push-7">
+        <div class="figure-holder">
+            <figure>
+                <img src="../../../../../public/images/profile.png" class="img img-circle img-responsive">
+            </figure>
+        </div>
+    </div>
+    <div class="col-md-6 col-md-pull-3">
+        <div class="method">
+            <h2><span class="color-swatch-orange">{{sectionName}}</span><span class="color-swatch-bluegreen">&#40;&#41;</span> &#123;</h2>
+        </div>
+        <p>
+            return [
+            <template ngFor let-item [ngForOf]="skillz">
+                <span class="{{item.classStyle}}">{{item.name}}</span>
+            </template>
+            ];
+        </p>
+        <h2>&#125;</h2>
+    </div>
+</div>
