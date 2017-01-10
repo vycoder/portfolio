@@ -9,7 +9,7 @@ import {LandingPageSection} from '../service/landing-page-section';
     styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent{
-    greet:string = "name='Harvey'";
+    greet:string = "var name='josephHarvey';";
     day:string;
     dusk:string = "R&D Engineer";
     night:string = "Asleep";
