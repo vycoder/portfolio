@@ -15,3 +15,10 @@ body{
 .color-swatch-orange{
 	color: #EE7546;
 }
+
+h1.superheader{
+    font-weight: 400;
+    font-size: 3.8em;
+    margin-top: 5%;
+    margin-bottom: 5%; 
+}

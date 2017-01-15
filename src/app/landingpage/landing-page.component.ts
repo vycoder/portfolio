@@ -1,10 +1,11 @@
 import {Component} from '@angular/core';
+
 import {LandingPageService} from './service/landing-page.service';
 import {LandingPageSection} from './service/landing-page-section';
 
 
 @Component({
-    selector: 'creo',
+    selector: 'home',
     templateUrl: './landing-page.component.html',
     providers: [LandingPageService]
 })
