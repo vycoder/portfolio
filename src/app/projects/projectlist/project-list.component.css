@@ -1,0 +1,12 @@
+h2 {
+    font-size: 2em;
+    /*text-align: center;*/
+    margin: 1em;
+    font-family: Consolas, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.project-item {
+    border-radius: 3px;
+    border-color: #ddd;
+    border: 1px #e5e5e5 solid;
+}

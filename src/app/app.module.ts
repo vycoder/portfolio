@@ -13,6 +13,7 @@ import {SectionManifestoComponent} from './landingpage/sections/manifesto/sectio
 import {SectionMadSkillzComponent} from './landingpage/sections/madskillz/section-madskillz.component';
 import {SectionContactComponent} from './landingpage/sections/contact/section-contact.component';
 import {ProjectsComponent} from './projects/projects.component';
+import {ProjectListComponent} from './projects/projectlist/project-list.component';
 import {PageNotFoundComponent} from './fourofour/pagenotfound.component';
 
 const appRoutes: Routes = [
@@ -39,6 +40,7 @@ const appRoutes: Routes = [
         SectionMadSkillzComponent,
         SectionContactComponent,
         ProjectsComponent,
+        ProjectListComponent,
         PageNotFoundComponent
     ],
     bootstrap: [AppComponent]

@@ -1,6 +1,7 @@
 h1{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 0.2em;
 }
 
 p {
@@ -13,4 +14,30 @@ p {
 h3 {
     font-size: 1.5em;
     font-family: Consolas, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 1em;
+    font-family: Consolas, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+a.pLink {
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+h2 a {
+    cursor: pointer;
+}
+
+.thumbnail:hover {
+    border-color: #EE7456;
+    border-width: 3px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.24), 0 0 2px rgba(0,0,0,0.12);
+    transition: box-shadow .5s;
+}
+
+.thumbnail {
+    margin-top: 2em;
 }
