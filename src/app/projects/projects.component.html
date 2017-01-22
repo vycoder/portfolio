@@ -24,13 +24,11 @@
         </div>
         <div class="row" *ngIf="!displayProjectLinks">
             <div class="row">
-                <project-list></project-list>
+                <project-list [selected]="selectedProject" [projectItems]="projectItems"></project-list>
             </div>
             <div class="row">
-                <div class="col-md-12">
-                    <h2><a (click)="toggleProjectButtons('hide')">return;</a>&#125;</h2>
-                    
-                </div>
+                <h2><a (click)="toggleProjectButtons('hide')">return;</a></h2>
+                <h2>&#125;</h2>
             </div>
         </div>
     </div>

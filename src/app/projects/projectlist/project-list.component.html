@@ -3,29 +3,26 @@
         <h2>
             public void
             <span class="color-swatch-orange">
-                getWorkProjects
+                {{selected}}
             </span>
             <span class="color-swatch-bluegreen">
                 &#40;&#41;
             </span> &#123;
         </h2>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6" *ngFor="let item of projectItems">
         <div class="project-item">
-            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="project-item">
-            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-            <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+            <div class="project-item-header" [ngStyle]="{'background-image': 'url(' + item.image + ')'}">
+            </div>
+            <h3 class="color-swatch-orange">
+                {{item.name}}
+                <span class="label" [ngClass]="getStatusClass(item.status)">{{item.status}}</span>
+                <a *ngIf="item.repo" href="{{item.repo}}" target="_blank" class="repo color-swatch-bluegreen"><i class="fa fa-github" aria-hidden="true"></i></a>
+            </h3>
+            <p>
+                {{item.description}}
+            </p>
+            <p class="lang" *ngFor="let lang of item.lang" [ngClass]="getClass(lang)">{{lang}}</p>
         </div>
     </div>
 </div>

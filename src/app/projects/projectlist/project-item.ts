@@ -3,5 +3,6 @@ export interface ProjectItem {
     description: string;
     image: string;
     lang: string[];
+    status: string;
     repo?: string;
 }

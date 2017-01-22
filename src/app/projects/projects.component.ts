@@ -1,5 +1,6 @@
 import { Component, trigger, transition, style, state, animate } from '@angular/core';
 import { ProjectsService, ProjectLink } from './projects.service';
+import {ProjectItem} from './projectlist/project-item';
 
 @Component({
     selector: 'projects',
@@ -30,6 +31,8 @@ export class ProjectsComponent {
     show: boolean = true;
     projects: ProjectLink[];
     displayProjectLinks: boolean = true;
+    selectedProject: string;
+    projectItems: ProjectItem[];
 
     constructor(private projectService: ProjectsService) {
         this.projects = projectService.getProjectLinks();
@@ -38,7 +41,8 @@ export class ProjectsComponent {
     toggleProjectButtons(name: string) {
         console.log(name);
         if (name !== 'hide') {
-            this.projectService.setSelectedProject(name);
+            this.selectedProject = name;
+            this.projectItems = this.projectService.getProjectItems(name);
         }
         this.displayProjectLinks = !this.displayProjectLinks;
     }

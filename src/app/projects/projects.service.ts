@@ -1,23 +1,20 @@
 import {Injectable} from '@angular/core';
+import {ProjectItem} from './projectlist/project-item';
+import {WORKPROJECTS} from './projectlist/workprojects-items';
+import {MISCPROJECTS} from './projectlist/miscprojects-items';
 
 @Injectable()
 export class ProjectsService {
-
-    selected:string;
 
     getProjectLinks(): ProjectLink[] {
         return PROJECTLINKS;
     }
 
-    getSelectedProject():string {
-        return this.selected;
+    getProjectItems(projectName:string): ProjectItem[] {
+        return this.getProjectLinks().find(item => {
+            return item.name === projectName;
+        }).projects;
     }
-
-    setSelectedProject(project:string){
-        console.log("set to:" + project);
-        this.selected = project;
-    }
-
 }
 
 export interface ProjectLink {
@@ -25,6 +22,7 @@ export interface ProjectLink {
     imgsrc: string;
     alt: string;
     description: string;
+    projects: ProjectItem[];
 }
 
 export const PROJECTLINKS : ProjectLink[] = [
@@ -32,18 +30,21 @@ export const PROJECTLINKS : ProjectLink[] = [
         name: "getWorkProjects",
         imgsrc: require("../../../public/images/workprojects.png"),
         alt: "Work Projects",
-        description: "My current industry and freelance projects."
+        description: "My current industry and freelance projects.",
+        projects: WORKPROJECTS
     },
     {
         name: "getMiscellaneousProjects",
         imgsrc: require("../../../public/images/miscprojects.png"),
         alt: "Miscellaneous Projects",
-        description: "Miscellaneous works, experiments and tools."
+        description: "Miscellaneous works, experiments and tools.",
+        projects: MISCPROJECTS
     },
     {
         name: "getUniStuff",
         imgsrc: require("../../../public/images/uniprojects.png"),
         alt: "University Projects",
-        description: "Projects that were mostly done during my undergrad."
+        description: "Projects that were mostly done during my undergrad.",
+        projects: []
     },
 ]

@@ -1,12 +1,102 @@
 h2 {
     font-size: 2em;
-    /*text-align: center;*/
-    margin: 1em;
-    font-family: Consolas, Cochin, Georgia, Times, 'Times New Roman', serif
+    margin-left: 0;
+    font-family: Consolas, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .project-item {
     border-radius: 3px;
-    border-color: #ddd;
     border: 1px #e5e5e5 solid;
+    padding: 5px;
+    margin-bottom: 1em;
+}
+
+.project-item-header {
+    width: 100%;
+    height: 130px;
+    background-size: cover;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    background-position: center;
+}
+
+.repo {
+    float: right;
+    vertical-align: middle;
+}
+
+p {
+    font-family: 'Roboto Condensed';
+    font-size: 1.12em;
+    text-indent: 1em;
+}
+
+h3 {
+    font-family: 'Consolas' Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+span.label {
+    font-size: 0.4em;
+    vertical-align: middle;
+}
+
+.lang {
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 0.8em;
+    border-radius: 2px;
+    margin: 2px;
+    text-align: center;
+    padding: 3px 10px;
+    text-indent: 0;
+    cursor: context-menu;
+}
+
+.label-blue {
+    background-color: #337ab7;
+}
+
+.label-lightblue {
+    background-color: #5bc0de;
+}
+
+.label-skyblue {
+    background-color: deepskyblue;
+}
+
+.label-yellow {
+    background-color: #f0ad4e;
+}
+
+.label-green {
+    background-color: green;
+}
+
+.label-red {
+    background-color: #d9534f;
+}
+
+.label-darkred {
+    background-color: darkred;
+}
+
+.label-orange {
+    background-color: orange;
+}
+
+.label-gray {
+    background-color: gray;
+}
+
+.label-darkgreen {
+    background-color: darkgreen;
+}
+
+.label-pink {
+    background-color: hotpink;
+}
+
+.label-yellowgreen {
+    background-color: mediumseagreen;
 }
