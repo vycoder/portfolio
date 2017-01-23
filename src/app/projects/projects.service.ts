@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {ProjectItem} from './projectlist/project-item';
 import {WORKPROJECTS} from './projectlist/workprojects-items';
 import {MISCPROJECTS} from './projectlist/miscprojects-items';
+import {UNIPROJECTS} from './projectlist/uniprojects-items';
 
 @Injectable()
 export class ProjectsService {
@@ -45,6 +46,6 @@ export const PROJECTLINKS : ProjectLink[] = [
         imgsrc: require("../../../public/images/uniprojects.png"),
         alt: "University Projects",
         description: "Projects that were mostly done during my undergrad.",
-        projects: []
+        projects: UNIPROJECTS
     },
 ]
