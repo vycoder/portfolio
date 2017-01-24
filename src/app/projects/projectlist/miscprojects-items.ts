@@ -75,7 +75,7 @@ export const MISCPROJECTS: ProjectItem[] = [
         lang: ['C'],
     },
     {
-        name: 'Asskit',
+        name: 'Sigma Prompt: Asskit',
         status: 'Completed',
         description:
         "Assembly language toolkit. I wrote this litte tool to help me in my assembly class during college. Hextables, Hexcalculators, ASCII conversion, etc, all packed into one little application.",
@@ -83,7 +83,7 @@ export const MISCPROJECTS: ProjectItem[] = [
         lang: ['C'],
     },
     {
-        name: 'TicTacToe',
+        name: 'Smartac',
         status: 'Completed',
         description:
         "This is the first project I made after I realized that computer science is what I like to do in life. It's a simple tictactoe game that I wrote after reading my first book in C. You'll play against my code, that ensures that almost any match would end in player's defeat or draw.",

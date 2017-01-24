@@ -9,6 +9,7 @@ h2 {
     border: 1px #e5e5e5 solid;
     padding: 5px;
     margin-bottom: 1em;
+    clear: both;
 }
 
 .project-item-header {
