@@ -45,7 +45,9 @@ export class ProjectListComponent {
         'micro-controller':'label-yellowgreen',
         'electron': 'label-yellow',
         'electronics': 'label-green',
-        'android': 'label-orange'
+        'android': 'label-orange',
+        'css': 'label-wisteria',
+        'jquery': 'label-midnightblue'
     }
    
 }

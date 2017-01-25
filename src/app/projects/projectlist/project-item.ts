@@ -5,4 +5,5 @@ export interface ProjectItem {
     lang: string[];
     status: string;
     repo?: string;
+    awards?: string[];
 }

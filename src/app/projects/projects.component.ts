@@ -39,7 +39,6 @@ export class ProjectsComponent {
     }
 
     toggleProjectButtons(name: string) {
-        console.log(name);
         if (name !== 'hide') {
             this.selectedProject = name;
             this.projectItems = this.projectService.getProjectItems(name);

@@ -16,5 +16,6 @@ export const WORKPROJECTS: ProjectItem[] = [
         "There is this one recurring task at work that made me think: 'I am to lazy to do this, maybe I can do something about this.' And that's what I did, I automated it. It's a test case generation tool that I made for a specific task at work, that can also be used for any tautology statements. Tessa generates all possible test cases from the base case you will provide, all that is left is running them. It's a time saver. It was also chosen as a finalist for Nokia Manila TC Innovation 2016. I named it Tessa, short for Test Case but I replaced 'c' with an 's' because I want to annoy people with slight OCD, including myself.",
         image: require("../../../../public/images/tessa.png"),
         lang: ['Java'],
+        awards: ['Nokia Manila TC 2016 Innovation Finalist']
     },
 ]

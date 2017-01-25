@@ -13,6 +13,7 @@
     <div class="col-md-6 col-sm-1" *ngFor="let item of projectItems">
         <div class="project-item">
             <div class="project-item-header" [ngStyle]="{'background-image': 'url(' + item.image + ')'}">
+                <span class="award" *ngFor="let award of item.awards"><i class="fa fa-trophy" aria-hidden="true"></i>{{award}}</span>
             </div>
             <h3 class="color-swatch-orange">
                 {{item.name}}
@@ -22,7 +23,9 @@
             <p>
                 {{item.description}}
             </p>
-            <p class="lang" *ngFor="let lang of item.lang" [ngClass]="getClass(lang)">{{lang}}</p>
+            <div class="lang-group">
+                <p class="lang" *ngFor="let lang of item.lang" [ngClass]="getClass(lang)">{{lang}}</p>
+            </div>
         </div>
     </div>
 </div>
