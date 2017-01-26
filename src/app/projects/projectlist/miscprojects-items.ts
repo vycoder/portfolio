@@ -7,7 +7,7 @@ export const MISCPROJECTS: ProjectItem[] = [
         description:
         "Context-switching  is one of those annoying pet peeve I have from work, one of the notorius culprit is the daily logging of work. That is why I made Chronocross. It's a time-management desktop application that I wrote integrated with a pomodoro, and reports generation. Basically, it's a to-do app but specialized for my personal workflow.",
         image: require("../../../../public/images/chronocross.png"),
-        lang: ['Angular2', 'Electron', 'Javascript', 'HTML'],
+        lang: ['Angular2', 'Electron', 'Javascript', 'Typescript', 'HTML'],
         repo: "https://github.com/josephharveyangeles/chronocross"
     },
     {
@@ -17,6 +17,7 @@ export const MISCPROJECTS: ProjectItem[] = [
         "Ever experienced that one cold night and you want to turn off the fan but you're too lazy to get up because the bed is so comfy? Yea, That's why I built swRctherIoo. The name is a pun, the letters 'I' and 'R' are switched from the word switcheroo, because it's an IR controlled switch box. So I could control any appliance I plug into this box using an IR remote. Too hot? switch the fan. Charge the phone? Going out? Need to turn off all the appliance in the room? No problem. This thing is a life-saver.",
         image: require("../../../../public/images/swrtcheioo.png"),
         lang: ['Electronics', 'Arduino'],
+        repo: "https://github.com/josephharveyangeles/swRtcherIoo"
     },
     {
         name: 'TheBeaconing',
@@ -41,6 +42,7 @@ export const MISCPROJECTS: ProjectItem[] = [
         "I had nothing to do one afternoon and I tried writing my own PingPong application using Java. I was just starting out my work as a Front-end UI Java Developer and this was a fun little exercise for my coding muscles.",
         image: require("../../../../public/images/pingponger.png"),
         lang: ['Java'],
+        repo: "https://github.com/josephharveyangeles/PingPonger"
     },
     {
         name: 'SudokuSolver',
@@ -49,6 +51,7 @@ export const MISCPROJECTS: ProjectItem[] = [
         "Another fun little project for a nice afternoon. This time, I tried writing a program that can solve a standard 9x9 sudoko puzzle. It's a stack-state based algorithm that I developed that will solve all possible solutions on any given 9x9 sudoko problem.",
         image: require("../../../../public/images/sudoku.png"),
         lang: ['Java'],
+        repo: "https://github.com/josephharveyangeles/SudokuSolver"
     },
     {
         name: 'BtQuerier',
@@ -73,6 +76,7 @@ export const MISCPROJECTS: ProjectItem[] = [
         "This a simple brain-trainer I made in C for those little breaks and down times.",
         image: require("../../../../public/images/silica.png"),
         lang: ['C'],
+        repo: "https://github.com/josephharveyangeles/Silica"
     },
     {
         name: 'Sigma Prompt: Asskit',
@@ -89,6 +93,7 @@ export const MISCPROJECTS: ProjectItem[] = [
         "This is the first project I made after I realized that computer science is what I like to do in life. It's a simple tictactoe game that I wrote after reading my first book in C. You'll play against my code, that ensures that almost any match would end in player's defeat or draw.",
         image: require("../../../../public/images/tictactoe.png"),
         lang: ['C'],
+        repo: "https://github.com/josephharveyangeles/smartac"
     },
     {
         name: 'LEDLamp',
