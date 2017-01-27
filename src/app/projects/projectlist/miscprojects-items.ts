@@ -23,7 +23,7 @@ export const MISCPROJECTS: ProjectItem[] = [
         name: 'TheBeaconing',
         status: 'Completed',
         description:
-        "I was able to get my hands on some BLE iBeacons. This simple android application is an iBeacon detector that logs and determine nearby iBeacons.",
+        "I was able to get my hands on some BLE (Bluetooth Low-Energy) iBeacons. This simple android application is an iBeacon detector that logs and determine nearby iBeacons.",
         image: require("../../../../public/images/thebeaconing.png"),
         lang: ['Android'],
     },
@@ -65,7 +65,7 @@ export const MISCPROJECTS: ProjectItem[] = [
         name: 'GhostDrive',
         status: 'Completed',
         description:
-        "Probably one of first useful projects that I made when I was just learning my ropes as a programmer. I was inspired by the 2007 Chuck Series 8-bit interfaces. It's a directory locking executable that will hide a directory that you can only unhide again by answering some riddles and by answering the correct random pattern-based passcode. It's one of those projects that made me confident in writing C programs.",
+        "Probably one of first useful projects that I made when I was just learning my ropes as a programmer. I was inspired by the 2007 Chuck Series 8-bit interfaces. It's a directory locking executable that will hides a directory that you can only unhide again by answering some riddles and by answering the correct random pattern-based passcode. It's one of those projects that made me confident in writing C programs.",
         image: require("../../../../public/images/ghostdrive.png"),
         lang: ['C'],
     },
@@ -73,7 +73,7 @@ export const MISCPROJECTS: ProjectItem[] = [
         name: 'Silica',
         status: 'Completed',
         description:
-        "This a simple brain-trainer I made in C for those little breaks and down times.",
+        "This a simple brain-trainer I made in C for those little breaks and down times. It's a quizzer for basic arithmetic operations. It also has base-two exponents because I was studying computer networks that time as well, I wanted to train myself to subnet faster.",
         image: require("../../../../public/images/silica.png"),
         lang: ['C'],
         repo: "https://github.com/josephharveyangeles/Silica"
