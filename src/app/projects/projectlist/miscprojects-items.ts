@@ -7,7 +7,7 @@ export const MISCPROJECTS: ProjectItem[] = [
         description:
         "Context-switching  is one of those annoying pet peeve I have from work, one of the notorius culprit is the daily logging of work. That is why I made Chronocross. It's a time-management desktop application that I wrote integrated with a pomodoro, and reports generation. Basically, it's a to-do app but specialized for my personal workflow.",
         image: require("../../../../public/images/chronocross.png"),
-        lang: ['Angular2', 'Electron', 'Javascript', 'Typescript', 'HTML'],
+        lang: ['Angular2', 'Electron', 'Javascript', 'Typescript', 'HTML', 'CSS'],
         repo: "https://github.com/josephharveyangeles/chronocross"
     },
     {
@@ -85,6 +85,7 @@ export const MISCPROJECTS: ProjectItem[] = [
         "Assembly language toolkit. I wrote this litte tool to help me in my assembly class during college. Hextables, Hexcalculators, ASCII conversion, etc, all packed into one little application.",
         image: require("../../../../public/images/asskit.png"),
         lang: ['C'],
+        repo: "https://github.com/josephharveyangeles/sigmaprompt"
     },
     {
         name: 'Smartac',
