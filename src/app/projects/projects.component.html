@@ -1,5 +1,5 @@
 <section>
-    <div id="returnButton" *ngIf="!displayProjectLinks" [@returnButton]=displayProjectLinks>
+    <div id="returnButton" *ngIf="!displayProjectLinks" [@returnButton]=!displayProjectLinks>
         <h2><a (click)="toggleProjectButtons('hide')">return;</a></h2>
     </div>
     <div class="container">
