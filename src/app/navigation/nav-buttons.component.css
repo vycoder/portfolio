@@ -1,6 +1,6 @@
 #sidebar{
     position: fixed;
-    margin-top: 18%;
+    top: 40%;
     z-index: 980;
     float: top;
     animation: sidebarAnimation 1s;
@@ -23,20 +23,15 @@
   background: #f8f8f8;
   color: #EE7456;
   border: #EE7456 2px solid;
-  /*background-image: -webkit-linear-gradient(top, #F8F8F8, #d6d6d6);
-  background-image: -moz-linear-gradient(top, #F8F8F8, #d6d6d6);
-  background-image: -ms-linear-gradient(top, #F8F8F8, #d6d6d6);
-  background-image: -o-linear-gradient(top, #F8F8F8, #d6d6d6);
-  background-image: linear-gradient(to bottom, #F8F8F8, #72BAAC);*/
   text-decoration: none;
 }
 
 @keyframes sidebarAnimation {
   0% {
-    margin-top: 0%;
+    top: 0%;
   }
   100% {
-    margin-top: 18%;
+    top: 40%;
   } 
 }
 

@@ -1,4 +1,7 @@
 <section>
+    <div id="returnButton" *ngIf="!displayProjectLinks" [@returnButton]=displayProjectLinks>
+        <h2><a (click)="toggleProjectButtons('hide')">return;</a></h2>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -26,10 +29,7 @@
             <div class="row">
                 <project-list [selected]="selectedProject" [projectItems]="projectItems"></project-list>
             </div>
-            <div class="row">
-                <h2><a (click)="toggleProjectButtons('hide')">return;</a></h2>
-                <h2>&#125;</h2>
-            </div>
+            <h2 style="margin: 0">&#125;</h2>
         </div>
     </div>
 </section>

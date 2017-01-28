@@ -40,3 +40,22 @@ h2 a {
 .thumbnail {
     margin-top: 2em;
 }
+
+#returnButton {
+    transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    position: fixed;
+    bottom: 22%;
+    left: -0.5%;
+    z-index: 999;
+}
+
+#returnButton a {
+    color: #72BAAC;
+}
+
+#returnButton a:hover {
+    color: #EE7456;
+}
