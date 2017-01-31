@@ -24,7 +24,13 @@ h2 {
 
 .repo {
     float: right;
-    vertical-align: middle;
+    vertical-align: text-top;
+    padding: 5px;
+}
+
+.repo:hover {
+    background-color: #CCCCCC;
+    border-radius: 40%;
 }
 
 p {
