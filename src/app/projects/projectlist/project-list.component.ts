@@ -47,7 +47,8 @@ export class ProjectListComponent {
         'electronics': 'label-green',
         'android': 'label-orange',
         'css': 'label-wisteria',
-        'jquery': 'label-midnightblue'
+        'jquery': 'label-midnightblue',
+        'bash' : 'label-adobeorange'
     }
    
 }

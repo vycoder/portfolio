@@ -10,7 +10,7 @@
             </span> &#123;
         </h2>
     </div>
-    <div class="col-md-6 col-sm-1" *ngFor="let item of projectItems">
+    <div class="col-md-6 col-sm-12 col-xs-12" *ngFor="let item of projectItems">
         <div class="project-item">
             <div class="project-item-header" [ngStyle]="{'background-image': 'url(' + item.image + ')'}">
                 <span class="award" *ngFor="let award of item.awards"><i class="fa fa-trophy" aria-hidden="true"></i>{{award}}</span>
