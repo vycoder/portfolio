@@ -26,9 +26,9 @@
             </div>
         </div>
         <div class="row" *ngIf="!displayProjectLinks">
-            <div class="row">
-                <project-list [selected]="selectedProject" [projectItems]="projectItems"></project-list>
-            </div>
+            <project-list [selected]="selectedProject" [projectItems]="projectItems"></project-list>
+        </div>
+        <div class="row" *ngIf="!displayProjectLinks">
             <h2 style="margin: 0">&#125;</h2>
         </div>
     </div>

@@ -73,7 +73,7 @@ export const MISCPROJECTS: ProjectItem[] = [
         name: 'Kill The Beast',
         status: 'Completed',
         description:
-        "A simple text-based card quessing game I wrote when I was trying to learn bash scripting as part of a Machine Problem. I figured it's a good way to glue all those simple bash scripting things I learned altogether. Check out the github repository for more information.",
+        "A simple text-based card quessing game I wrote when I was trying to learn bash scripting as part of a Machine Problem. I figured it's a good way to glue all those simple bash scripting things I learned altogether.",
         image: require("../../../../public/images/killthebeast.png"),
         lang: ['bash'],
         repo: 'https://github.com/josephharveyangeles/killthebeast'
