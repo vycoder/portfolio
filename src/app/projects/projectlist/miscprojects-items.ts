@@ -79,6 +79,15 @@ export const MISCPROJECTS: ProjectItem[] = [
         repo: 'https://github.com/josephharveyangeles/killthebeast'
     },
     {
+        name: 'vNote',
+        status: 'Completed',
+        description:
+        "I wrote my own version of Notepad but with a twist -- an autoback-up and an autorecover functionality. This also serves as practice for working on Java's Swing UI API. Complete with Menubars File and Edit functionalities.",
+        image: require("../../../../public/images/vnote.png"),
+        lang: ['Java'],
+        repo: 'https://github.com/josephharveyangeles/vnote'
+    },
+    {
         name: 'Silica',
         status: 'Completed',
         description:
