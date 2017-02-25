@@ -22,3 +22,7 @@ h1.superheader{
     margin-top: 5%;
     margin-bottom: 5%; 
 }
+
+canvas.particles-js-canvas-el {
+	position:fixed;
+}

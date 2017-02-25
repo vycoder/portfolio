@@ -4,6 +4,9 @@ import { AppModule } from './app/app.module';
 
 import '../public/css/styles.css';
 
+import '../public/js/particles.min.js';
+import '../public/js/particles-config.js';
+
 if (process.env.ENV === 'production') {
   enableProdMode();
 }
