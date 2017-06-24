@@ -1,13 +1,14 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
 import { AppModule } from './app/app.module';
+import { environment } from './environments/environment';
 
-import '../public/css/styles.css';
+declare var particlesJS: any;
 
-import '../public/js/particles.min.js';
-import '../public/js/particles-config.js';
-
-if (process.env.ENV === 'production') {
+if (environment.production) {
   enableProdMode();
+  particlesJS('particles-js', './assets/resources/particles.json');
 }
+
 platformBrowserDynamic().bootstrapModule(AppModule);

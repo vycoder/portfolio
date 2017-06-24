@@ -1,6 +1,7 @@
-import { Component, trigger, transition, style, state, animate } from '@angular/core';
+import { Component } from '@angular/core';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 import { ProjectsService, ProjectLink } from './projects.service';
-import {ProjectItem} from './projectlist/project-item';
+import { ProjectItem } from './projectlist/project-item';
 
 @Component({
     selector: 'projects',
@@ -15,7 +16,7 @@ import {ProjectItem} from './projectlist/project-item';
                 animate('0.2s ease-in')
             ]),
             transition('* => void', [
-                animate('0.2s 10 ease-out', style({
+                animate('0.2s 10ms ease-out', style({
                     opacity: 0,
                     height: 0
                 }))
@@ -31,7 +32,7 @@ import {ProjectItem} from './projectlist/project-item';
                 animate('0.2s ease-in')
             ]),
             transition('* => void', [
-                animate('0.2s 10 ease-out', style({
+                animate('0.2s 10ms ease-out', style({
                     bottom: 0,
                     left: '-0.5%'
                 }))

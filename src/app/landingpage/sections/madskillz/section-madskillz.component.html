@@ -2,7 +2,7 @@
     <div class="col-md-4 col-md-push-7">
         <div class="figure-holder">
             <figure>
-                <img src="../../../../../public/images/madskills.png" class="img img-circle img-responsive">
+                <img src="assets/images/madskills.png" class="img img-circle img-responsive">
             </figure>
         </div>
     </div>
@@ -12,9 +12,9 @@
         </div>
         <p>
             return [
-            <template ngFor let-item [ngForOf]="skillz">
+            <ng-template ngFor let-item [ngForOf]="skillz">
                 <span class="{{item.classStyle}}">{{item.name}}</span>
-            </template>
+            </ng-template>
             ];
         </p>
         <h2>&#125;</h2>

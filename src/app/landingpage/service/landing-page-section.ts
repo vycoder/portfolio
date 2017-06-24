@@ -1,4 +1,4 @@
-export interface LandingPageSection{
+export interface LandingPageSection {
     title: string;
     content: string;
 }

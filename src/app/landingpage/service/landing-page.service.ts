@@ -5,13 +5,13 @@ import {TITLE_SECTION} from './contents/static-sections';
 import {SECTIONS} from './contents/section-page';
 
 @Injectable()
-export class LandingPageService{
+export class LandingPageService {
 
-    getTitleSection():LandingPageSection{
+    getTitleSection(): LandingPageSection {
         return TITLE_SECTION;
     }
 
-    getSections():LandingPageSection[]{
+    getSections(): LandingPageSection[] {
         return SECTIONS;
     }
 }

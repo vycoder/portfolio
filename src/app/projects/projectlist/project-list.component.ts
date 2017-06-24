@@ -13,25 +13,10 @@ export class ProjectListComponent {
     @Input() selected: string;
     @Input() projectItems: ProjectItem[];
 
-    imgsrc:string = require("../../../../public/images/osyshub.png");
-
-    constructor(private service: ProjectsService){
-        
-    }
-
-    getClass(name:string):string {
-        return this.langClass[name.toLowerCase()];
-    }
-
-    getStatusClass(name:string):string {
-        if(name.toLowerCase() === 'completed') {
-            return "label-primary";
-        }
-        return "label-default";
-    }
+    imgsrc = 'assets/images/osyshub.png';
 
     langClass = {
-        'java':'label-blue',
+        'java': 'label-blue',
         'c': 'label-lightblue',
         'embedded-c': 'label-skyblue',
         'c#': 'label-yellow',
@@ -42,13 +27,26 @@ export class ProjectListComponent {
         'html': 'label-darkred',
         'arduino': 'label-darkgreen',
         'raspberry-pi': 'label-pink',
-        'micro-controller':'label-yellowgreen',
+        'micro-controller': 'label-yellowgreen',
         'electron': 'label-yellow',
         'electronics': 'label-green',
         'android': 'label-orange',
         'css': 'label-wisteria',
         'jquery': 'label-midnightblue',
         'bash' : 'label-adobeorange'
+    };
+
+    constructor(private service: ProjectsService) {}
+
+    getClass(name: string): string {
+        return this.langClass[name.toLowerCase()];
     }
-   
+
+    getStatusClass(name: string): string {
+        if (name.toLowerCase() === 'completed') {
+            return 'label-primary';
+        }
+        return 'label-default';
+    }
+
 }

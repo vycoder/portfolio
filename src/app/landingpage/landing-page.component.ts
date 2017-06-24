@@ -9,11 +9,11 @@ import {LandingPageSection} from './service/landing-page-section';
     templateUrl: './landing-page.component.html',
     providers: [LandingPageService]
 })
-export class LandingPageComponent{
+export class LandingPageComponent {
 
-    private titleSection:LandingPageSection;
+    private titleSection: LandingPageSection;
 
-    constructor(private landingPageService:LandingPageService){
+    constructor(private landingPageService: LandingPageService) {
         this.titleSection = this.landingPageService.getTitleSection();
     }
 
