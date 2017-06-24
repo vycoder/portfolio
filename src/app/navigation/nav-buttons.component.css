@@ -6,7 +6,7 @@
     animation: sidebarAnimation 1s;
 }
 
-.button {
+.navbutton {
   font-family: 'Roboto Condensed';
   color: #72BAAC;
   font-size: 18px;
@@ -19,7 +19,20 @@
   animation: buttonAnimation 1s;
 }
 
-.button:hover {
+.navbtn-sm {
+  font-family: 'Roboto Condensed';
+  color: #72BAAC !important;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 0;
+  text-align: center;
+}
+
+.navbtn-sm:hover {
+  color: #EE7456 !important;
+  border: #EE7456 1px solid;
+}
+.navbutton:hover {
   background: #f8f8f8;
   color: #EE7456;
   border: #EE7456 2px solid;

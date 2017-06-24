@@ -19,8 +19,8 @@ import {ProjectListComponent} from './projects/projectlist/project-list.componen
 import {PageNotFoundComponent} from './fourofour/pagenotfound.component';
 
 const appRoutes: Routes = [
-    {path: '', redirectTo: '/josephharveyangeles', pathMatch: 'full'},
-    {path: 'josephharveyangeles', component: LandingPageComponent},
+    {path: 'josephharveyangeles', redirectTo: '', pathMatch: 'full'},
+    {path: '', component: LandingPageComponent},
     {path: 'projects', component: ProjectsComponent},
     {path: '**', component: PageNotFoundComponent}
 ];
