@@ -1,6 +1,9 @@
 <section>
-    <div id="returnButton" *ngIf="!displayProjectLinks" [@returnButton]=!displayProjectLinks>
+    <div id="returnButton" class="nav-return hidden-md hidden-sm hidden-xs" *ngIf="!displayProjectLinks" [@returnButton]=!displayProjectLinks>
         <h2><a (click)="toggleProjectButtons('hide')">return;</a></h2>
+    </div>
+    <div id="navReturnButton" class="nav-return hidden-lg hidden-xl" *ngIf="!displayProjectLinks">
+      <a (click)="toggleProjectButtons('hide')">&laquo;</a>
     </div>
     <div class="container">
         <div class="row">

@@ -26,6 +26,9 @@
   text-decoration: none;
   border-radius: 0;
   text-align: center;
+  color: #72BAAC !important;
+  border: #72BAAC 1px solid;
+  margin: 1px;
 }
 
 .navbtn-sm:hover {
@@ -45,7 +48,7 @@
   }
   100% {
     top: 40%;
-  } 
+  }
 }
 
 @keyframes buttonAnimation {
@@ -54,5 +57,5 @@
   }
   100% {
     margin: 0px;
-  } 
+  }
 }

@@ -41,21 +41,50 @@ h2 a {
     margin-top: 2em;
 }
 
+.nav-return {
+  position: fixed;
+  z-index: 999;
+}
+
+.nav-return a {
+  color: #72BAAC;
+}
+
+.nav-return a:hover {
+  color: #EE7456;
+}
+
 #returnButton {
     transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
-    position: fixed;
     bottom: 22%;
     left: -0.5%;
-    z-index: 999;
 }
 
-#returnButton a {
-    color: #72BAAC;
+#navReturnButton {
+  right: 5%;
+  bottom: 5%;
+  font-size: 3em;
+  border-radius: 50%;
+  border: 2px #72BAAC solid;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  background-color: snow;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.24), 0 0 2px rgba(0,0,0,0.12);
+  cursor: pointer;
 }
 
-#returnButton a:hover {
-    color: #EE7456;
+#navReturnButton:hover {
+  color: #EE7456;
+  border: 3px #EE7456 solid;
+  background-color: #EEE;
+}
+
+#navReturnButton a:hover {
+  text-decoration: none !important;
+  color: #EE7456;
 }
