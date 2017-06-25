@@ -2,6 +2,22 @@ import { ProjectItem } from './project-item';
 
 export const WORKPROJECTS: ProjectItem[] = [
     {
+        name: 'Nokia',
+        status: 'In Progress',
+        description:
+        "I started working with Nokia on September 2014, building and maintaining different projects that supports and/or creates different technologies on the Mobile Networks and Communications industry. I mainly build desktop and web applications using different techonologies and languages on an Agile Scrum software development methodology. Oh and yeah, Nokia's business doesn't only revolve around making phones, they mostly deal with the whole Mobile Communications techonologies, Base Transceiver Stations, 5G, and stuff. Just thought I had to lay it here. I once thought the same too.",
+        image: 'assets/images/nokia.png',
+        lang: [
+          'java',
+          'html',
+          'angular2',
+          'typescript',
+          'javascript',
+          'jquery',
+          'css'
+        ],
+    },
+    {
         name: 'OSysHub',
         status: 'Completed',
         description:

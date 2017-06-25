@@ -1,6 +1,24 @@
 import { ProjectItem } from './project-item';
 
 export const MISCPROJECTS: ProjectItem[] = [
+      {
+         name: 'Recigle',
+         status: 'Completed',
+         description:
+         "Think google for recipes? That's it. Have you ever experience those times when you're home, alone, and it's raining, but you're hungry or you really just wanted to cook something but you don't want to trouble yourself of going outside? Wouldn't it be nice if you have an app where you could input all ingredients you have and it would spit out recipes that you could cook out of it? That's recigle. I also needed a project to experiment Angular2 on as well.",
+         image: 'assets/images/recigle.png',
+         lang: ['Angular2', 'Javascript', 'Typescript', 'HTML', 'CSS'],
+         repo: 'https://github.com/josephharveyangeles/recigle'
+     },
+     {
+        name: 'nReciquery',
+        status: 'Completed',
+        description:
+        "nReciquery is the REST service being consumed by Recigle. I've built this using python django + djangorestframework. Like all my miscellaneous projects, I needed some project to experiment building python applications on, and this was the good start I could think. The filters are all handed on nReciquery. Since it's a REST service, I could build android apps and something like an embedded software on refrigerators that will all consume nReciquery. It's a good project to experiment REST services.",
+        image: 'assets/images/nreciquery.png',
+        lang: ['Python'],
+        repo: 'https://github.com/josephharveyangeles/nreciquery'
+     },
      {
         name: 'Chronocross',
         status: 'In Progress',
