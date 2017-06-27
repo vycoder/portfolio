@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-	background: #DFDFDF url('assets/images/bg.png') repeat-x fixed center;
+	background: #DFDFDF url('assets/images/bg.png') repeat-x fixed center !important;
 	margin: 0px auto;
 	width: 100%;
 }
@@ -19,7 +19,8 @@ body{
 
 h1.superheader{
     font-weight: 400;
-    font-size: 3.8em;
+/*    font-size: 3.8em;*/
+    font-size: 4vw;
     margin-top: 5%;
     margin-bottom: 5%;
 }

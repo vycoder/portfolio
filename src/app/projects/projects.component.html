@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="row">
-            <div *ngIf="displayProjectLinks" [@mainProjectsAnimation]="displayProjectLinks">
+            <div class="project-menu" *ngIf="displayProjectLinks" [@mainProjectsAnimation]="displayProjectLinks">
                 <div class="col-sm-6 col-md-4" *ngFor="let project of projects">
                     <a (click)="toggleProjectButtons(project.name)" class="pLink">
                         <div class="thumbnail">
