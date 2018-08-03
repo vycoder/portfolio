@@ -1,0 +1,66 @@
+{
+  "profession": {
+    "dawn": "Bibliomaniac",
+    "day": "Software Developer",
+    "dusk": "Cat parent",
+    "night": "Asleep",
+    "end": "Dead x-X"
+  },
+  "introduction": "I am a software developer based in Manila, Philippines. I have an appetite for learning and a passion for creating software applications that do stuff. When 'm not in front of a computer you'll find me tinkering with hobby electronics or just chillin' beside a cat.",
+  "manifesto": "IMHO, computer programming is a discipline of both Science and Art mungled together in perfect harmony. Creating a good software application is more than that though, It's a mixture of technical excellence, domain knowledge, complementary UI/UX and two-way communication between the client and developer - I always strive to deliver all.",
+  "skills": [
+    "Vue",
+    "Angular/AngularJS",
+    "CSS/Sass/Stylus",
+    "HTML",
+    "Typescript",
+    "Javascript",
+    "Node",
+    "Java",
+    "Python",
+    "Bash",
+    "C#/C/Embedded-C",
+    "Android",
+    "Git/SVN",
+    "AWS/Jenkins/Bamboo",
+    "Raspberry-Pi/Arduino/Microcontrollers"
+    ],
+  "stats": {
+    "activity": "https://wakatime.com/share/@yev/bfb8f216-9d87-4e78-9dd4-9c98409f8dcc.svg",
+    "languages": "https://wakatime.com/share/@yev/c53f27c3-1807-4572-91d3-86b88e8f3000.svg"
+  },
+  "history": [
+    {
+      "title": "Nokia Networks UICA (R&D Engineer I)",
+      "date": "September 2014",
+      "texts": [
+        "Two months after earning my BS in Computer Engineering from Technological Institue of the Philippines, I started working at Nokia as an R&D Engineer I.",
+        "I was part of a team responsible for developing and maintaining features of a monolithic user-interface software for base transceiver stations using Java technologies. This is where I started to really have that initial foundation for Software Development. Thanks to my highly competent colleagues and seniors at that time, I learned the ropes - bridged the gap between school and actual industry experience. Discovered agile, clean code, the benefits of Test-Driven development, best practices and many more. I'm very fortunate to have worked here for my 1st Job."
+      ]
+    },
+    {
+      "title": "Nokia A&T Preventive Platforms (R&D Engineer II)",
+      "date": "October 2015",
+      "texts": [
+        "Technically my second job, but still with the folks at Nokia working as a Software Specialist that develops and maintains tools and softwares that support the Architecture and Technology Preventive Platforms.",
+        "I was a key person responsible for the system architecture design and implementation of various software systems. I had spent enormous amount of time prototyping designing architectures that would fit the requirements. I had tons of fun learning and really immersed myself in the world of good design, refactoring disciplines, SOLID principles and design patterns.",
+        "Aside from developing software, I also participated on tons of internal hackathons such as: StraTWOs, VR and IoT. Joined university CodeRetreats as a Facilitator where we visit various universities to provide real-word insights and hopefully imparted inspiration to students that will soon enter the Software industry."
+      ]
+    },
+    {
+      "title": "Vertere Global Solutions, Inc. (Programmer Analyst III - Team Lead)",
+      "date": "September 2017",
+      "texts": [
+        "Was part of a team that was deployed at Sydney, Australia to oversee and implement the transition of an entire business listing and searching software application product.",
+        "Worked on Java Spring microservices on the backend and AngularJS on the front-end. I'm used to Jenkins - even led DevOps initiative during my time at Nokia A&T but this is the first time that I had the chance to work on a bunch of new (at least for me) CI/CD and cloud delivery services such as Bamboo, Ansible and AWS."
+      ]
+    },
+    {
+      "title": "Accenture, Sensis (Application Developer Team Lead)",
+      "date": "June 2018",
+      "texts": [
+        "Worked on pretty much the same set of technologies back at my previous job. This time, we're maintaining and developing features for a Content Management system that is being consumed by a business listing and searching web application."
+      ]
+    }
+  ]
+}

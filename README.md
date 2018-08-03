@@ -3,6 +3,8 @@
 > my portfolio website hosted on https://josephharveyangeles.github.io
 
 ## Release History
+* 8/3/2018
+  * version 4: Used Quasar Framework added built-in blog
 * 1/28/2018 
   * version 3: Ported to Vue.js
 * 6/24/2017
