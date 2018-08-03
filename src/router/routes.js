@@ -5,14 +5,21 @@ const routes = [
     component: () => import('layouts/MyLayout.vue'),
     children: [
       { path: '', component: () => import('pages/Index.vue') },
-      { path: 'blog', component: () => import('pages/Blog.vue') },
+      {
+        path: 'blog',
+        component: () => import('layouts/BlogLayout.vue'),
+        children: [
+          { path: '', name: 'blogIndex', component: () => import('blogs/BlogIndex.vue') },
+          { path: 'codenoobsguide/main', component: resolve => require(['blogs/codenoobsguide/main.md'], resolve) }
+        ]
+      },
       {
         path: 'projects',
         component: () => import('layouts/ProjectsLayout.vue'),
         children: [
-          { path: '', name: 'Featured', component: () => import('pages/Projects.vue') },
-          { path: 'archived', name: 'Archived', component: () => import('pages/ProjectsArchived.vue') },
-          { path: 'unistuff', name: 'UniStuff', component: () => import('pages/ProjectsUniStuff.vue') }
+          { path: '', name: 'Featured', component: () => import('pages/projects/ProjectsFeatured.vue') },
+          { path: 'archived', name: 'Archived', component: () => import('pages/projects/ProjectsArchived.vue') },
+          { path: 'unistuff', name: 'UniStuff', component: () => import('pages/projects/ProjectsUniStuff.vue') }
         ]
       }
     ]

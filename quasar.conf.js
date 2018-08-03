@@ -1,5 +1,4 @@
 // Configuration for your app
-
 module.exports = function (ctx) {
   return {
     // app plugins (/src/plugins)
@@ -32,6 +31,19 @@ module.exports = function (ctx) {
           loader: 'eslint-loader',
           exclude: /(node_modules|quasar)/
         })
+      },
+      chainWebpack (chain) {
+        chain.module.rule('md')
+          .test(/\.md/)
+          .use('vue-loader')
+          .loader('vue-loader')
+          .end()
+          .use('vue-markdown-loader')
+          .loader('vue-markdown-loader/lib/markdown-compiler')
+          .options({
+            raw: true
+          })
+        chain.resolve.alias.set('blogs', require('path').resolve(__dirname, './src/blogs'))
       }
     },
     devServer: {

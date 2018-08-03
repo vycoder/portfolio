@@ -28,7 +28,7 @@
   </div>
 </template>
 <script>
-import DATA from '../statics/data/projects.json'
+import DATA from '../../statics/data/projects.json'
 export default {
   name: 'ProjectsUniStuffPage',
   created () {

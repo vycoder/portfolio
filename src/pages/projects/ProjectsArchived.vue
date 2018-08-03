@@ -21,8 +21,8 @@
   </div>
 </template>
 <script>
-import Data from '../statics/data/projects.json'
-import Project from '../components/projects/Project'
+import Data from '../../statics/data/projects.json'
+import Project from '../../components/projects/Project'
 export default {
   name: 'ProjectsPage',
   components: {Project},

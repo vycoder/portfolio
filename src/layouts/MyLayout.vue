@@ -89,7 +89,6 @@ export default {
   name: 'MyLayout',
   created () {
     this.$q.addressbarColor.set()
-    console.log(process.env.NODE_ENV)
   },
   data () {
     return {
