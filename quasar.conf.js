@@ -44,6 +44,7 @@ module.exports = function (ctx) {
             raw: true
           })
         chain.resolve.alias.set('blogs', require('path').resolve(__dirname, './src/blogs'))
+        chain.resolve.alias.set('statics', require('path').resolve(__dirname, './src/statics'))
       }
     },
     devServer: {

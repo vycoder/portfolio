@@ -51,13 +51,13 @@
 </style>
 
 <script>
-import data from '../statics/data/index.json'
-import Banner from '../components/index/Banner'
-import Intro from '../components/index/Intro'
-import Manifesto from '../components/index/Manifesto'
-import Madskills from '../components/index/Madskills'
-import Stats from '../components/index/Stats'
-import Timeline from '../components/index/Timeline'
+import data from 'statics/data/index.json'
+import Banner from 'components/index/Banner'
+import Intro from 'components/index/Intro'
+import Manifesto from 'components/index/Manifesto'
+import Madskills from 'components/index/Madskills'
+import Stats from 'components/index/Stats'
+import Timeline from 'components/index/Timeline'
 export default {
   name: 'PageIndex',
   components: {Banner, Intro, Manifesto, Madskills, Stats, Timeline},
