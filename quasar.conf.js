@@ -70,7 +70,11 @@ module.exports = function (ctx) {
         'QItemSide',
         'QTimeline',
         'QTimelineEntry',
-        'QSlideTransition'
+        'QSlideTransition',
+        'QCard',
+        'QCardMedia',
+        'QCardTitle',
+        'QCardMain'
       ],
       directives: [
         'Ripple'
