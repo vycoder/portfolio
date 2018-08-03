@@ -1,0 +1,18 @@
+{
+  "featured": {
+    "codeNoobsGuide": [
+      {
+        "image": "codenoobsguide/main.png",
+        "title": "main() - Prelude",
+        "date": "March 25, 2017",
+        "to": "codenoobsguide/main"
+      },
+      {
+        "image": "codenoobsguide/genchar.png",
+        "title": "General Characteristics",
+        "date": "July 6, 2017",
+        "to": "codenoobsguide/generalcharacteristics"
+      }
+    ]
+  }
+}
