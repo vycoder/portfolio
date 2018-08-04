@@ -72,7 +72,7 @@ $p-margins = 1.5rem
   }
   h6 {
     font-size 1.2rem
-    color $grey-6
+    color $amber-9
   }
   p {
     margin $p-margins 0
@@ -82,6 +82,7 @@ $p-margins = 1.5rem
     p {
       margin 0
       color $light-d
+      font-family 'Roboto'
     }
   }
   a,
