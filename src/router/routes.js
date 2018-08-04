@@ -1,4 +1,18 @@
-
+import {blogRoutes} from 'statics/data/blogs.json'
+const getBlogRouteChildren = () => {
+  const routes = []
+  for (let elem of blogRoutes) {
+    for (let entry of elem.entries) {
+      const parentPath = elem.section ? `${elem.section}/` : ''
+      const path = `${parentPath}${entry}`
+      routes.push({
+        path,
+        component: resolve => require([`blogs/${path}.md`], resolve)
+      })
+    }
+  }
+  return routes
+}
 const routes = [
   {
     path: '/',
@@ -8,9 +22,7 @@ const routes = [
       {
         path: 'blog',
         component: () => import('layouts/BlogLayout.vue'),
-        children: [
-          { path: 'codenoobsguide/main', component: resolve => require(['blogs/codenoobsguide/main.md'], resolve) }
-        ]
+        children: getBlogRouteChildren()
       },
       {
         path: 'projects',

@@ -14,5 +14,15 @@
         "to": "codenoobsguide/generalcharacteristics"
       }
     ]
-  }
+  },
+  "blogRoutes": [
+    {
+      "section": "codenoobsguide",
+      "entries": ["main", "generalcharacteristics"]
+    },
+    {
+      "section": "",
+      "entries": ["typography"]
+    }
+  ]
 }
