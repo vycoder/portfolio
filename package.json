@@ -1,6 +1,6 @@
 {
   "name": "porfolio",
-  "version": "1.0.0",
+  "version": "4.0.0",
   "description": "Joseph Harvey Angeles | Software Developer",
   "productName": "Joseph Harvey Angeles | Software Developer",
   "cordovaId": "org.cordova.quasar.app",
@@ -27,7 +27,7 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-vue": "^4.3.0",
-    "quasar-cli": "^0.17.6",
+    "quasar-cli": "^0.17.7",
     "strip-ansi": "^3.0.1",
     "vue-markdown-loader": "^2.4.1",
     "vue-particles": "^1.0.9"
