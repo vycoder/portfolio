@@ -6,7 +6,7 @@
       :title="entry.title"
       :subtitle="entry.date"
       :side="key % 2 === 0? 'right' : 'left'">
-      <div class="q-px-lg">
+      <div class="q-px-lg text-grey-8">
         <p v-for="(text, i) in entry.texts" :key="i" class="font-condensed-roboto">{{text}}</p>
       </div>
     </q-timeline-entry>
