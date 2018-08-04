@@ -9,7 +9,6 @@ const routes = [
         path: 'blog',
         component: () => import('layouts/BlogLayout.vue'),
         children: [
-          { path: '', name: 'blogIndex', component: () => import('blogs/BlogIndex.vue') },
           { path: 'codenoobsguide/main', component: resolve => require(['blogs/codenoobsguide/main.md'], resolve) }
         ]
       },
