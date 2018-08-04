@@ -51,11 +51,14 @@
         <q-item to="/projects">
           <q-item-main label="Projects" />
         </q-item>
+        <q-item @click.native="showContactModal()">
+          <q-item-main label="Contact" />
+        </q-item>
       </q-list>
-      <div class="links q-mt-xl">
-        <div class="links__item">
+      <div class="links q-mt-lg">
+        <a class="links__item" href="mailto:josephharveyangeles@gmail.com">
           <font-icon icon="envelope" />
-        </div>
+        </a>
         <div class="links__item" @click="openURL('https://wakatime.com/@yev')">
           <font-icon icon="clock" />
         </div>
@@ -91,10 +94,11 @@
 <script>
 import { openURL } from 'quasar'
 import Credits from 'components/Credits'
+import Contact from 'components/Contact'
 
 export default {
   name: 'RootLayout',
-  components: { Credits },
+  components: { Credits, Contact },
   created () {
     this.$q.addressbarColor.set()
   },
@@ -115,6 +119,10 @@ export default {
     showCreditsModal () {
       this.modalOpened = true
       this.modalComponent = Credits
+    },
+    showContactModal () {
+      this.modalOpened = true
+      this.modalComponent = Contact
     }
   }
 }
