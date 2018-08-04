@@ -75,10 +75,12 @@ module.exports = function (ctx) {
         'QCard',
         'QCardMedia',
         'QCardTitle',
-        'QCardMain'
+        'QCardMain',
+        'QModal'
       ],
       directives: [
-        'Ripple'
+        'Ripple',
+        'CloseOverlay'
       ],
       // Quasar plugins
       plugins: [

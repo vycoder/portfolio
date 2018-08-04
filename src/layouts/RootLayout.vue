@@ -71,6 +71,9 @@
         <div class="links__item" @click="openURL('https://medium.com/@yhev')">
           <font-icon :icon="{ prefix: 'fab', iconName: 'medium'}" />
         </div>
+        <div class="credits">
+          <p>&#169; {{year}}. <a @click="showCreditsModal()">Credits.</a></p>
+        </div>
       </div>
     </q-layout-drawer>
 
@@ -79,24 +82,40 @@
         <router-view />
       </transition>
     </q-page-container>
+    <q-modal v-model="modalOpened">
+      <component v-bind:is="modalComponent" />
+    </q-modal>
   </q-layout>
 </template>
 
 <script>
 import { openURL } from 'quasar'
+import Credits from 'components/Credits'
 
 export default {
-  name: 'MyLayout',
+  name: 'RootLayout',
+  components: { Credits },
   created () {
     this.$q.addressbarColor.set()
   },
   data () {
     return {
-      leftDrawerOpen: this.$q.platform.is.desktop
+      leftDrawerOpen: this.$q.platform.is.desktop,
+      modalOpened: false,
+      modalComponent: Credits
+    }
+  },
+  computed: {
+    year () {
+      return new Date().getFullYear()
     }
   },
   methods: {
-    openURL
+    openURL,
+    showCreditsModal () {
+      this.modalOpened = true
+      this.modalComponent = Credits
+    }
   }
 }
 </script>
@@ -157,4 +176,19 @@ img
       box-shadow 0 .7rem 2rem rgba($grey-10, .5)
       background-color $amber-9
       color white
+.credits {
+  color white
+  font-size .8rem
+  margin-top 3rem
+  a, a:link, a:visited {
+    color white
+    cursor pointer
+    text-decoration none
+    transition all .5s ease
+    &:hover {
+      color $amber-9
+      text-decoration underline
+    }
+  }
+}
 </style>
