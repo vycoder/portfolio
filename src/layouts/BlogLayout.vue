@@ -4,6 +4,15 @@
     <blog-featured v-if="isBlogIndex" class="q-px-xl"/>
     <div v-else class="blogs font-condensed-roboto">
       <router-view />
+      <div class="row">
+        <q-btn
+          to="/blog"
+          size="lg"
+          icon="arrow_back"
+          class="col-6 q-mt-xl text-primary font-consolas backnav">
+            back
+        </q-btn>
+      </div>
     </div>
   </div>
 </template>
@@ -22,11 +31,21 @@ export default {
 
 <style lang="stylus" scoped>
 @import '~variables'
-h3
-  margin-top 0
-
 $h-margins = 2rem
 $p-margins = 1.5rem
+h3 {
+  margin-top 0
+}
+.backnav {
+  text-transform none
+  box-shadow none
+  border 1px solid $grey-4
+  background-color $grey-1
+  &:hover {
+    text-decoration none !important
+    box-shadow 0 1px 5px rgba(0,0,0,0.2), 0 2px 2px rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12)
+  }
+}
 .blogs {
   padding 4rem 6rem
   +respond-max($breakpoint-sm) {
