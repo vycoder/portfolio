@@ -29,6 +29,12 @@ $h-margins = 2rem
 $p-margins = 1.5rem
 .blogs {
   padding 4rem 6rem
+  +respond-max($breakpoint-sm) {
+    padding 2rem 4rem
+  }
+  +respond-max($breakpoint-xs) {
+    padding 1rem 2rem
+  }
 }
 .blogs /deep/ {
   h1, h2, h3, h4, h5, h6 {
@@ -44,10 +50,16 @@ $p-margins = 1.5rem
   h1 {
     font-size 4rem
     font-weight 400
+    +respond-max($breakpoint-sm) {
+      font-size 3rem
+    }
   }
   h2 {
     font-size 3rem
     font-weight 400
+    +respond-max($breakpoint-sm) {
+      font-size 2.7rem
+    }
   }
   h3 {
     font-size 2.5rem
