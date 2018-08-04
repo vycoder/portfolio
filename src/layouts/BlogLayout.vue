@@ -1,8 +1,8 @@
 <template>
-  <div class="q-pa-xl">
-    <h3 v-if="isBlogIndex" class="text-center font-courier">/** Blog **/</h3>
-    <blog-featured v-if="isBlogIndex" />
-    <div class="blogs font-condensed-roboto">
+  <div>
+    <h3 v-if="isBlogIndex" class="text-center font-courier q-pt-xl">/** Blog **/</h3>
+    <blog-featured v-if="isBlogIndex" class="q-px-xl"/>
+    <div v-else class="blogs font-condensed-roboto">
       <router-view />
     </div>
   </div>
@@ -25,17 +25,21 @@ export default {
 h3
   margin-top 0
 
-$h-margins = 1rem
-$p-margins = 1rem
+$h-margins = 2rem
+$p-margins = 1.5rem
+.blogs {
+  padding 4rem 6rem
+}
 .blogs /deep/ {
   h1, h2, h3, h4, h5, h6 {
     color $secondary
     margin 0
     font-family 'Roboto'
-    margin $p-margins 0
+    margin $h-margins 0
   }
   ul, ol, p {
     color $grey-7
+    font-size 1.1rem
   }
   h1 {
     font-size 4rem
@@ -59,7 +63,7 @@ $p-margins = 1rem
     color $grey-6
   }
   p {
-    margin 1rem 0
+    margin $p-margins 0
   }
   blockquote {
     margin .8rem 0
@@ -71,8 +75,8 @@ $p-margins = 1rem
   a,
   a:link,
   a:visited {
-    text-decoration none
     color $primary
+    text-decoration none
     &:hover {
       color $secondary
       text-decoration underline
@@ -83,6 +87,7 @@ $p-margins = 1rem
     position relative
     left 50%
     transform translateX(-50%)
+    max-width 100%
   }
   code {
     background-color $blue-grey-1
@@ -98,6 +103,13 @@ $p-margins = 1rem
       color $grey-8
       background-color transparent
     }
+  }
+  ins {
+    text-decoration none
+    text-align center
+    width 100%
+    display block
+    margin 3rem auto
   }
 }
 </style>
