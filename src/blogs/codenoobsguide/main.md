@@ -50,3 +50,16 @@ Lastly, this section will ponder on your software development career. How to bui
 <ins>* * *</ins>
 
 I will go into detail in a separate post for every component and provide appropriate hyperlinks while I’m at it. For now, this main() article will serve as the overview.
+
+<ins>* * *</ins>
+
+###### Quick Links
++ [General Characteristics](blog/codenoobsguide/generalcharacteristics)
++ Runtime Environment
++ Preprocessing
++ In the Zone
++ Coding Principles
++ Design Principles
++ Debugging
++ Interfacing
++ Outer Scope

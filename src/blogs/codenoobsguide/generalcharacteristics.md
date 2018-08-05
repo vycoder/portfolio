@@ -91,3 +91,17 @@ Release successful open source software, write books and articles, and aim to sp
 It’s definitely not easy to be remarkable (Isn’t that why we’re doing this?), few people managed to be one. It’s a never-ending endeavor. And I think that’s a good thing, it’s something to strive for and to look forward.
 
 ![do it!](https://media.giphy.com/media/GcSqyYa2aF8dy/giphy.gif)
+
+<ins>* * *</ins>
+
+###### Quick Links
++ [Overview](blog/codenoobsguide/main)
+  + [General Characteristics](blog/codenoobsguide/generalcharacteristics)
+  + Runtime Environment
+  + Preprocessing
+  + In the Zone
+  + Coding Principles
+  + Design Principles
+  + Debugging
+  + Interfacing
+  + Outer Scope
