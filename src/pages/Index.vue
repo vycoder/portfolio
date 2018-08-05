@@ -51,7 +51,7 @@
 </style>
 
 <script>
-import data from 'statics/data/index.json'
+import DATA from 'statics/data/index.json'
 import Banner from 'components/index/Banner'
 import Intro from 'components/index/Intro'
 import Manifesto from 'components/index/Manifesto'
@@ -62,12 +62,15 @@ export default {
   name: 'PageIndex',
   components: {Banner, Intro, Manifesto, Madskills, Stats, Timeline},
   created () {
-    this.introduction = data.introduction
-    this.profession = data.profession
-    this.manifesto = data.manifesto
-    this.skills = data.skills
-    this.stats = data.stats
-    this.history = data.history
+    this.introduction = DATA.introduction
+    this.profession = DATA.profession
+    this.manifesto = DATA.manifesto
+    this.skills = DATA.skills
+    this.stats = DATA.stats
+    this.history = DATA.history
+  },
+  meta: {
+    meta: DATA.meta
   }
 }
 </script>

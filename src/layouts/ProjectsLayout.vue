@@ -9,6 +9,7 @@
   </div>
 </template>
 <script>
+import DATA from 'statics/data/projects.json'
 export default {
   name: 'ProjectsLayout',
   computed: {
@@ -19,7 +20,8 @@ export default {
         default: return 'Projects'
       }
     }
-  }
+  },
+  meta: DATA.meta
 }
 </script>
 <style lang="stylus">

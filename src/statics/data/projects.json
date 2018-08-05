@@ -1,4 +1,17 @@
 {
+  "meta": {
+    "title": "Joseph Harvey Angeles's Projects",
+    "meta": {
+      "description": {
+        "name": "description",
+        "content": "Joseph Harvey Angeles's Projects using Web, HTML, Javascript, Vuejs, CSS, Angular, Python, Java and many more.."
+      },
+      "keywords": {
+        "name": "keywords",
+        "content": "Web, HTML, Javascript, CSS, Java, Vuejs, Angular"
+      }
+    }
+  },
   "featured": [
     {
       "name": "Chronocross",

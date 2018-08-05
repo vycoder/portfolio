@@ -62,5 +62,15 @@
         "Worked on pretty much the same set of technologies back at my previous job. This time, we're maintaining and developing features for a Content Management system that is being consumed by a business listing and searching web application."
       ]
     }
-  ]
+  ],
+  "meta": {
+    "description": {
+      "name": "description",
+      "content": "Joseph Harvey Angeles's website. Software Engineer, Software Developer, Web Developer, Full-stack engineer. Clean Code advocate. DevOps. He likes cats."
+    },
+    "keywords": {
+      "name": "keywords",
+      "content": "Web Development, Software Engineer, Software Developer, Full-stack Developer, Full-stack Engineer"
+    }
+  }
 }

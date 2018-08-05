@@ -124,13 +124,18 @@ export default {
       this.modalOpened = true
       this.modalComponent = Contact
     }
+  },
+  meta: {
+    link: {
+      googlefonts: { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=VT323|Qwigley|Roboto+Condensed' }
+    }
   }
 }
 </script>
 
 <style lang="stylus" scoped>
 @import "~variables"
-h1
+h1 {
   position absolute
   top 50%
   left 50%
@@ -141,37 +146,45 @@ h1
   font-weight 500
   font-family 'Qwigley'
   margin 0
-#logo-box
+}
+#logo-box {
   height 42%
   position relative
   background linear-gradient(to bottom, $grey-10, transparent)
-#particles-js
+}
+#particles-js {
   height 100%
-/deep/ .q-item-label
+}
+/deep/ .q-item-label {
   transition all .5s
-.q-item:hover
+}
+.q-item:hover {
   background-color rgba(black, .5) !important
-  /deep/ .q-item-label
+  /deep/ .q-item-label {
     margin-left 10px
     font-size 1.1rem
-img
+  }
+}
+img {
   position absolute
   top 50%
   left 50%
   height 150px
   transform translate(-50%, -50%)
   max-width 100%
-.q-layout-header
+}
+.q-layout-header {
   display none
-  +respond-max($breakpoint-sm)
+  +respond-max($breakpoint-sm) {
     display block
-
-.links
+  }
+}
+.links {
   text-align center
-  &__item
-    &:not(:last-child)
+  &__item {
+    &:not(:last-child) {
       margin-right 8px
-
+    }
     background-color white
     color $primary
     display inline-block
@@ -179,11 +192,14 @@ img
     padding 9px 11px
     transition all .5s ease
     cursor pointer
-    &:hover
+    &:hover {
       transform scale(1.3) translateY(-5px)
       box-shadow 0 .7rem 2rem rgba($grey-10, .5)
       background-color $amber-9
       color white
+    }
+  }
+}
 .credits {
   color white
   font-size .8rem
