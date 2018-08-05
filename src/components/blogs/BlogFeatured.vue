@@ -5,7 +5,7 @@
       <div
         v-for="(entry, k) in codeNoobsGuides"
         :key="k"
-        class="div col-4 col-md-4 col-sm-6 col-xs-12 q-mb-md" >
+        class="div col-4 col-md-4 col-sm-6 col-xs-12 q-mb-lg" >
         <thumbnail
           :image="`statics/images/blogs/${entry.image}`"
           :to="`blog/${entry.to}`"
@@ -32,5 +32,8 @@ export default {
 .series {
   border-bottom 1px solid $grey-7
   padding-bottom .5rem
+  +respond-max($breakpoint-sm) {
+    font-size 1.3rem
+  }
 }
 </style>

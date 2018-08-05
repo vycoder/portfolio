@@ -9,7 +9,7 @@
       <function class="function">
         <template slot="identifier">void</template>
         <template slot="name">manifesto</template>
-        <p>{{text}}</p>
+        <p class="text">{{text}}</p>
       </function>
     </div>
   </div>
@@ -37,9 +37,7 @@ img
 .function
   +respond-max($breakpoint-md)
     margin-top 1rem
-p
+.text
   +respond-max($breakpoint-md)
     font-size 1rem
-  +respond-max($breakpoint-sm)
-    font-size .8rem
 </style>

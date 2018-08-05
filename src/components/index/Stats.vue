@@ -26,7 +26,14 @@ export default {
   font-family Consolas, Cochin, Georgia, Times, "Times New Roman", serif
   font-size 1.8rem
   padding-top 1rem
-embed
+embed {
   box-shadow 0 1.5rem 4rem rgba($grey-10, .15)
   border-radius 10rem
+  +respond-max($breakpoint-md) {
+    border-radius 5rem
+  }
+  +respond-max($breakpoint-sm) {
+    border-radius 2rem
+  }
+}
 </style>

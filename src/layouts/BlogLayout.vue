@@ -95,6 +95,9 @@ h3 {
   }
   p {
     margin $p-margins 0
+    +respond-max($breakpoint-sm) {
+      font-size 1.5rem
+    }
   }
   blockquote {
     margin .8rem 0
@@ -131,6 +134,7 @@ h3 {
     border-radius .5rem
     box-shadow 0 5px 20px rgba(black, .12)
     color $light-d !important
+    overflow-x scroll
     code {
       color $grey-8
       background-color transparent

@@ -39,6 +39,5 @@ img
 p
   +respond-max($breakpoint-md)
     font-size 1rem
-  +respond-max($breakpoint-sm)
-    font-size .8rem
+
 </style>

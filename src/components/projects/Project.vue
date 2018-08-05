@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="project">
-      <div class="project__text-side q-pr-xl">
+      <div class="project__text-side">
         <h4
           @click="openLink(project.url)"
           class="project__text-side__title text-secondary font-consolas">
@@ -54,13 +54,18 @@ export default {
   margin 4rem auto
   &__text-side {
     width 65%
+    padding-right 3rem
     +respond-max($breakpoint-sm) {
       width 100%
+      padding-right 0;
     }
     &__title {
       cursor pointer
       margin 0
       transition all .5s ease
+      +respond-max($breakpoint-sm) {
+        font-size 2rem
+      }
       &:hover {
         transform scale(1.05) translateX(8px)
         text-decoration underline

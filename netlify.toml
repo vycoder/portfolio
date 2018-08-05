@@ -1,0 +1,8 @@
+[build]
+  command = "quasar build"
+  publish = "dist/spa-mat"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

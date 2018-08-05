@@ -10,7 +10,7 @@
         <intro :text="introduction" class="absolute-center intro" />
       </div>
     </section>
-    <h3 class="text-center font-courier">/** What I can do for you **/</h3>
+    <h3 class="text-center font-courier q-mx-sm">/** What I can do for you **/</h3>
     <section>
       <div class="full-section">
         <manifesto :text="manifesto" class="absolute-center manifesto"/>
@@ -21,13 +21,13 @@
         <madskills :skills="skills" class="absolute-center madskills"/>
       </div>
     </section>
-    <h3 class="text-center font-courier">/** Stats for nerdz **/</h3>
+    <h3 class="text-center font-courier q-mx-sm">/** Stats for nerdz **/</h3>
     <section>
       <div class="full-section">
         <stats :stats="stats" class="absolute-center stats"/>
       </div>
     </section>
-    <h3 class="text-center q-pb-xl">/** Work History **/</h3>
+    <h3 class="text-center font-courier q-pb-xl q-mx-sm">/** Work History **/</h3>
     <timeline :data="history" />
   </q-page>
 </template>

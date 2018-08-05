@@ -1,4 +1,4 @@
-# CodeNo0b’s Guide out of Mediocrity — generalCharacteristics()
+# CodeNo0b’s Guide out of Mediocrity — General Characteristics
 ###### 6 July 2017
 
 _This is part of a series of articles entitled, “CodeNo0b’s Guide out of Mediocrity” — my attempt to create some sort of mental model from the concepts discussed on the classic books of Andy Hunt, Dave Thomas, Chad Fowler, and Robert Martin on a teach-myself manner. Table of contents here: [main()](blog/codenoobsguide/main)_
