@@ -1,6 +1,6 @@
 {
   "featured": {
-    "codeNoobsGuide": [
+    "codenoobsguide": [
       {
         "image": "codenoobsguide/main.png",
         "title": "main() - Prelude",
@@ -24,5 +24,17 @@
       "section": "",
       "entries": ["typography"]
     }
-  ]
+  ],
+  "blogMetas": {
+    "codenoobsguide-main": {
+      "title": "CodeNo0b's Guide out of Mediocrity - main",
+      "description": "CodeNo0b's Guide out of Mediocrity's overview, table of contents. Much like a map of best practices and pragmatic clean coding.",
+      "keywords": "Passionate Programmer, Pragmatic Programmer, Clean Code, Software Design, Software Architecture, Best Practices"
+    },
+    "codenoobsguide-generalcharacteristics": {
+      "title": "CodeNo0b's Guide out of Mediocrity - General Characteristics",
+      "description": "Here I explore some of the key traits for our ideal best version of our developer's self. Keep in mind, this isn't a checklist but a goal.",
+      "keywords": "Inquisitive, Realistic, Specialist, Generalist, Creative, Passionate, Remarkable"
+    }
+  }
 }

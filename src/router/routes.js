@@ -3,10 +3,12 @@ const getBlogRouteChildren = () => {
   const routes = []
   for (let elem of blogRoutes) {
     for (let entry of elem.entries) {
-      const parentPath = elem.section ? `${elem.section}/` : ''
+      const parentPath = elem.section ? `${elem.section.toLowerCase()}/` : ''
+      const name = elem.section ? `${elem.section.toLowerCase()}-${entry}` : entry
       const path = `${parentPath}${entry}`
       routes.push({
         path,
+        name,
         component: resolve => require([`blogs/${path}.md`], resolve)
       })
     }

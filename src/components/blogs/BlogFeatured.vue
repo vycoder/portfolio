@@ -22,7 +22,7 @@ export default {
   name: 'BlogIndexPage',
   components: {Thumbnail},
   created () {
-    this.codeNoobsGuides = DATA.featured.codeNoobsGuide
+    this.codeNoobsGuides = DATA.featured.codenoobsguide
   }
 }
 </script>

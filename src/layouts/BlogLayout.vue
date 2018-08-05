@@ -18,12 +18,37 @@
 </template>
 <script>
 import BlogFeatured from 'components/blogs/BlogFeatured'
+import {blogMetas} from 'statics/data/blogs.json'
 export default {
   name: 'BlogLayout',
   components: { BlogFeatured },
   computed: {
     isBlogIndex () {
       return this.$route.path === '/blog'
+    },
+    metaTitle () {
+      return this.getMeta('title') || 'Joseph Harvey Angeles - Blog'
+    },
+    metaDescription () {
+      return this.getMeta('description') || "Joseph Harvey Angeles's random thoughts"
+    },
+    metaKeywords () {
+      return this.getMeta('keywords') || 'Software Engineering'
+    }
+  },
+  methods: {
+    getMeta (key) {
+      const res = blogMetas[this.$route.name]
+      return res ? res[key] : false
+    }
+  },
+  meta () {
+    return {
+      title: this.metaTitle,
+      meta: {
+        description: { name: 'description', content: this.metaDescription },
+        keywords: { name: 'keywords', content: this.metaKeywords }
+      }
     }
   }
 }
@@ -134,7 +159,7 @@ h3 {
     border-radius .5rem
     box-shadow 0 5px 20px rgba(black, .12)
     color $light-d !important
-    overflow-x scroll
+    overflow-x auto
     code {
       color $grey-8
       background-color transparent
