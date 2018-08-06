@@ -1,12 +1,12 @@
 {
   "profession": {
     "dawn": "Bibliomaniac",
-    "day": "Software Developer",
+    "day": "Software Engineer",
     "dusk": "Cat parent",
     "night": "Asleep",
     "end": "Dead x-X"
   },
-  "introduction": "I am a software developer based in Manila, Philippines. I have an appetite for learning and a passion for creating software applications that do stuff. When 'm not in front of a computer you'll find me tinkering with hobby electronics or just chillin' beside a cat.",
+  "introduction": "I am a software engineer based in Manila, Philippines. I have an appetite for learning and a passion for creating software applications that do stuff. When 'm not in front of a computer you'll find me tinkering with hobby electronics or just chillin' beside a cat.",
   "manifesto": "IMHO, computer programming is a discipline of both Science and Art mungled together in perfect harmony. Creating a good software application is more than that though, It's a mixture of technical excellence, domain knowledge, complementary UI/UX and two-way communication between the client and developer - I always strive to deliver all.",
   "skills": [
     "Vue",
