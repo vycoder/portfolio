@@ -175,7 +175,7 @@ img {
 }
 .q-layout-header {
   display none
-  +respond-max($breakpoint-sm) {
+  +respond-max($breakpoint-md) {
     display block
   }
 }
