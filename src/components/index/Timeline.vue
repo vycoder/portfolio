@@ -1,5 +1,5 @@
 <template>
-  <q-timeline color="primary" class="q-px-lg q-pb-xl">
+  <q-timeline responsive color="primary" class="q-px-lg q-pb-xl">
     <q-timeline-entry
       v-for="(entry, key) in data"
       :key="key"
