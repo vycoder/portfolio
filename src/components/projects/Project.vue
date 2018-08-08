@@ -50,14 +50,12 @@ export default {
 @import '~variables'
 .project {
   display flex
-  width 100%
+  justify-content space-between;
   margin 4rem auto
   &__text-side {
-    width 65%
-    padding-right 3rem
-    +respond-max($breakpoint-sm) {
-      width 100%
-      padding-right 0;
+    flex 0 0 60%
+    +respond-max($breakpoint-xs) {
+      flex 1;
     }
     &__title {
       cursor pointer
@@ -87,11 +85,12 @@ export default {
     }
   }
   &__image-side {
-    +respond-max($breakpoint-sm) {
+    +respond-max($breakpoint-xs) {
       display none
     }
     min-height 100%
-    width 35%
+    flex 0 0 35%;
+    align-self stretch;
     overflow hidden
     position relative
     &__image {
