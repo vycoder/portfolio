@@ -70,6 +70,7 @@ export default {
     this.history = DATA.history
   },
   meta: {
+    title: 'Joseph Harvey Angeles | Software Engineer',
     meta: DATA.meta
   }
 }
