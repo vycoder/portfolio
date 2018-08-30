@@ -13,6 +13,14 @@
         "date": "July 6, 2017",
         "to": "codenoobsguide/generalcharacteristics"
       }
+    ],
+    "2018": [
+      {
+        "image": "2018/chronocross/chronocross.png",
+        "title": "Introducing Chronocross",
+        "date": "August 6, 2018",
+        "to": "2018/chronocross"
+      }
     ]
   },
   "blogRoutes": [

@@ -5,7 +5,20 @@
       <div
         v-for="(entry, k) in codeNoobsGuides"
         :key="k"
-        class="div col-4 col-md-4 col-sm-6 col-xs-12 q-mb-lg" >
+        class="col-4 col-md-4 col-sm-6 col-xs-12 q-mb-lg" >
+        <thumbnail
+          :image="`statics/images/blogs/${entry.image}`"
+          :to="`blog/${entry.to}`"
+          :title="entry.title"
+          :subtitle="entry.date" />
+      </div>
+    </div>
+    <h6 class="series text-grey-7 font-condensed-roboto q-mb-lg">2018</h6>
+    <div class="row gutter-x-md cngom">
+      <div
+        v-for="(entry, k) in currentYear"
+        :key="k"
+        class="col-4 col-md-4 col-sm-6 col-xs-12 q-mb-lg" >
         <thumbnail
           :image="`statics/images/blogs/${entry.image}`"
           :to="`blog/${entry.to}`"
@@ -23,6 +36,7 @@ export default {
   components: {Thumbnail},
   created () {
     this.codeNoobsGuides = DATA.featured.codenoobsguide
+    this.currentYear = DATA.featured['2018']
   }
 }
 </script>

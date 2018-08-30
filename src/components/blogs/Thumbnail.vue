@@ -33,4 +33,7 @@ export default {
 .subtitle {
   margin 0
 }
+img {
+  min-height 100%
+}
 </style>
