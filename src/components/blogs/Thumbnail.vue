@@ -17,12 +17,16 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '~variables'
 .q-card {
   cursor pointer
   transition all .5s ease
   &:hover {
     box-shadow 0 .5rem 2rem rgba(black, .5)
     transform translateY(-3px)
+  }
+  .q-card-media {
+    background-color rgba($primary, .5)
   }
 }
 .title {
@@ -34,6 +38,6 @@ export default {
   margin 0
 }
 img {
-  min-height 100%
+  min-height 12rem
 }
 </style>

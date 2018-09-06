@@ -89,10 +89,11 @@ export default {
       display none
     }
     min-height 100%
-    flex 0 0 35%;
-    align-self stretch;
+    flex 0 0 35%
+    align-self stretch
     overflow hidden
     position relative
+    background-color rgba($primary, .5)
     &__image {
       min-height 100%
       min-width 100%
