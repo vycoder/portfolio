@@ -45,8 +45,13 @@
     },
     "codenoobsguide-generalcharacteristics": {
       "title": "CodeNo0b's Guide out of Mediocrity - General Characteristics",
-      "description": "Here I explore some of the key traits for our ideal best version of our developer's self. Keep in mind, this isn't a checklist but a goal.",
+      "description": "Here I explore some of the key traits for our ideal best version of our developer self. Keep in mind, this isn't a checklist but a goal.",
       "keywords": "Inquisitive, Realistic, Specialist, Generalist, Creative, Passionate, Remarkable"
+    },
+    "2018-chronocross": {
+      "title": "Introducing Chronocross - A Simple Productivity App built on Quasar and Firebase",
+      "description": "What's the best way to explore a new framework? Build something that solves your personal problem. Chronocross is a productivity app, a combination of the Pomodoro Technique and Eisenhower matrix.",
+      "keywords": "Firebase, Vuejs, Vue, Quasar, Pomodoro, Eisenhower, Productivity, Cordova, Mobile App"
     }
   }
 }

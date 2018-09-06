@@ -6,7 +6,10 @@ import {
   faGithub,
   faGithubSquare,
   faLinkedin,
-  faAndroid
+  faAndroid,
+  faFacebook,
+  faTwitterSquare,
+  faRedditSquare
 } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
@@ -20,5 +23,8 @@ export default ({ app, router, Vue }) => {
   library.add(faGithubSquare)
   library.add(faClock)
   library.add(faGlobe)
+  library.add(faFacebook)
+  library.add(faRedditSquare)
+  library.add(faTwitterSquare)
   Vue.component('font-icon', FontAwesomeIcon)
 }

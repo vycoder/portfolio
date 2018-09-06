@@ -4,6 +4,37 @@
     <blog-featured v-if="isBlogIndex" class="q-px-xl"/>
     <div v-else class="blogs font-condensed-roboto">
       <router-view />
+      <social-sharing
+        class="text-center q-mt-xl socials"
+        :url="fullUrl"
+        :title="metaTitle"
+        :description="metaDescription"
+        twitter-user="yhev"
+        inline-template
+        >
+        <div>
+          <network network="twitter">
+            <div class="social-icon">
+              <font-icon :icon="{ prefix: 'fab', iconName: 'twitter-square'}" />
+            </div>
+          </network>
+          <network network="facebook">
+            <div class="social-icon">
+              <font-icon :icon="{ prefix: 'fab', iconName: 'facebook'}"/>
+            </div>
+          </network>
+          <network network="linkedin">
+            <div class="social-icon">
+              <font-icon :icon="{ prefix: 'fab', iconName: 'linkedin'}"/>
+            </div>
+          </network>
+          <network network="reddit">
+            <div class="social-icon">
+              <font-icon :icon="{ prefix: 'fab', iconName: 'reddit-square'}"/>
+            </div>
+          </network>
+        </div>
+      </social-sharing>
       <div class="row">
         <q-btn
           to="/blog"
@@ -34,6 +65,10 @@ export default {
     },
     metaKeywords () {
       return this.getMeta('keywords') || 'Software Engineering'
+    },
+    fullUrl () {
+      const hostname = window.location.hostname
+      return `${hostname}${this.$route.fullPath}`
     }
   },
   methods: {
@@ -58,6 +93,23 @@ export default {
 @import '~variables'
 $h-margins = 2rem
 $p-margins = 1.5rem
+.socials {
+  display flex
+  justify-content center
+  align-items center
+}
+/deep/ .social-icon {
+  cursor pointer
+  margin 0 1rem
+  display inline
+  font-size 2rem
+  vertical-align middle
+  color $amber-9
+  :hover {
+    color $secondary
+    transform translateY(-3px)
+  }
+}
 h3 {
   margin-top 0
 }
