@@ -206,14 +206,13 @@ h3 {
     padding 0 5px
   }
   pre {
-    background-color $blue-grey-11
+    background-color $blue-grey-8
     padding 1rem
     border-radius .5rem
     box-shadow 0 5px 20px rgba(black, .12)
-    color $light-d !important
     overflow-x auto
     code {
-      color $grey-8
+      color $grey-1
       background-color transparent
     }
   }
