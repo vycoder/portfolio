@@ -74,9 +74,9 @@
         <div class="links__item" @click="openURL('https://medium.com/@yhev')">
           <font-icon :icon="{ prefix: 'fab', iconName: 'medium'}" />
         </div>
-        <div class="credits">
-          <p>&#169; {{year}}. <a @click="showCreditsModal()">Credits.</a></p>
-        </div>
+      </div>
+      <div class="credits">
+        <p>&#169; {{year}}. <a @click="showCreditsModal()">Credits.</a></p>
       </div>
     </q-layout-drawer>
 
@@ -201,9 +201,12 @@ img {
   }
 }
 .credits {
-  color white
+  color $grey-4
   font-size .8rem
-  margin-top 3rem
+  position absolute
+  left: 50%
+  bottom 1%
+  transform translateX(-50%)
   a, a:link, a:visited {
     color white
     cursor pointer
