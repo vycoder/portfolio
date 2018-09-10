@@ -35,6 +35,13 @@
           </network>
         </div>
       </social-sharing>
+      <div class="comments q-mt-lg">
+        <vue-disqus
+          shortname="josephharveyangeles"
+          :title="metaTitle"
+          :identifier="$route.path"
+          :url="urlWithProtocol" />
+      </div>
       <div class="row">
         <q-btn
           to="/blog"
@@ -65,6 +72,9 @@ export default {
     },
     metaKeywords () {
       return this.getMeta('keywords') || 'Software Engineering'
+    },
+    urlWithProtocol () {
+      return window.location.protocol + '//' + this.fullUrl
     },
     fullUrl () {
       const hostname = window.location.hostname

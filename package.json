@@ -15,6 +15,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.2.0",
     "@fortawesome/free-solid-svg-icons": "^5.2.0",
     "@fortawesome/vue-fontawesome": "^0.1.1",
+    "vue-disqus": "^3.0.4",
     "vue-social-sharing": "^2.3.3"
   },
   "devDependencies": {

@@ -5,7 +5,8 @@ module.exports = function (ctx) {
     plugins: [
       'particles',
       'fontawesome',
-      'social'
+      'social',
+      'disqus'
     ],
     css: [
       'app.styl'
