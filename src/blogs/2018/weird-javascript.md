@@ -94,12 +94,12 @@ Hello world
 ```
 
 ### Single Threaded and Synchronous
-The javascript is single threaded which means, command is being ran one at a time (under the hood, the browser maybe not) and synchronous which means, in order. Code is being ran one at a time and in order.
+The Javascript language is single threaded which means, command is being ran one at a time (under the hood, the browser maybe not) and synchronous which means, in order. Code is being ran one at a time and in order.
 
 ### The Execution Stack
-Everytime a function is invocated, a new execution context is created and is placed on top of the execution stack, whichever is on top is the one currently running, once it finished, it gets popped off the stack.
+Everytime a function is invocated, a new execution context is created and is placed on top of the execution stack, whichever is on top is the one currently running, once it finishes, it gets popped off the stack.
 
-Which means, each function call gets it's own separate and independent execution context, and it's own `this`. Note that, the `variable environment` is not the same with `this`.
+Which means, each function call gets its own separate and independent execution context, and its own `this`. Note that, the `variable environment` is not the same with `this`.
 
 ```javascript
 function b() {
@@ -127,7 +127,7 @@ undefined
 ```
 
 ### The Outer Environment
-In every execution context, there's a reference to the outer environment. If a certain variable is not found in the current `variable environment`, javascript will look for it at the outer environment which refers to `variable environment` of the one that created it, this does **NOT** refer to the previous execution context on the stack but from it's lexical environment, or the execution environment of where it was written.
+In every execution context, there's a reference to the outer environment. If a certain variable is not found in the current `variable environment`, Javascript will look for it at the outer environment which refers to the `variable environment` of the one that created it, this does **NOT** refer to the previous execution context on the stack but from it's lexical environment, or the execution environment of where it was written.
 ```javascript
 function b() {
   console.log(myVar);
@@ -170,11 +170,15 @@ Also note that in the global scope, the `variable environment` resides in the gl
 It's a bit confusing but just remember that in the global execution context, we could roughly consider the `variable environment`, `this` and the `outer environment` to be on the same place which is the global `window` object.
 
 ##### Let
-The block-scoping variable  declaration of javascript ES6. The variable is only available on it's own block.
+The block-scoping variable  declaration of Javascript ES6. The variable is only available on it's own block.
 ```javascript
 if (a > b) {
   let c = true;
 }
+console.log(c);
+```
+```
+undefined
 ```
 
 ### Primitive Types
@@ -361,7 +365,7 @@ if (a || a === 0) {
   console.log('Somethign is there');
 }
 ```
-Just never check existence like this if you expect the value could be `0`.
+Just never check existence in this way if you expect the value could be `0`.
 
 ##### Default Values
 Using type coercion and operator precedence, there's a common trick being used to create default values.
@@ -389,7 +393,7 @@ function greet(name='Your name here') {
 ```
 
 ### Objects
-The dot `.` operator and the computed member access `[]` have the same precedence and associativity.
+Objects in Javascript is the same as what you expect from other languages. It's a container of primitives and other objects, which can be accessed by `.` or `[]`. The dot `.` operator and the computed member access `[]` have the same precedence and associativity.
 
 ```javascript
 var person = new Object();
@@ -438,9 +442,9 @@ greet({
 ```
 
 ### Functions
-In Javascript, everything is either an object or a primitive. Functions are treated like usual objects as well, they could be assigned to variables, pass them around, or create them on the fly. Javascript functions are first-class functions.
+In Javascript, everything is either an object or a primitive. Functions are treated like usual objects as well, they could be assigned to variables, passed around, or created on the fly. Javascript functions are first-class functions.
 
-Think of functions as special type of object that can have properties, another function but also has an invocable special property `code` and a `name`.
+Think of functions as special type of object that can have properties but functions also has an invocable special property called `code` and a string property called `name`.
 
 ```javascript
 function greet() {
@@ -602,7 +606,7 @@ holmes.greet();     // 'Hello there, Sherlock'
 watson.greet();     // 'Hello there, John'
 
 ```
-The `this.a` in `sayMayName` refers to the particular object from the the it was called. Remember `this` always refer to an object. But now consider the following:
+The `this.a` in `sayMayName` refers to the particular object it's attached to on the time it was called. Always remember, `this` always refers to an object. But now consider the following:
 ```javascript
 var d = {
   name: '',
@@ -621,11 +625,11 @@ console.log(d.name);    // Holmes
 console.log(name);      // Watson
 ```
 
-What happened? When `setName` was called inside `d.fun`, the `this` operator is now pointing to the global object. The object that `this` was referring to was lost and defaults back to the global object.
+What happened? When `setName` was called inside `d.fun`, the `this` operator is now pointing to the global object. The object that `this` was referring to was lost and defaulted back to the global object.
 
 To understand this, remember that `this` is always bound to the object that called it. `d.fun()`, `fun`'s `this` is bound to `d`, but right before `fun()` finished executing, `setName()` was invoked but isn't bound to any object (it was invoked by `fun`, but `fun` is not an object), hence it got thrown off to the global object.
 
-A common solution for solving this problem is usually done by exploiting the concept of how the execution context behaves when it can't find a certain variable in the current execution context, it goes out to the outer environment that points to it's parent lexical context until it finds it.
+A common solution for solving this problem is usually done by exploiting the concept of how the execution context behaves when it can't find a certain variable, it goes out to the outer environment that points to its parent lexical context until it finds it.
 ```javascript
 var e = {
   name: '',
@@ -644,7 +648,7 @@ e.fun();
 console.log(e.name);    // Watson
 // console.log(name);   // Error
 ```
-When `setName` executes, `self` is not present in it's `variable environment`, so it goes to look on the `outer environment` that happens to point to `fun`'s execution context, where it finds `self`. `setName` is written inside `fun` that's why the `outer environment` points to `fun` not because it's right below `setName`'s execution context on the execution stack.
+When `setName` executes, `self` is not present in it's `variable environment`, so it goes to look on the `outer environment` which happens to point to `fun`'s execution context, where it finds `self`. `setName` is written inside `fun` that's why the `outer environment` points to `fun` and not because it's right below `setName`'s execution context on the execution stack.
 
 There are other ways to get around and explicitly bind `this` to certain object by using Javascript's built-in methods, `call()`, `apply()` and `bind()`.
 
@@ -671,7 +675,7 @@ John Watson
 ```
 
 ##### `apply()`
-With respect `this` binding, `call(..)` and `apply(..)` are identical. They do behave differently with their additional parameters.
+With respect to `this` binding, `call(..)` and `apply(..)` are identical. They do behave differently when used with their additional parameters.
 ```javascript
 var sherlock = {
   firstName: 'Sherlock',
@@ -711,7 +715,7 @@ arg1 arg2
 ------
 ```
 
-`apply()` just unrolls its array arguments and provide it as the `targetFn`'s arguments. It doesn't seem useful at first glance but it's very convenient if you are doing some array manipulations and you want the result to be used as the arguments to a generic target function.
+`apply()` just unrolls its array arguments and provide it as the `targetFn`'s arguments. It doesn't seem useful at first glance but it's very convenient if you are doing some array manipulations and you want the result to be used as arguments for a generic target function.
 
 ```javascript
 function someFrameworkTask = function(targetFn, targetOb, arrArgs) {
@@ -759,9 +763,9 @@ Sherlock Holmes
 Sherlock Holmes
 Sherlock Holmes
 ```
-We created a `hardbound` variable whose value is just a function that wraps a `call` invocation, explicitly binding it to `sherlock`. When `hardbound()` is invoked, it's the same as calling `call(sherlock)`, but this wrapping mechanism that we have implemented has made the binding permanent. Invoking `hardbound.call(watson)` would only bind `this` to the anymous wrapper function that will just be ignored because when `logName.call(sherlock)` is invoked.
+We created a `hardbound` variable whose value is just a function that wraps a `call` invocation, explicitly binding it to `sherlock`. When `hardbound()` is invoked, it's the same as calling `call(sherlock)`, but this wrapping mechanism that we have implemented has made the binding permanent. Invoking `hardbound.call(watson)` would only bind `this` to the anonymous wrapper function that will just be ignored when `logName.call(sherlock)` is invoked.
 
-This hard binding is so common that it was also provided by the Javascript engine called `bind()`. Of course it's implementation is far more robust and less error prone than ours.
+This hard binding is so common that it was also provided by the Javascript engine called `bind()`. Of course its implementation is far more robust and less error prone than ours.
 
 
 ##### `bind()`
@@ -789,7 +793,7 @@ John Watson
 Note that it's still possible to change this binding if we used the keyword `new` that we'll explore in a different chapter.
 
 ##### Function Currying
-Passing parameters to `bind()` does something interesting. Currying is creating a copy of a function with some preset parameters or partial application of parameters.
+Passing parameters to `bind()` does something interesting, it gave us the ability to curry. Currying is creating a copy of a function with some preset parameter values or partial application of parameters.
 ```javascript
 function power(base, exponent) {
   return base ** exponent;
@@ -812,7 +816,7 @@ four(5);      // 4. 5 will be passed as the 3rd parameter that we're just ignori
 Currying, is widely used in Functional style of programming. We could also create the same behavior by exploiting closures that will be discussed in the next sections.
 
 ##### Function Overloading
-Javascript has no function overloading capabilities because Functions are treated are objects, unlike in other languages. It's still possible to convey an overloading concept buy utilizing default parameters:
+Javascript has no function overloading capabilities because functions are treated as objects, unlike in other languages. Javascript doesn't care about the number of parameters, it just care about the name of the function you're trying to invoke. If your function expect 2 parameters but you only pass 1 argument, the second parameter will be `undefined`. Likewise, if you expect 2 parameters and you pass 3 arguments, you'll just have no straightforward way to access the third parameter (unless you access the built-in `arguments` property a functions have).  It's still possible to convey a somewhat cleaner overloading concept by utilizing default parameters:
 
 ```javascript
 function greet(firstName, greeting = "Hi", question="How are you?") {
@@ -881,7 +885,7 @@ f {
   hello: 'hey'
 }
 ```
-But still, don't forget that these are still normal functions. When invoked without `new`, `this` would refer to the global object like what we've always known. That's why it's a convention that any function intended to use as function constructors always starts it capital letters.
+But still, don't forget that these are still normal functions. When invoked without `new`, `this` would refer to the global object like what we've learned. That's why it's a convention that any function intended to use as function constructors should always start with capital letters.
 ```javascript
 function Foo(){
   console.log(this);
@@ -921,7 +925,7 @@ num.toFixed(2);
 var tesla = new String("Nikola Tesla");
 tesla.toLowerCase();
 ```
-Just a word of caution, be careful in using these wrapper objects because it can cause bugs specially when it comes to comparisons and coercion takes place.
+Just a word of caution, be careful in using these wrapper objects because it can cause bugs specially when it comes to comparisons where coercion is taking place.
 ```javascript
 var meaningOfLife = 42;
 var is42 = new Number(42);
@@ -960,11 +964,13 @@ undefined
 ```
 In this example, we see that `new` overrides what `this` refers to explicitly bound by `bind`. It always creates a new empty object, that's why `undefined` was always the result.
 
-In summary, the order of precedence from to determine the `this` binding would be:
+In summary, the order of precedence to determine the `this` binding would be the following, the first rule that applies would be the `this` binding:
+
 1. `new` binding - the newly created object.
 2. Explicit binding (`call`, `apply` or `bind`) - whatever the explicit object was
 3. Implicit binding - the owning or containing object from which the function was called.
 4. Default binding - if none of the above it falls back to the global object, (or `undefined` on `strict-mode`)
+
 
 ### Closures
 The ability to treat functions as values, brings up an interesting question. What happens to the functions' local variables when the said function has finished executing and was already popped off the execution stack?
@@ -986,7 +992,7 @@ Hi Holmes
 Hello Watson
 Sup Morty
 ```
-Remember that each function can access it's outer environment whenever it wasn't able to look for a certain variable in it's own environment? Not only that, functions in Javascript also maintains a reference to it's outer environment even though said environment has already finished executing.
+Remember that each function can access its outer environment whenever it wasn't able to look for a certain variable in its own environment? Not only that, functions in Javascript also maintains a reference to its outer environment even though said environment has already finished executing.
 
 In the example above, `sayHi` is a reference to a function where `'Hi'` was passed as an argument to the parameter, said function returns yet another function where said parameter is being used in addition to the latter functions' own parameter.
 
@@ -1025,7 +1031,7 @@ But instead, when we run this code we would get:
 3
 3
 ```
-Why? The value that's being pushed in `arr` is a function that access the variable `i`. We know that functions doesn't get evaluated until invocation. Only when `fs[0]()` is run that it looks for `i` and has to go to it's outer environment to resolve the value. But `buildFunctions()` has already been executed when we assigned the resulting array to `fs`. `buildFunctions`'s variable environment still persists but `var i`'s value has already been incremented to `3` when it finished running. Hence, when we try to reference it on our `fs[n]()` calls, what we get is the current state of the enclosing variable environment of `buildFunctions`.
+Why? The value that's being pushed in `arr` is a function that accesses the variable `i`. We know that functions doesn't get evaluated until invocation. Only when `fs[0]()` is run that it looks for `i` and has to go to its outer environment to resolve the value. But `buildFunctions()` has already been executed when we assigned the resulting array to `fs`. `buildFunctions`'s variable environment still persists but `var i`'s value has already been incremented to `3` when it finished running. Hence, when we try to reference it on our `fs[n]()` calls, what we get is the current state of the enclosing variable environment of `buildFunctions`.
 
 We could around this by using es6's `let` variable declaration to let Javascript know that we're interested only on the block level scope value of `i`:
 ```javascript
@@ -1040,7 +1046,7 @@ function buildFunctions() {
 }
 ```
 
-Or by adding what we know from IIFE's and exploiting it we could come up with something like:
+Or by adding what we know from IIFEs and exploiting it, we could come up with something like:
 ```javascript
 function buildFunctions() {
   const arr = [];
@@ -1058,11 +1064,11 @@ function buildFunctions() {
 
 var fs = buildFunctions();
 ```
-This code is confusing and would be frowned upon when used in the real world but it does perferctly demonstrate what we've learned about Javascript's Closures, IIFEs and scope chains. `arr` will contain a value that is, still a function but that function is a result of an immediately-invoked function that encapsulates `i` as `j`.
+This code is confusing and would be frowned upon when used in the real world but it does perfectly demonstrates what we've learned about Javascript's Closures, IIFEs and scope chains. `arr` will contain a value that is, still a function but that function is a result of an immediately-invoked function that encapsulates `i` as `j`.
 
 Now, when we invoked `fs[0]();`, `console.log(j)` will be executed, it will look for the variable `j` but since it wasn't in its own variable environment, it will then find it as the parameter of the enclosing IIFE which was in turn a copy of the value of the parameter `i` of the enclosing function. Remember that objects are pass by reference and primitives are pass by values? The value of `j` is whatever the value of `i` at the time of its execution, subsequent changes to `i` will not affect `j`.
 
-Going back to the original example, if it wasn't a function and we immediately used the value of `i` like `arr.push(i)`, it would be a different scenario. But since it's a function along with the behavior of closures we are somehow able to retain the state of `buildFunctions`. This behavior is futher demonstrated by the code below:
+Going back to the original example, if it isn't a function and we immediately used the value of `i` like `arr.push(i)`, it would be a different scenario. But since it's a function along with the behavior of closures we are somehow able to retain the state of `buildFunctions`. This behavior is further demonstrated by the code below:
 ```javascript
 function saveState() {
   const arr = [];
@@ -1225,9 +1231,9 @@ Object.getPrototypeOf("new String") === Object.getPrototypeOf(myString)
 
 ### Prototypical Inheritance
 The prototype is also an object and thus it also have a prototype. This is how the concept of inheritance is being achieved by Javascript. Instead of the conventional classes, Javascript objects are composition of various prototypes that will ultimately define the said object's behavior.
-When a property is not found on the object, it will search its prototype and if still not found it will look on the prototype's prototype and further down the *prototype chain* until it finds the said property.
+When a property is not found on the object, it will search its prototype and if not found, it will look on the prototype's prototype and so on, further down the *prototype chain* until it eventually finds the said property.
 
-To demonstrate this, let's manually modify an object's prototype. Note that this is for demonstration purposes only and should never done in actual development or you might mess up the background decision making of the Javascript engine as it runs your code.
+To demonstrate this, let's manually modify an object's prototype. Note that this is for demonstration purposes only and should never be done in actual development or you might mess up the background decision making of the Javascript engine as it runs your code.
 ```javascript
 var human = {
   firstName: 'Default',
@@ -1298,12 +1304,12 @@ for (var prop in z) {
   }
 }
 ```
-> word of caution, don't use `for`..`in` when iterating array values, because you could also iterate through the array properties as well not just the elements.
+> word of caution, don't use `for`..`in` when iterating array values, because you could also iterate through the properties of the Array object itself as well, not just the elements.
 ```
 x
 y
 ```
-The example below is a contrived version of the inner workings of the underscores `extend` function. `createArray()` and `lib` is actually not necessary but important to demonstrate how javascript libraries exploit functional programming to implement interesting stuff like this. `createAssigner` takes some sort of utility function, in this case a function that determines all existing props in an object, then returns another function that takes an `obj` parameter where the `getKeysFunc` will be used against. `lib` is now like an object where all utility functions like `extend` exists by composing and chaining utility functions like `createAssigner`. Also notice that the resulting return function of `createAssigner` only takes one parameter but when we used `lib.extend` we passed 3 arguments. If this were any other languages this wouldn't be possible but since javascript doesn't care about parameter length, all it cares about is the function name, it's possible to not define all parameters if we can also access them via `arguments`.
+The example below is a contrived version of the inner workings of the lodash's `extend` function. `createArray()` and `lib` is actually not necessary but important to demonstrate how javascript libraries exploit functional programming to implement interesting stuff like this. `createAssigner` takes some sort of utility function, in this case a function that determines all existing props in an object, then returns another function that takes an `obj` parameter where the `getKeysFunc` will be used against. `lib` is now an object where all utility functions like `extend` exists by composing and chaining utility functions like `createAssigner`. Also notice that the resulting return function of `createAssigner` only takes one parameter but when we use `lib.extend` we passed 3 arguments. If this were any other language this wouldn't be possible but since Javascript doesn't care about parameter length, and all it cares about is the function name, it's possible to not define all parameters. After all, we can still access them via `arguments`.
 ```javascript
 function createAssigner(getKeysFunc)
   return function(obj) {
@@ -1361,7 +1367,7 @@ x
 y
 z
 ```
-`ob1` extended it's behavior by adding all properties and methods coming from `ob2` and `ob3`. And we did that dynamically at run-time.
+`ob1` extended its behavior by adding all properties and methods coming from `ob2` and `ob3`. And we did that dynamically at run-time.
 
 #### Function Constructor's `.prototype`
 In every javascript function there's a `.prototype` property **NOT** to be confused with `.__proto__` property. The latter is the fallback source of any object, or the source template, like what we've discussed before. On the other hand, `.prototype` is being set and used when a function is used as a function constructor upon using the `new` operator.
@@ -1382,10 +1388,10 @@ console.log(holmes.__proto__ === Person.prototype === watson.__proto__);
 true
 true
 ```
-Does it make sense? `Person` itself is a function that's why its `__proto__` and `foo`'s refer to the same thing. But then `holmes` and `watson`'s `__proto__` points to `Person.prototype` because they were created with `new`. Hence, `.prototype` of a function a is a special property that points to the object that will be the `__proto__` of all the objects that will be created out of it via `new`.
+Does it make sense? `Person` itself is a function that's why its and `foo`'s `__proto__` refer to the same thing. But then `holmes` and `watson`'s `__proto__` points to `Person.prototype` because they were created with `new`. Hence, `.prototype` of a function a is a special property that points to the object that will be the `__proto__` of all the objects that will be created out of it via `new`.
 
 #### Extending via `.prototype`
-Using `.prototype` we can then now extend all the objects behavior by adding or modifying it.
+Using `.prototype` we can now extend all the objects behavior by adding or modifying it.
 ```javascript
 function Person(firstname, lastname) {
   this.firstname = firstname;
@@ -1450,10 +1456,10 @@ class InformalPerson extends Person {
   }
 }
 ```
-Tread carefully though, while it looks like Java classes and other conventional OOP classes, it's very important to remember that these are still just functions constructors under the hood and they create objects. Don't try wrapped your head against strict OOP relationships when using ES6 classes.
+Tread carefully though, while it looks like Java classes and other conventional OOP classes, it's very important to remember that these are still just function constructors under the hood and they create objects. Don't try to strictly wrap your head around conventional OOP relationships when using ES6 classes.
 
 ##### Figuring out what something is, `typeof` and `instanceof`
-Due to the dynamic nature of Javascript we will sometimes find ourselves trying to figure out the type of the object truly is for some reason or another.
+Due to the dynamic nature of Javascript we will sometimes find ourselves trying to figure out what the type of the object truly is for some reason or another.
 
 ```javascript
 var num = 4;
@@ -1470,7 +1476,7 @@ console.log(typeof undefined);          // undefined
 console.log(typeof null);               // object
 console.log(holmes instanceof Person);  // true
 ```
-We can see in the code above how `typeof` and `instanceof` works and immediately you should pay attention on `arr` and `null`. `null` apparently is also an `object`, arrays as well but it does make sense since arrays aren't really primitives but a type of an object. That would seem like a problem, in order to determine if an object is an array, we could do something like this:
+We can see in the code above how `typeof` and `instanceof` works, and immediately you should pay attention to `arr` and `null`. `null` apparently is also an `object`, and same as arrays. It does make sense since arrays aren't really primitives but a type of an object. In order to determine if an object is an array, we could do something like this:
 ```javascript
 // a little weird, more of a workaround
 console.log(Object.prototype.toString.call(arr) === '[object Array]');      // true
@@ -1481,7 +1487,7 @@ console.log(Array.isArray(arr));    // true
 ```
 
 ### Strict Mode
-We've learned that Javascript is a bit liberal or flexible, it's useful but sometimes we want it to be a bit stricter.
+We've learned that Javascript is a bit liberal or flexible. It's useful but sometimes we want it to be a bit stricter if we use strict mode.
 ```javascript
 var person;
 persom = {};            // suppose we accidentally typed a typo
