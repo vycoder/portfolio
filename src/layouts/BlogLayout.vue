@@ -224,6 +224,7 @@ h3 {
     code {
       color $grey-1
       background-color transparent
+      padding 0
     }
   }
   ins {
@@ -232,6 +233,22 @@ h3 {
     width 100%
     display block
     margin 3rem auto
+  }
+  table {
+    border-width 1px
+    border-style solid
+    border-color $blue-grey-4
+    border-spacing 1px
+    width 100%
+    th {
+      border 1px solid $blue-grey-4
+      background rgba($blue-grey-5, .5)
+      padding 1rem
+    }
+    td {
+      border 1px solid $blue-grey-4
+      padding .5rem
+    }
   }
 }
 </style>

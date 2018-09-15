@@ -1,6 +1,6 @@
 <template>
-  <q-card>
-    <q-card-media @click.native="$router.push(to)">
+  <q-card @click.native="$router.push(to)">
+    <q-card-media>
       <img :src="image">
     </q-card-media>
     <q-card-main>

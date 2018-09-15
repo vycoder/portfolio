@@ -20,6 +20,12 @@
         "title": "Introducing Chronocross",
         "date": "August 6, 2018",
         "to": "2018/chronocross"
+      },
+      {
+        "image": "2018/weird-javascript.png",
+        "title": "Javascript's Weird Parts",
+        "date": "September 15, 2018",
+        "to": "2018/weird-javascript"
       }
     ]
   },
@@ -30,7 +36,7 @@
     },
     {
       "section": "2018",
-      "entries": ["chronocross"]
+      "entries": ["chronocross", "weird-javascript"]
     },
     {
       "section": "",
@@ -52,6 +58,11 @@
       "title": "Introducing Chronocross - A Simple Productivity App built on Quasar and Firebase",
       "description": "What's the best way to explore a new framework? Build something that solves your personal problem. Chronocross is a productivity app, a combination of the Pomodoro Technique and Eisenhower matrix.",
       "keywords": "Firebase, Vuejs, Vue, Quasar, Pomodoro, Eisenhower, Productivity, Cordova, Mobile App"
+    },
+    "2018-weird-javascript": {
+      "title": "Javascript: The Weird Parts ",
+      "description": "Javascript is weird, let's get that out of the way. Still, it's not like Javascript is illogical, in fact most of it's weirdness is a side effect of it's power and coping up with programmers whims. But once you understand why it does what it does, we'll learn that it's not that complex at all.",
+      "keywords": "Javascript, JS, Learning Javascript, Understanding the weird parts"
     }
   }
 }

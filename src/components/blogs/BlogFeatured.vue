@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h6 class="series text-grey-7 font-condensed-roboto q-mb-lg">CodeNo0b's Guide Out of Mediocrity</h6>
+    <h6 class="series text-grey-7 font-condensed-roboto q-mb-lg">2018</h6>
     <div class="row gutter-x-md cngom">
       <div
-        v-for="(entry, k) in codeNoobsGuides"
+        v-for="(entry, k) in currentYear"
         :key="k"
         class="col-4 col-md-4 col-sm-6 col-xs-12 q-mb-lg" >
         <thumbnail
@@ -13,10 +13,10 @@
           :subtitle="entry.date" />
       </div>
     </div>
-    <h6 class="series text-grey-7 font-condensed-roboto q-mb-lg">2018</h6>
+    <h6 class="series text-grey-7 font-condensed-roboto q-mb-lg">CodeNo0b's Guide Out of Mediocrity</h6>
     <div class="row gutter-x-md cngom">
       <div
-        v-for="(entry, k) in currentYear"
+        v-for="(entry, k) in codeNoobsGuides"
         :key="k"
         class="col-4 col-md-4 col-sm-6 col-xs-12 q-mb-lg" >
         <thumbnail
