@@ -7,8 +7,8 @@
         :key="k"
         class="col-4 col-md-4 col-sm-6 col-xs-12 q-mb-lg" >
         <thumbnail
+          @click="$router.push(`blog/${entry.to}`)"
           :image="`statics/images/blogs/${entry.image}`"
-          :to="`blog/${entry.to}`"
           :title="entry.title"
           :subtitle="entry.date" />
       </div>
@@ -20,8 +20,8 @@
         :key="k"
         class="col-4 col-md-4 col-sm-6 col-xs-12 q-mb-lg" >
         <thumbnail
+          @click="$router.push(`blog/${entry.to}`)"
           :image="`statics/images/blogs/${entry.image}`"
-          :to="`blog/${entry.to}`"
           :title="entry.title"
           :subtitle="entry.date" />
       </div>

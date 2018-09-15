@@ -1,11 +1,11 @@
-<template>
-  <q-card @click.native="$router.push(to)">
+<template functional>
+  <q-card @click.native="listeners.click">
     <q-card-media>
-      <img :src="image">
+      <img :src="props.image">
     </q-card-media>
     <q-card-main>
-      <p class="title text-secondary">{{title}}</p>
-      <p class="subtitle text-grey-8">{{subtitle}}</p>
+      <p class="title text-secondary">{{props.title}}</p>
+      <p class="subtitle text-grey-8">{{props.subtitle}}</p>
     </q-card-main>
   </q-card>
 </template>
