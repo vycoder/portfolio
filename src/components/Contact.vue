@@ -28,7 +28,7 @@
   }
 }
 h1 {
-  font-family 'Qwigley'
+  font-family 'Cute Font'
   margin 0 auto
   color white
   font-size 6rem

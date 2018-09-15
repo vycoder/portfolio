@@ -127,7 +127,7 @@ export default {
   },
   meta: {
     link: {
-      googlefonts: { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=VT323|Qwigley|Roboto+Condensed' }
+      googlefonts: { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=VT323|Cute+Font|Roboto+Condensed' }
     }
   }
 }
@@ -142,9 +142,9 @@ h1 {
   width 100%
   text-align center
   transform translate(-50%, 160%)
-  font-size 3.2rem
+  font-size 3rem
   font-weight 500
-  font-family 'Qwigley'
+  font-family 'Cute Font'
   margin 0
 }
 #logo-box {
