@@ -56,7 +56,7 @@
         </q-item>
       </q-list>
       <div class="links q-mt-lg">
-        <a class="links__item" href="mailto:josephharveyangeles@gmail.com">
+        <a class="links__item" @click="openURL('https://m.me/joseph.harvey')">
           <font-icon icon="envelope" />
         </a>
         <div class="links__item" @click="openURL('https://wakatime.com/@yev')">
