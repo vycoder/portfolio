@@ -68,7 +68,7 @@ export default {
       return this.getMeta('title') || 'Joseph Harvey Angeles - Blog'
     },
     metaDescription () {
-      return this.getMeta('description') || "Joseph Harvey Angeles's random thoughts"
+      return this.getMeta('description') || "Joseph Harvey Angeles' random thoughts"
     },
     metaKeywords () {
       return this.getMeta('keywords') || 'Software Engineering'
