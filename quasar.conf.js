@@ -1,12 +1,7 @@
-// Configuration for your app
 module.exports = function (ctx) {
   return {
-    // app plugins (/src/plugins)
     plugins: [
-      'particles',
-      'fontawesome',
-      'social',
-      'disqus'
+      'fontawesome'
     ],
     css: [
       'app.styl'
@@ -18,7 +13,7 @@ module.exports = function (ctx) {
       // 'mdi',
       // 'fontawesome'
     ],
-    supportIE: true,
+    supportIE: false,
     build: {
       scopeHoisting: true,
       vueRouterMode: 'history',
@@ -31,22 +26,8 @@ module.exports = function (ctx) {
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules|quasar)/
+          exclude: /node_modules/
         })
-      },
-      chainWebpack (chain) {
-        chain.module.rule('md')
-          .test(/\.md/)
-          .use('vue-loader')
-          .loader('vue-loader')
-          .end()
-          .use('vue-markdown-loader')
-          .loader('vue-markdown-loader/lib/markdown-compiler')
-          .options({
-            raw: true
-          })
-        chain.resolve.alias.set('blogs', require('path').resolve(__dirname, './src/blogs'))
-        chain.resolve.alias.set('statics', require('path').resolve(__dirname, './src/statics'))
       }
     },
     devServer: {
@@ -70,36 +51,21 @@ module.exports = function (ctx) {
         'QListHeader',
         'QItem',
         'QItemMain',
-        'QItemSide',
-        'QTimeline',
-        'QTimelineEntry',
-        'QSlideTransition',
-        'QCard',
-        'QCardMedia',
-        'QCardTitle',
-        'QCardMain',
-        'QModal'
+        'QItemSide'
       ],
       directives: [
-        'Ripple',
-        'CloseOverlay'
+        'Ripple'
       ],
       // Quasar plugins
       plugins: [
         'Notify',
-        'AddressbarColor',
         'Meta'
       ]
       // iconSet: ctx.theme.mat ? 'material-icons' : 'ionicons'
       // i18n: 'de' // Quasar language
     },
     // animations: 'all' --- includes all animations
-    animations: [
-      'fadeIn',
-      'fadeOut',
-      'zoomInUp',
-      'zoomOutDown'
-    ],
+    animations: [],
     ssr: {
       pwa: false
     },

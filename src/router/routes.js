@@ -1,40 +1,10 @@
-import {blogRoutes} from 'statics/data/blogs.json'
-const getBlogRouteChildren = () => {
-  const routes = []
-  for (let elem of blogRoutes) {
-    for (let entry of elem.entries) {
-      const parentPath = elem.section ? `${elem.section.toLowerCase()}/` : ''
-      const name = elem.section ? `${elem.section.toLowerCase()}-${entry}` : entry
-      const path = `${parentPath}${entry}`
-      routes.push({
-        path,
-        name,
-        component: resolve => require([`blogs/${path}.md`], resolve)
-      })
-    }
-  }
-  return routes
-}
+
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/RootLayout.vue'),
+    component: () => import('layouts/IndexLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') },
-      {
-        path: 'blog',
-        component: () => import('layouts/BlogLayout.vue'),
-        children: getBlogRouteChildren()
-      },
-      {
-        path: 'projects',
-        component: () => import('layouts/ProjectsLayout.vue'),
-        children: [
-          { path: '', name: 'Featured', component: () => import('pages/projects/ProjectsFeatured.vue') },
-          { path: 'archived', name: 'Archived', component: () => import('pages/projects/ProjectsArchived.vue') },
-          { path: 'unistuff', name: 'UniStuff', component: () => import('pages/projects/ProjectsUniStuff.vue') }
-        ]
-      }
+      { path: '', component: () => import('pages/Index.vue') }
     ]
   }
 ]

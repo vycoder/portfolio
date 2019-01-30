@@ -1,7 +1,7 @@
 {
-  "name": "porfolio",
-  "version": "4.0.0",
-  "description": "Joseph Harvey Angeles - Portfolio Website",
+  "name": "portfolio",
+  "version": "5.0.0",
+  "description": "Joseph Harvey Angeles | Software Engineer",
   "productName": "Joseph Harvey Angeles | Software Engineer",
   "cordovaId": "org.cordova.quasar.app",
   "author": "yev <josephharveyangeles@gmail.com>",
@@ -11,12 +11,9 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.2",
-    "@fortawesome/free-brands-svg-icons": "^5.2.0",
-    "@fortawesome/free-solid-svg-icons": "^5.2.0",
-    "@fortawesome/vue-fontawesome": "^0.1.1",
-    "vue-disqus": "^3.0.4",
-    "vue-social-sharing": "^2.3.3"
+    "@fortawesome/fontawesome-svg-core": "^1.2.13",
+    "@fortawesome/free-brands-svg-icons": "^5.7.0",
+    "@fortawesome/vue-fontawesome": "^0.1.5"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
@@ -29,10 +26,8 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-vue": "^4.3.0",
-    "quasar-cli": "^0.17.8",
-    "strip-ansi": "^3.0.1",
-    "vue-markdown-loader": "^2.4.1",
-    "vue-particles": "^1.0.9"
+    "quasar-cli": "^0.17.0",
+    "strip-ansi": "=3.0.1"
   },
   "engines": {
     "node": ">= 8.9.0",
