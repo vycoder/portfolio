@@ -1,7 +1,8 @@
 module.exports = function (ctx) {
   return {
     plugins: [
-      'fontawesome'
+      'fontawesome',
+      'colors'
     ],
     css: [
       'app.styl'
@@ -28,6 +29,20 @@ module.exports = function (ctx) {
           loader: 'eslint-loader',
           exclude: /node_modules/
         })
+      },
+      chainWebpack (chain) {
+        chain.module.rule('md')
+          .test(/\.md/)
+          .use('vue-loader')
+          .loader('vue-loader')
+          .end()
+          .use('vue-markdown-loader')
+          .loader('vue-markdown-loader/lib/markdown-compiler')
+          .options({
+            raw: true
+          })
+        chain.resolve.alias.set('blogs', require('path').resolve(__dirname, './src/blogs'))
+        chain.resolve.alias.set('statics', require('path').resolve(__dirname, './src/statics'))
       }
     },
     devServer: {

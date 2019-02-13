@@ -1,4 +1,18 @@
+import BlogEntries from 'statics/data/blogs.json'
 
+const blogRoutes = Object.keys(BlogEntries).map(section => {
+  const children = BlogEntries[section].map(child => ({
+    path: child.id,
+    name: child.id,
+    component: resolve => require([`blogs/${section}/${child.id}.md`], resolve)
+  }))
+  return {
+    path: section,
+    name: section,
+    component: () => import('layouts/BlogLayout.vue'),
+    children
+  }
+})
 const routes = [
   {
     path: '/',
@@ -9,9 +23,24 @@ const routes = [
   },
   {
     path: '/blog',
-    component: () => import('layouts/MainLayout.vue'),
+    component: () => import('layouts/BlogLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Blogs.vue') }
+      {
+        path: '',
+        name: 'BlogRoot',
+        component: () => import('pages/Blogs.vue')
+      },
+      {
+        path: ':id',
+        name: 'BlogIndex',
+        component: () => import('pages/Blogs.vue')
+      },
+      {
+        path: 'thoughts-on/:tag',
+        name: 'thoughts',
+        component: () => import('pages/ThoughtsOn.vue')
+      },
+      ...blogRoutes
     ]
   },
   {

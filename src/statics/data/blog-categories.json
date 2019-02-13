@@ -1,0 +1,34 @@
+{
+  "root": {
+    "title": "Blogs",
+    "description": "I use writing as another form of learning. Here are my latest musings, epiphany, discoveries, rants, and what nots."
+  },
+  "codeNo0bsGuide": {
+    "title": "CodeNo0b's Guide out of Mediocrity",
+    "description": "A series of articles that maps out and summarizes wisdoms about Software Development, Design and Engineering. Taken from the mosts influential books in the industry: 'The Pragmatic Programmer' by Andy Hunt and David Thomas, 'The Passionate Programmer' by Chad Fowler, 'Clean Code' by Robert Martin and 'Refactoring' by Martin Fowler, wrapping it up in a certain mental model."
+  },
+  "2018": {
+    "title": "20XVIII CE",
+    "description": "Articles, musings, thoughts I have over the past year."
+  },
+  "2019": {
+    "title": "20XIX CE",
+    "description": "Thoughts so far.."
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Articles about weekend projects that I've built and currently working on."
+  },
+  "learnings": {
+    "title": "Learnings",
+    "description": "My musings, findings, experiments and introspection about a certain technology, framework, language or any new thing that I had picked up to learn."
+  },
+  "software design": {
+    "title": "Software Design",
+    "description": "Software design and architecture are among my favorite topics and as a Software Craftman's Oath keeper it's no wonder I often write about it."
+  },
+  "business": {
+    "title": "Business",
+    "description": "Articles running my own business as a freelance software engineer and building my own software consultancy company."
+  }
+}

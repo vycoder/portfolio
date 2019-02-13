@@ -1,5 +1,5 @@
-<template functional>
-  <q-list dense link no-border dark class="bg q-ml-xl q-px-md shadow-1">
+<template>
+  <q-list dense link no-border dark class="bg q-ml-xl q-px-md shadow-5">
     <q-list-header>
       <router-link to="/" class="row justify-center items-center q-py-md">
         <img src="~assets/profile.png" alt="Joseph Harvey Angeles | Profile" class="shadow-5">
@@ -22,26 +22,34 @@
         </q-item>
       </q-list>
     </q-collapsible>
-    <q-item to="/blog">
-      <q-item-main label="Blog" />
-    </q-item>
+    <q-collapsible to="/blog" dense label="Blogs" class="q-my-none" opened>
+      <q-list link no-border dense class="q-py-none">
+        <q-item
+          v-for="(menu, index) in blogMenus"
+          :key="index"
+          :to="{ name: 'BlogIndex', params: { id: menu } }"
+          >
+          <q-item-main :label="menu" />
+        </q-item>
+      </q-list>
+    </q-collapsible>
     <q-item>
       <q-item-main label="Contact" />
     </q-item>
     <q-item-separator class="q-mt-lg"/>
     <div class="icon-tray row justify-around items-center cursor-pointer text-white q-py-md">
-      <template v-for="(social, index) in props.socials">
+      <template v-for="(social, index) in socials">
         <f-icon
           :key="index"
           v-if="social.iconType === 'fa'"
-          @click="listeners.link(social.link)"
+          @click="openURL(social.link)"
           :icon="social.icon"
           :class="social.class"
           size="lg"/>
         <q-icon
           v-else
           :key="index"
-          @click.native="listeners.link(social.link)"
+          @click.native="openURL(social.link)"
           :name="social.icon"
           :class="social.class"
           size="1.5rem" />
@@ -50,8 +58,29 @@
   </q-list>
 </template>
 <script>
+import { openURL } from 'quasar'
+
+import BLOGENTRIES from 'statics/data/blogs.json'
+
 export default {
-  name: 'SideNav'
+  name: 'SideNav',
+  created () {
+    this.blogMenus = Object.keys(BLOGENTRIES)
+  },
+  data () {
+    return {
+      socials: [
+        { 'iconType': 'fa', 'icon': ['fab', 'youtube'], 'class': 'icon-disabled', 'link': 'https://github.com/josephharveyangeles/' },
+        { 'iconType': 'fa', 'icon': ['fab', 'dev'], 'class': 'icon', 'link': 'https://dev.to/josephharveyangeles' },
+        { 'iconType': 'fa', 'icon': ['fab', 'medium'], 'class': 'icon', 'link': 'https://medium.com/@yhev' },
+        { 'iconType': 'fa', 'icon': ['fab', 'twitter'], 'class': 'icon', 'link': 'https://twitter.com/yev' }
+      ],
+      blogMenus: []
+    }
+  },
+  methods: {
+    openURL
+  }
 }
 </script>
 <style lang="stylus" scoped>

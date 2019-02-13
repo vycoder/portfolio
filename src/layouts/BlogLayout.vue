@@ -4,7 +4,7 @@
       side="left"
       v-model="leftDrawer"
       content-class="no-box-shadow bg-grey-2">
-      <side-nav :socials="socials" @link="openURL" />
+      <side-nav />
     </q-layout-drawer>
     <q-page-container>
       <q-page padding>

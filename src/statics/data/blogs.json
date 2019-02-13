@@ -1,0 +1,34 @@
+{
+  "codeNo0bsGuide": [
+    {
+      "id": "main",
+      "date": "March 25, 2017",
+      "tags": ["software design"],
+      "title": "CodeNo0b's Guide out of Mediocrity - Main",
+      "description": "CodeNo0b's Guide out of Mediocrity's overview, table of contents. Much like a map of best practices and pragmatic clean coding."
+    },
+    {
+      "id": "generalcharacteristics",
+      "date": "July 6, 2017",
+      "tags": ["software design"],
+      "title": "CodeNo0b's Guide out of Mediocrity - General Characteristics",
+      "description": "Here I explore some of the key traits for our ideal best version of our developer self. Keep in mind, this isn't a checklist of whether you have it or not. It's a goal that we should always strive to achieve."
+    }
+  ],
+  "2018": [
+    {
+      "id": "chronocross",
+      "date": "August 6, 2018",
+      "tags": ["projects", "learnings"],
+      "title": "Introducing Chronocross",
+      "description": "From the greek word “chronos“ which means “time“, and the latin “curos“, which means “to attend“, Chronocross is a Todo app that integrates other productivity techniques: The Pomodoro Technique and Eisenhower Matrix, into one cohesive workflow"
+    },
+    {
+      "id": "weird-js",
+      "date": "September 15, 2018",
+      "tags": ["learnings"],
+      "title": "Javascript's Weird Parts",
+      "description": "Javascript is weird, let's get that out of the way. Still, it's not like Javascript is illogical, in fact, most of it's weirdness is a side effect of its power while coping up with programmers' whims. But once you understand why it does what it does, we'll realize that it's not that complex after all. All languages has its own fair share of quirks and nuances that we just have to learn."
+    }
+  ]
+}
