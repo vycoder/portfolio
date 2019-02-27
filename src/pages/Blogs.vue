@@ -1,6 +1,7 @@
 <template>
   <div class="q-px-md">
-    <h1 :class="['q-display-3 text-bold capitalize q-ma-none font-text', `text-${getColor(section)}-9`]">
+    <h1 class="q-display-3 text-bold capitalize q-ma-none font-text"
+      :class="`text-${getColor(section)}-9`">
       {{category.title}}
     </h1>
     <p class="text-bold q-mb-lg">{{category.description}}</p>

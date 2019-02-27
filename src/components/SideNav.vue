@@ -8,7 +8,7 @@
     <q-item-separator class="q-mb-md"/>
     <q-collapsible dense label="Projects" opened class="q-my-none">
       <q-list link no-border dense class="q-py-none">
-        <q-item to="/projects">
+        <q-item to="/projects" exact>
           <q-item-main label="Client Projects" />
         </q-item>
         <q-item to="/projects/side">
@@ -17,8 +17,8 @@
         <q-item to="/projects/archive">
           <q-item-main label="Archived Projects" />
         </q-item>
-        <q-item to="/projects/uni">
-          <q-item-main label="Uni Projects" />
+        <q-item to="/projects/university">
+          <q-item-main label="University Projects" />
         </q-item>
       </q-list>
     </q-collapsible>

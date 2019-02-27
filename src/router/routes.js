@@ -9,7 +9,7 @@ const blogRoutes = Object.keys(BlogEntries).map(section => {
   return {
     path: section,
     name: section,
-    component: () => import('layouts/BlogLayout.vue'),
+    component: () => import('layouts/BlogEntryLayout.vue'),
     children
   }
 })
@@ -47,7 +47,16 @@ const routes = [
     path: '/projects',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Projects.vue') }
+      {
+        path: '',
+        name: 'ClientProjects',
+        component: () => import('pages/Projects.vue')
+      },
+      {
+        path: ':id',
+        name: 'ProjectIndex',
+        component: () => import('pages/Projects.vue')
+      }
     ]
   }
 ]

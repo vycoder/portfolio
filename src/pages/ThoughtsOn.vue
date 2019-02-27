@@ -3,7 +3,7 @@
     <div class="q-headline uppercase text-grey text-bold thoughts-on font-display">
       Thoughts on...
     </div>
-    <h1 :class="['q-display-3 text-bold capitalize q-ma-none font-text', `text-${$colors[chosenTag]}-9`]">
+    <h1 class="q-display-3 text-bold capitalize q-ma-none font-text" :class="`text-${$colors[chosenTag]}-9`">
       {{category.title}}
     </h1>
     <p class="text-bold q-mb-lg">{{category.description}}</p>

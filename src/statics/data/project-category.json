@@ -1,0 +1,18 @@
+{
+  "client": {
+    "title": "Client Projects",
+    "description": "I quit corporate and started freelancing a few months ago. Here's a collection of all projects that I have worked on since I started as an independent software developer."
+  },
+  "side": {
+    "title": "Side Projects",
+    "description": "Building stuff is my hobby. Apps, tools, OSS, electronics, etc."
+  },
+  "archive": {
+    "title": "Archive",
+    "description": "Amateur side projects that I've done when I was younger. I still like to keep tabs on it just for old time's sake for a quick reminder of what projects was I working during those yesteryears."
+  },
+  "university": {
+    "title": "School Projects",
+    "description": "University project archives. Dead stuff. Graveyard."
+  }
+}

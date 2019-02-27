@@ -1,0 +1,346 @@
+{
+  "client": [
+    {
+      "title":  "DLDNation",
+      "subtitle": "Fitness App",
+      "description": [],
+      "image": "dldnation.png",
+      "links": [],
+      "tags": ["web", "vue", "quasar", "firebase"],
+      "quote": {
+        "avatar": "https://lh3.googleusercontent.com/a-/AAuE7mBZuZ0q0aKT2bzDCXQZzq99J05WbjpEgNIZNuG0WA=s70-p-k-rw-no",
+        "name": "Dala McDevitt",
+        "role": "DLDNation LLC",
+        "message": ""
+      }
+    },
+    {
+      "title":  "Zoom App",
+      "subtitle": "Product Inventory App with Barcode",
+      "description": [
+        "ZoomApp is a mobile application that I created for a client that wanted a mobile solution for an inventory and tracking system.",
+        "The application is specifically tailored for the client's use case. Equipped with a barcode and camera functionality, it helps the clients track the products that are being delivered across the country."
+      ],
+      "image": "zoomapp.png",
+      "tags": ["vue", "quasar", "cordova"],
+      "quote": {
+        "name": "Karen Daguio",
+        "role": "Sendeya",
+        "message": "He's very professional and knowledgeable in this line of work. He's one of the best collaborators in this industry. He will surely give you the finished product/project beyond expectation. We will surely come back and get his service again in the future."
+      }
+    },
+    {
+      "title":  "OSysHub",
+      "subtitle": "OLMHRP System Hub",
+      "description": [
+        "OLMHRP &mdash; Our Lady of the Most Holy Rosary Parish is a church near the hometown when I grew up in. I wrote OSyshub as a solution to help digitized and automate most of the parish-related processes.",
+        "OSysHub is purely written in <a target=\"_blank\" href=\"https://java.com/en/\">Java</a> and Java Swing to build the UI. OSysHub is just fancy way of saying, <i>System Hub</i>. The idea is to create a unified application that will handle all church related-processes. I designed it with a plugin architecture so I could build every system independently and iteratively on-demand.",
+        "Currently, OSysHub contains a Columbary Management System and a Voucher/Cheque Printing feature complete with tests.",
+        "I've extracted an API &mdash; <a target=\"_blank\" href=\"https://github.com/josephharveyangeles/bethelscribe\">Bethelscribe</a> out of OSysHub and made it public on github."
+      ],
+      "image": "osyshub.png",
+      "links": [
+        { "iconType": "fa", "icon": ["fab", "github"], "url": "https://github.com/josephharveyangeles/bethelscribe" }
+      ],
+      "tags": ["java"],
+      "quote": {
+        "name": "Admin",
+        "role": "Our Lady of the Most Holy Rosary Parish",
+        "message": "We have a major problem regarding filing records. OSysHub was the solution that we never knew we needed until it's here."
+      }
+    }
+  ],
+  "side": [
+    {
+      "title":  "Chronocross",
+      "subtitle": "Time-management and TODO app",
+      "description": [
+        "From the greek word <i>\"chronos\"</i> which means \"time\", and the latin word <i>\"curo\"</i> which means \"to attend\", Chronocross is combination of a TODO app together with productivity techniques <a href=\"https://en.wikipedia.org/wiki/Pomodoro_Technique\" target=\"_blank\">Pomodoro Technique &reg;</a> and <a href=\"http://eisenhower-matrix.com/\" target=\"_blank\">Eisenhower Matrix</a>.",
+        "At work, we use Jira to track and manage our tasks, but like most devs, I tend to neglect logging my hours, even totally forgetting what and how much time I spent working on a task. Like who has time for that? There's a task and I'll work on it and move on to others. But yeah, metrics are still important and necessary. That's where the impetus for Chronocross came from.",
+        "I've been practicing the Pomodoro technique and Eisenhower matrix even before this &mdash; I figured, why not just combine them and just extract a report at the end of day. I could probably take it even further, update the Jira card automatically based on the extracted report and never bother about manually logging anymore."
+      ],
+      "image": "chronocross.png",
+      "links": [
+        { "iconType": "mat", "icon": "android", "url": "https://play.google.com/store/apps/details?id=org.yevlabs.chronocross" }
+      ],
+      "tags": ["quasar", "vue", "web", "cordova"]
+    },
+    {
+      "title":  "jQuizzer",
+      "subtitle": "Java Quizzer Mobile App",
+      "description": [
+        "JQuizzer is Java 8 exam reviewer presented in a simple quiz application. The app covers six topics: Building blocks, Operators and Statements, Core Java, Methods and Encapsulation, Class Design and Exception.",
+        "The app was written in <a target=\"_blank\" href=\"https://vuejs.org/\">Vue</a> built for mobile using <a target=\"_blank\" href=\"https://quasar-framework.org/\">Quasar Framework</a>, it uses the browser's local storage to persist the scores of the user."
+      ],
+      "image": "jquizzer.png",
+      "links": [
+        { "iconType": "mat", "icon": "android", "url": "https://play.google.com/store/apps/details?id=org.yevlabs.jquizzer" }
+      ],
+      "tags": ["quasar", "vue", "web", "cordova"]
+    },
+    {
+      "title":  "vue-animate-scroll",
+      "subtitle": "An open-source vue library",
+      "description": [
+        "A simple <code>Vue</code> directive that animates elements as they scroll into view.",
+        "Check out demo <a target=\"_blank\" href=\"https://vue-animate-onscroll.netlify.com/\">here</a>. Installation and setup details over at github's <a target=\"_blank\" href=\"https://github.com/josephharveyangeles/vue-animate-onscroll\">README</a>."
+      ],
+      "image": "vue-animate-scroll.png",
+      "links": [
+        { "iconType": "mat", "icon": "public", "url": "https://vue-animate-onscroll.netlify.com/" },
+        { "iconType": "fa", "icon": ["fab", "github"], "url": "https://github.com/josephharveyangeles/vue-animate-onscroll" }
+      ],
+      "tags": ["vue", "javascript"]
+    },
+    {
+      "title":  "Tessa",
+      "subtitle": "Test-case Creation Tool",
+      "description": [
+        "Tessa is a command-line utility tool written on Java that generates all possible test cases from a given tautology-based statements.",
+        "I made it to automate a specific task back when I was working at <a target=\"blank\" href=\"https://networks.nokia.com/\">Nokia Networks</a>. We implement configuration combinations and test with each possible scenarios to test it validity. The problem can be viewed as a tautology statement, &mdash; that's what I started with. Tessa parses an input into an equation then builds the tautology logic tree than can be easily manipulated and calculated. It automatically simplifies and applies De Morgan's Law as it sees fit. It will then output all possible scenarios including their validity into the console, text file or an html file.",
+        "I also presented a talk and demo of Tessa as a finalist for <b>Nokia Manila TC Innovaton 2016</b>.",
+        "PS: The name 'Tessa' is a word play on the words 'Test Case', in case that wasn't as obvious as I think. "
+      ],
+      "image": "tessa.png",
+      "tags": ["java", "cli"]
+    }
+  ],
+  "archive": [
+    {
+      "title":  "Recigle",
+      "subtitle": "Recipe Lookup Web App",
+      "description": [
+        "Recigle is really just <i>google but for recipes</i>. The idea is that, if you ever want to cook something but you don't want to buy groceries, you could just look for recipes that you could cook with only the ingredients you currently have.",
+        "The app is written in <a target=\"_blank\" href=\"https://angular.io\">Angular</a> and deployed on github pages. It's <a target=\"_blank\" href=\"https://github.com/josephharveyangeles/nreciquery\">backend</a> is written on python and was deployed on a cloud server.",
+        "Recigle is a fully functional prototype, it lacks actual data recipes that's why it doesn't do much right now.",
+        "I'm not sure If I'm ever going to continue working on this project, I just wrote it mainly for fun and just to try out python in the backend."
+      ],
+      "image": "recigle.png",
+      "links": [
+        { "iconType": "mat", "icon": "public", "url": "http://josephharveyangeles.com/recigle/#/" },
+        { "iconType": "fa", "icon": ["fab", "github"], "url": "https://github.com/josephharveyangeles/recigle" }
+      ],
+      "tags": ["angular", "typescript", "web", "bootstrap"]
+    },
+    {
+      "title":  "nReciquery",
+      "subtitle": "REST Recipe Lookup",
+      "description": [
+        "nReciquery is the REST backend that Recigle consumes. It is built on <a target=\"_blank\" href=\"https://www.python.org/\">Python</a> using <a target=\"_blank\" href=\"https://www.djangoproject.com/\">Django</a> and <a target=\"_blank\" href=\"https://www.django-rest-framework.org/\">django-rest-framework</a> deployed on <a target=\"_blank\" href=\"https://www.pythonanywhere.com/\">PythonAnywhere.com</a>. See <a target=\"_blank\" href=\"https://github.com/josephharveyangeles/nreciquery/blob/master/README.md\">ReadMe</a> for more details. ",
+        "I wrote the app mainly just to try out and explore backend technologies, I was fond of python that time so I figured to try experience what's like to use it on the backend.",
+        "The server is running when I worked on this project but since I'm just using a free-tier, it may be decommisioned by the time you read this. But codes are just hosted on github."
+      ],
+      "image": "nreciquery.png",
+      "links": [
+        { "iconType": "fa", "icon": ["fab", "github"], "url": "https://github.com/josephharveyangeles/nreciquery" }
+      ],
+      "tags": ["python", "django", "django-rest-framework"]
+    },
+    {
+      "title":  "PrjRiceMill",
+      "subtitle": "Rice Mill Machine Automation Device",
+      "description": [
+        "Project Rice Mill, for a lack of a better name, &mdash; is a set devices/sensors and an accompanying android application that monitors and automate the operation of a rice-milling machine.",
+        "The idea was to retrofit an existing rice-milling machine with my custom devices that monitors various information such as: weight of the load, status, and so on, and relay those information on the android application that I designed and implemented.",
+        "You can start or stop the operation of the machine using the app and the machine could also automatically stop upon determining the absence of rice grains."
+      ],
+      "image": "prjricemill.png",
+      "tags": ["android", "arduino", "µcontroller", "electronics"]
+    },
+    {
+      "title":  "swRtcheIoo",
+      "subtitle": "IR Remote-controlled Power Extension",
+      "description": [
+        "This is a fun little weekend project that I built that was born out of laziness. swRtcheIoo is just a power extension that is controlled by an Infrared remote. A gizDuino Mini USB Atmega168 (An Arduino clone) served as the brain of the whole device it controls four solid-state relays, uses an IR sensor to detect IR signals coming from the remote of course, complete with LED indicators.",
+        "I didn't want to buy nor design my own IR remote, I just went dumpster diving and found an old remote that still works. I decoded what each buttons do and implemented the Arduino to interpret said signals and toggle the relays accordingly.",
+        "PS: swRtcheIoo is a bad pun, I just switched the letters <i>I</i> and <i>R</i> from the word <b>\"switcheroo\"</b> because this device switches stuff, get it?"
+      ],
+      "image": "switcheroo.png",
+      "links": [
+        { "iconType": "fa", "icon": ["fab", "github"], "url": "https://github.com/josephharveyangeles/swRtcherIoo" }
+      ],
+      "tags": ["arduino", "electronics"]
+    },
+    {
+      "title":  "PingPonger",
+      "subtitle": "A version of Pong written in Java Swing",
+      "description": [
+        "PingPonger is just another implementation of the classing <a target=\"_blank\" href=\"http://www.ponggame.org/\">Pong game</a> that I wrote in Java for practice.",
+        "It taught me the basics of Java's shapes, graphics and colors. I was curious about <i>collision detection</i> mechanisms at that time, Pong seemed like a very good start to explore the concept."
+      ],
+      "image": "pingponger.png",
+      "links": [
+        { "iconType": "fa", "icon": ["fab", "github"], "url": "https://github.com/josephharveyangeles/PingPonger" }
+      ],
+      "tags": ["java"]
+    },
+    {
+      "title":  "Sudoku Solver",
+      "subtitle": "9x9 Sudoku Solver",
+      "description": [
+        "This is a command-line applcation written in Java. It accepts a space separated values of 9x9 <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Sudoku\">Sudoku</a> as input, and it will solve all possible solutions for the given Sudoku board.",
+        "I implemented a brute-force stack algorithm with slight optimizations to solve the puzzle. It first parses the input to build the board matrix in memory, it then reads the board row by row if it encounters a missing cell, it will come up with all possible numbers to fill the cell. My algorithm will save each possible number onto a stack along with the state of the board and will proceed solving using that number, if it encounters a dead-end it will pop the stack and just repeat the process over again.",
+        "I've missed working on problems such as this that's why I really had fun doing it."
+      ],
+      "image": "sudoku.png",
+      "links": [
+        { "iconType": "fa", "icon": ["fab", "github"], "url": "https://github.com/josephharveyangeles/SudokuSolver" }
+      ],
+      "tags": ["java"]
+    },
+    {
+      "title":  "vNote",
+      "subtitle": "A version of Notepad written Java Swing",
+      "description": [
+        "This is a command-line applcation written in Java. It accepts a space separated values of 9x9 <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Sudoku\">Sudoku</a> as input, and it will solve all possible solutions for the given Sudoku board.",
+        "I implemented a brute-force stack algorithm with slight optimizations to solve the puzzle. It first parses the input to build the board matrix in memory, it then reads the board row by row if it encounters a missing cell, it will come up with all possible numbers to fill the cell. My algorithm will save each possible number onto a stack along with the state of the board and will proceed solving using that number, if it encounters a dead-end it will pop the stack and just repeat the process over again.",
+        "I've missed working on problems such as this that's why I really had fun doing it."
+      ],
+      "image": "vNote.png",
+      "links": [
+        { "iconType": "fa", "icon": ["fab", "github"], "url": "https://github.com/josephharveyangeles/vnote" }
+      ],
+      "tags": ["java"]
+    },
+    {
+      "title":  "Kill The Beast",
+      "subtitle": "A cli, text-based game of chance",
+      "description": [
+        "'Kill the beast' is a simple text-based chance game where you will try and defeat the beast based on a narrative. Test your luck against the beast on a card guessing game from a standard deck of cards. Check out the game mechanics in the <a target=\"_blank\" href=\"https://github.com/josephharveyangeles/killthebeast/blob/master/README.md\">ReadMe</a> file for more information.",
+        "The game is written in <a target=\"_blank\" href=\"https://www.gnu.org/software/bash\">bash</a> complete with a swell narrative and ascii arts, truly reminiscent of the old days.",
+        "I was learning the fundamentals of bash scripting that time, and this seems like a good exercise idea to work on. Plus it has that nostalgic feeling of the old text-based game that proliferated the early computer days, the time when I wasn't probably born yet."
+      ],
+      "image": "killthebeast.png",
+      "links": [
+        { "iconType": "fa", "icon": ["fab", "github"], "url": "https://github.com/josephharveyangeles/killthebeast" }
+      ],
+      "tags": ["bash"]
+    },
+    {
+      "title":  "Smartac",
+      "subtitle": "Tic-tac-toe on C",
+      "description": [
+        "Smartac is a version of tic-tac-toe written in C that is played on the command-line interface.",
+        "The user will play against my code which ensures that any match will end in either the player's loss or a tie.",
+        "This is the first complete program that I wrote when I was first learning the C language. I learn the basics of computing and how to think about programming.",
+        "A tic-tac-toe game has a fairly complex mechanics. Having a 9x9 board with two players, I had to think about all the possible plays for each cell whether you are the player or the opponent, extracted some patterns and built an algorithm that will never lose.",
+        "It's an incomplete algorithm. My code always gets the first pick and it always pick the center cell which improves its chancing of winning."
+      ],
+      "image": "smartac.png",
+      "links": [
+        { "iconType": "fa", "icon": ["fab", "github"], "url": "https://github.com/josephharveyangeles/smartac" }
+      ],
+      "tags": ["c"]
+    },
+    {
+      "title":  "Silica",
+      "subtitle": "Trainer for basic arithmetic",
+      "description": [
+        "Silica is written in C, it's a CLI-based quiz game. It covers the basic arithmetic operations: Add, Subtract, Multiply and Divide. The user is being flashed an equation one at time, calculates the score based on how fast the user has answered. Like the old-school games, it gets more difficult round after round. Complete with 8-bit sounds.",
+        "Writing those 8bit sounds was also one of the fun things about this project. I extracted the pitch and duration values of every note on the music sheet I like and used them as arguments to <code>windows.h</code>'s <code>Beep()</code> method producing nostalgic 8bit sounds.",
+        "I also implemented a power of two (2<sup>n</sup>) category. I was enrolled on a Computer Networks class at that time and I figured it would make me subnet easier if I memorized them. I played it during those down time at college days to keep me sharp."
+      ],
+      "image": "silica.png",
+      "links": [
+        { "iconType": "fa", "icon": ["fab", "github"], "url": "https://github.com/josephharveyangeles/Silica" }
+      ],
+      "tags": ["c"]
+    },
+    {
+      "title":  "Σ Prompt",
+      "subtitle": "Assembly CLI utility",
+      "description": [
+        "&Sigma; prompt (I also refer to it as assembly toolkit, <i>assKit</i> for short) is written in C when I was studying Assembly language back at the university.",
+        "It has all the common operations that I often need when working on an assembly program such as: Hextables, Hexcalculators, ASCII conversion, etc.",
+        "I was so obsessed with 8bit applications at that time that I felt like creating CLI-based applications are cool. (they still are).",
+        "Asskit is not full-pledged CLI library but an executable that has it's own shell and argument parser that I personally implemented &mdash; I really wanted to give it custom colors and all so I could really feel I was in Tron or something."
+      ],
+      "image": "asskit.png",
+      "links": [
+        { "iconType": "fa", "icon": ["fab", "github"], "url": "https://github.com/josephharveyangeles/sigmaprompt" }
+      ],
+      "tags": ["c"]
+    },
+    {
+      "title":  "LED Music Lamp",
+      "subtitle": "LED VU Meter Lamp",
+      "description": [
+        "This is probably the first electronic hardware project that I created when I was first learning about electronics while I was undergoing my BS in Engineering.",
+        "It is built out of LED arrays connected to a <a target=\"_blank\" href=\"https://pdf1.alldatasheet.com/datasheet-pdf/view/2779/MOSPEC/TIP31C.html\">TIP31 NPN power transistor</a> hooked on my computer speakers's signal output that ultimately acts as a VU meter (Volume Unit Meter).",
+        "I soldered everything on a silver-painted PCB put in a makeshift enclosure made out of a glass jar with baby powder coating to diffuse light a bit. I added shards of broken glasses for added cool light effect. I also spray-painted the bottom of the jar (now, the top of the LED lamp) with silver paint to focus the light on the the glass itself."
+      ],
+      "image": "ledlamp.png",
+      "tags": ["electronics"]
+    }
+  ],
+  "university": [
+    {
+      "title": "Romeocito",
+      "subtitle": "Low-cost Braille Printer",
+      "description": [
+        "Romeocito is my undergraduate thesis project that I built along with @mdgman, @sethjuriste and @rbtabor in partnership with the Non-profit organization: <a href=\"http://blind.org.ph/\" target=\"_blank\">Resources of the Blind, Incorporation</a>. At the time when we're building Romeocito there were only Two Braille Printers in the Philippines that were being shared by the entire blind community to print large publications in Braille. The cost of said industrial printers ranges from Php 250,000.00 to a million pesos &mdash; that's what inspired us to build Romeocito.",
+        "Our goal was to create a cheap, non-industrial, household alternative to enable more households with blind individuals have access to reading resources.",
+        "The result is a low-cost Braille printer that consists of two soleniod printing heads controlled by <a href=\"https://www.microchip.com/wwwproducts/en/PIC16F877A\" target=\"_blank\">PIC16F877A microcontroller</a> that communicates with the computer via the Serial port. We have also created an accompanying custom document editor to use in conjuction with the printer. It also has a bluetooth interface that can directly communicate to an accompanying android application that can be used to print documents as well. Ultimately, all the components used only cost around Php 10,000.00.",
+        "The biggest challenge in this project was using limited resources to achieve considerable results. Solenoids we're the most costly components that Romeocito has. It's the one component we would not compromise, we had the folks at RBI got us the same model of solenoids their industrial printers have.",
+        "<a href=\"https://en.wikipedia.org/wiki/Braille#Derivation\" target=\"_blank\">Braille characters</a> are composed of 6 dots to encode a letter, industrial printers have mechanical contraptions to emboss a Braille character in one motion using six solenoids. I have designed an algorithm to get around that problem that had greatly help in making Romeocito possible.",
+        "The algorithm make use of our custom encoding scheme that encodes characters into an array of dots. In Romeocito, we didn't make use of any costly mechanical contraptions and just arranged the solenoid in an array, each solenoid is responsible for embossing a dot on it's column range width and just leverage the use of software the control each solenoids until they were able to print the whole document. The tradeoff for the huge reduction of cost was the speed. Romeocito prints far slower as opposed to it's industrial counterparts, still we've considered it a good a sacrifice for a household alternative. I've also designed the software to be scalable into four or six more solenoids making it print more faster.",
+        "PS: The name <b>Romeocito</b> was inspired by the cheapest industrial Braille printer that time, which was called: <b><i>Romeo</i></b>."
+      ],
+      "awards": "Ideaspace 2014 Qualifier, 2<sup>nd</sup> Best Design Project 2014, 1<sup>st</sup> Runner-up ICpEP Engbensyon Design Exhibit 2014, 2<sup>nd</sup> Runner-up TIP Science Fair Project 2014",
+      "tags": ["java", "android", "electronics", "µcontroller"]
+    },
+    {
+      "title": "Kirkos",
+      "subtitle": "Sumobot",
+      "description": [
+        "Kirkos is created for the Annual Sumobot Robotics Competition where I competed as a school representative.",
+        "At this point I was fairly accustomed to be working with a lot constraints &mdash; with so little time for preparation and utter lack of high-powered motors, I decided to sought for creative solutions.",
+        "I know I wouldn't win with power, having a scoop would be useless on it that's why I decided to turn the problem on its head and just opt for a circular chassis instead (hence the name <i>Kirkos</i> from its greek word), retrofitted it with makeshift bump sensors and let it rolled. I also programmed some random maneuvers on startup.",
+        "My general strategy: Just evade and hoped that the opponents high powered motors can't deal with an opponent they couldn't crash into at first contact. It did perform pretty well in the elimations round but got totally crushed on the next semi-final rounds."
+      ],
+      "awards": "Sumobot Robotics Competition 2014 School Represenative",
+      "tags": ["arduino", "electronics"]
+    },
+    {
+      "title": "Anjuli",
+      "subtitle": "Catering Website + CMS",
+      "description": [
+        "Anjuli is a catering website I built for an actual client as requirement for the partial fulfillment of my Bachelors. It has an accompanying CMS written in vanilla Javascript, JQuery, HTML and CSS."
+      ],
+      "tags": ["web"]
+    },
+    {
+      "title": "Droiduino",
+      "subtitle": "Android-controlled Racing Bot",
+      "description": [
+        "Droiduino is racebot controlled by an Arduino with a steering user interface android application that communicates via bluetooth.",
+        "What sets Droiduino apart from it's opponents on the competition is how I designed the steering interface. Most bots uses a button-centric or joypad-like user interface to control the bot which means, the bot can only move in one direction at a time resulting to a stop-reorient-start laggy movement. Unless you implement a multi-touch functionality it can never maneuver pretty well on sharp turns.",
+        "Luckily for me, nobody has seemed to have thought about it that time. I implemented a custom encoding scheme that can relay all four direction component on a single byte based on the location of the draggable trackball interface on my android app. The code on the arduino doesn't read a character for 'up', 'down', 'left' or 'right', it reads an actual byte and extracts the direction of both X and Y axis on their respective bit position based on my encoding scheme. I took it further and encoded a 'speed' component depending on how far from the center you dragged the ball on your screen. I would only need 2 bits for direction after all.",
+        "The result was, Droiduino can react on the racetrack far more efficiently than it's opponents, it can move diagonally, do sharp turns, slow-down to gain traction, or speed up on straight course."
+      ],
+      "awards": "CpE Robotics Competition 2013 Champion",
+      "tags": ["android", "arduino"]
+    },
+    {
+      "title": "Sinivo",
+      "subtitle": "Client-Server Course Management System",
+      "description": [
+        "Inviso is a client-server application that is intended to be used in a faculty environment. The server is used to assign classes or course loads to faculties, time, names of students and all.",
+        "The client application will be installed on the instructor's laptop attached to an RFID reader, students will register their attendance by tapping their RFID cards. A valid attendance will only be recorded if the student has tapped his RFID card both on the start and at the end of the class.",
+        "<b>Sinivo</b> is an anagram of the latin word: <i>Inviso</i>, which means, to look at or to watch. "
+      ],
+      "tags": ["java", "electronics", "RFID"]
+    },
+    {
+      "title": "Somlif!q",
+      "subtitle": "Gamified Collaboration Platform for University Students",
+      "description": [
+        "Somlifiq's, which stands for, <i><b>\"Something like Facebook, but not quite!\"</b></i> main goal is to influence the students of the whole campus on different courses and programs to collaborate and build inter-disciplinary projects.",
+        "When I was back in college I've always wanted to really build large side-projects, but most importantly I wanted to collaborate and learn with other students. I always found myself wanting to build something that seems hard or expensive because of a certain issue but a mechanical engineer would just recommend a gear system to solve it. That's when I pitched my project idea for that semester on my instructor.",
+        "Each student can post or pitch a project that they are currently or planning to work on, then other students can comment and participate on the said project. Upon completion of a project, a user can unlock profile badges such as: R0b0warrior, SolderBender, Gearhead, etc..",
+        "The platform would contain more features and is obviously very big. I only implemented the most important features to demonstrate what I learned in class in order to complete the course hoping that the idea would spark some interest on the faculty and eventually make it a reality."
+      ],
+      "tags": ["web"]
+    }
+  ]
+}
