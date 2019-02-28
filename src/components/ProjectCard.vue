@@ -1,13 +1,12 @@
 <template functional>
   <div class="card shadow-2 bg-white row q-mb-xl" :class="`border-left--${props.color}`">
-    <div v-if="props.project.image" class="img-side q-pa-md col-sm-12 col-md-4 self-stretch row justify-center items-center">
+    <div v-if="props.project.image" class="img-side q-pa-md col-sm-12 col-md-4 self-stretch row justify-center items-start">
       <img :src="`statics/images/projects/${props.project.image}`" class="block" />
     </div>
     <div class="content-side col column justify-between q-pb-sm q-pt-lg q-px-lg">
       <div>
         <h3
-          class="q-display-1 text-bold title q-ma-none capitalize font-text"
-          :class="`text-${props.color}`">
+          class="q-display-1 text-bold title q-ma-none capitalize font-text">
           {{props.project.title}}
         </h3>
         <div class="row justify-between items-center q-mb-md">
@@ -36,9 +35,9 @@
           <div
             v-for="(tag, index) in props.project.tags"
             :key="index"
-            class="chip uppercase text-bold q-mr-sm"
-            :class="`text-${props.color}`">
-            <span class="text">{{tag}}</span>
+            class="chip uppercase q-mr-sm"
+            :class="`text-${tag.color}`">
+            <span class="text">{{tag.label}}</span>
           </div>
         </div>
       </div>
@@ -86,16 +85,11 @@ export default {
   border 1px solid $grey-3
   border-radius .4rem
 
-.content-side
-  p
-    font-size .99rem
-    letter-spacing 1px
-
 .kuote
   &__text
     border-radius 1rem
-    letter-spacing 1px
-    font-size .95rem
+    font-style italic
+    font-weight 200
   &__image
     position relative
     display inline-block
@@ -127,6 +121,7 @@ export default {
   letter-spacing 1px
   transition all .3s ease-in
   cursor pointer
+  font-weight 400
   &:hover
     background-color currentColor
     .text

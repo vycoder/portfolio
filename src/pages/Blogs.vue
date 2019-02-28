@@ -1,10 +1,10 @@
 <template>
-  <div class="q-px-md">
-    <h1 class="q-display-3 text-bold capitalize q-ma-none font-text"
+  <div class="q-pa-md">
+    <h2 class="q-mb-lg capitalize"
       :class="`text-${getColor(section)}-9`">
       {{category.title}}
-    </h1>
-    <p class="text-bold q-mb-lg">{{category.description}}</p>
+    </h2>
+    <p class="q-mb-lg">{{category.description}}</p>
     <blog-card
       v-for="blog in entries"
       :color="blog.color"
@@ -62,6 +62,5 @@ export default {
 
 <style lang="stylus" scoped>
 p
-  letter-spacing 1px
   font-size 1.2rem
 </style>

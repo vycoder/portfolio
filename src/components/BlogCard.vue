@@ -6,7 +6,7 @@
     <div class="text-grey">{{props.date}}</div>
     <div
       v-for="(tag, index) in props.tags" :key="index"
-      :class="['chip uppercase text-bold q-my-md q-mr-sm', `text-${tag.color}`]"
+      :class="['chip uppercase q-my-md q-mr-sm', `text-${tag.color}`]"
       @click="listeners.tag(tag.name)">
       <span class="text">{{tag.name}}</span>
     </div>
@@ -37,7 +37,6 @@ export default {
   border-radius .4rem
 
 .title
-  letter-spacing 1px
   cursor pointer
   transition text-shadow .2s
   &:hover
@@ -52,6 +51,7 @@ export default {
   letter-spacing 1px
   transition all .3s ease-in
   cursor pointer
+  font-weight 400
   &:hover
     background-color currentColor
     .text
@@ -60,6 +60,4 @@ export default {
     transform scale(0.5)
     filter drop-shadow(0px 0px 12px white) blur(100px)
 
-p
-  font-size 1.25rem
 </style>

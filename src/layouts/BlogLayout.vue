@@ -1,30 +1,21 @@
 <template>
-  <q-layout view="lHh Lpr lFf" class="bg-grey-2">
-    <q-layout-drawer
-      side="left"
-      v-model="leftDrawer"
-      content-class="no-box-shadow bg-grey-2">
-      <side-nav />
-    </q-layout-drawer>
-    <q-page-container>
-      <q-page padding>
-        <router-view />
-      </q-page>
-    </q-page-container>
-  </q-layout>
+  <router-view />
 </template>
 
 <script>
-import SideNav from 'components/SideNav'
 
 export default {
-  name: 'MainLayout',
-  components: { SideNav },
-  data () {
-    return { leftDrawer: true }
-  }
+  name: 'BlogLayout'
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
+h1
+  font-size 3.5rem
+img
+  max-width 100%
+  border-radius 1rem
+  display block
+  text-align center
+  margin 0 auto
 </style>

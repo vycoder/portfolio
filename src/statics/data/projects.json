@@ -178,8 +178,8 @@
       "title":  "Sudoku Solver",
       "subtitle": "9x9 Sudoku Solver",
       "description": [
-        "This is a command-line applcation written in Java. It accepts a space separated values of 9x9 <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Sudoku\">Sudoku</a> as input, and it will solve all possible solutions for the given Sudoku board.",
-        "I implemented a brute-force stack algorithm with slight optimizations to solve the puzzle. It first parses the input to build the board matrix in memory, it then reads the board row by row if it encounters a missing cell, it will come up with all possible numbers to fill the cell. My algorithm will save each possible number onto a stack along with the state of the board and will proceed solving using that number, if it encounters a dead-end it will pop the stack and just repeat the process over again.",
+        "This is a command-line applcation written in Java. It accepts a space-separated values of 9x9 <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Sudoku\">Sudoku</a> as input, and it will solve all possible solutions for the given Sudoku board.",
+        "I implemented a matrix-based state stack algorithm with slight optimizations to solve the puzzle. It first parses the input to build the board matrix in memory, it then reads the board row by row if it encounters a missing cell, it will come up with all possible numbers to fill the cell. My algorithm will save each possible number onto a stack along with the state of the board and will proceed solving using that number, if it encounters a dead-end it will pop the stack and just repeat the process over again.",
         "I've missed working on problems such as this that's why I really had fun doing it."
       ],
       "image": "sudoku.png",
@@ -192,11 +192,10 @@
       "title":  "vNote",
       "subtitle": "A version of Notepad written Java Swing",
       "description": [
-        "This is a command-line applcation written in Java. It accepts a space separated values of 9x9 <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Sudoku\">Sudoku</a> as input, and it will solve all possible solutions for the given Sudoku board.",
-        "I implemented a brute-force stack algorithm with slight optimizations to solve the puzzle. It first parses the input to build the board matrix in memory, it then reads the board row by row if it encounters a missing cell, it will come up with all possible numbers to fill the cell. My algorithm will save each possible number onto a stack along with the state of the board and will proceed solving using that number, if it encounters a dead-end it will pop the stack and just repeat the process over again.",
-        "I've missed working on problems such as this that's why I really had fun doing it."
+        "vNote is just my version of Notepad that has an auto-back-up and auto-recover functionality.",
+        "This served as one my practice exercises on Java's Swing UI API. It has all the basic features the notepad has, File and Edit menus, complete with keyboard shortcuts and mnemonics."
       ],
-      "image": "vNote.png",
+      "image": "vnote.png",
       "links": [
         { "iconType": "fa", "icon": ["fab", "github"], "url": "https://github.com/josephharveyangeles/vnote" }
       ],

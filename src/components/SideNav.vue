@@ -1,5 +1,5 @@
 <template>
-  <q-list dense link no-border dark class="bg q-ml-xl q-px-md shadow-5">
+  <q-list dense link no-border dark class="bg side-nav q-ml-xl q-px-md shadow-5">
     <q-list-header>
       <router-link to="/" class="row justify-center items-center q-py-md">
         <img src="~assets/profile.png" alt="Joseph Harvey Angeles | Profile" class="shadow-5">
@@ -86,6 +86,11 @@ export default {
 <style lang="stylus" scoped>
 @import '~variables'
 
+.side-nav
+  max-width 280px
+  position sticky
+  top 0
+
 img
   max-width 100%
   display block
@@ -104,7 +109,6 @@ img
 /deep/ .q-item.router-link-active
   background none !important
   .q-item-label
-    letter-spacing 2px !important
     text-shadow 0px 0px 5px $pink !important
 
 /deep/ .q-item:hover
@@ -113,7 +117,6 @@ img
 /deep/ .q-item-label
   font-size 1.05rem
   font-weight bold
-  letter-spacing 1px
   text-shadow 0px 0px 5px black
   transition all .3s ease
   &:hover

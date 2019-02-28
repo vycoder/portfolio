@@ -1,12 +1,12 @@
 <template>
-  <div class="q-px-md">
-    <div class="q-headline uppercase text-grey text-bold thoughts-on font-display">
+  <div class="q-pa-md">
+    <div class="q-mt-xl q-headline uppercase text-grey text-bold thoughts-on">
       Thoughts on...
     </div>
-    <h1 class="q-display-3 text-bold capitalize q-ma-none font-text" :class="`text-${$colors[chosenTag]}-9`">
+    <h2 class="q-mt-sm capitalize font-display" :class="`text-${$colors[chosenTag]}-9`">
       {{category.title}}
-    </h1>
-    <p class="text-bold q-mb-lg">{{category.description}}</p>
+    </h2>
+    <p class="q-mb-lg">{{category.description}}</p>
     <blog-card
       v-for="blog in cards"
       :color="blog.color"
@@ -56,9 +56,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.thoughts-on
-  letter-spacing 2px !important
 p
   font-size 1.2rem
-  letter-spacing 1px
 </style>

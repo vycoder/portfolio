@@ -11,8 +11,8 @@
       </ul>
     </nav>
     <div class="column items-center absolute-center text-center">
-      <img src="~assets/profile.png" class="block shadow-20" width="150px"/>
-      <h1 class="text-white q-my-md">{{data.greeting}}</h1>
+      <img src="~assets/profile.png" class="block shadow-20" width="170px"/>
+      <h1 class="text-white q-my-md q-mb-xl">{{data.greeting}}</h1>
       <p v-for="(text, index) in data.introduction" :key="index"
         class="text-white text-center intro-text q-mx-auto">
         {{text}}
@@ -89,8 +89,9 @@ img
     transform scale(.2)
     filter drop-shadow(0px 0px 12px white) blur(100px)
 .intro-text
-  font-size 1.05rem
-  width 600px
+  font-size 1.2rem
+  max-width 900px
+  font-weight 500
   text-shadow 0px 0px 5px black
 h1
   text-shadow 2px 2px black

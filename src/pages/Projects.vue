@@ -1,10 +1,10 @@
 <template>
   <q-page class="q-pa-md">
-    <h1 class="q-display-3 text-bold capitalize q-ma-none font-text"
+    <h2 class="q-mb-lg capitalize"
       :class="`text-${color}`">
       {{category.title}}
-    </h1>
-    <p class="text-bold q-mb-lg">{{category.description}}</p>
+    </h2>
+    <p class="q-mb-lg">{{category.description}}</p>
     <project-card
       v-for="project in projectItems"
       :key="project.title"
@@ -22,6 +22,32 @@ import PROJECTS from 'statics/data/projects.json'
 export default {
   name: 'Projects',
   components: { ProjectCard },
+  data () {
+    return {
+      colors: {
+        'side': 'teal',
+        'archive': 'deep-purple',
+        'university': 'pink',
+        'web': 'pink',
+        'vue': 'green',
+        'quasar': 'indigo',
+        'java': 'blue',
+        'firebase': 'deep-orange',
+        'cordova': 'purple',
+        'javascript': 'teal',
+        'cli': 'cyan',
+        'bash': 'cyan',
+        'electronics': 'pink',
+        'raspberry-pi': 'purple',
+        'arduino': 'pink',
+        'android': 'teal',
+        'python': 'green',
+        'django': 'indigo',
+        'typescript': 'blue',
+        'angular': 'red'
+      }
+    }
+  },
   computed: {
     section () {
       return this.$route.params.id || 'client'
@@ -30,15 +56,15 @@ export default {
       return CATEGORIES[this.section]
     },
     color () {
-      const colors = {
-        'side': 'teal',
-        'archive': 'deep-purple',
-        'university': 'pink'
-      }
-      return colors[this.section] || 'cyan'
+      return this.colors[this.section] || 'cyan'
     },
     projectItems () {
-      return PROJECTS[this.section]
+      return PROJECTS[this.section].map(project => ({
+        ...project,
+        tags: project.tags.map(tag => ({
+          label: tag, color: this.colors[tag] || this.color
+        }))
+      }))
     }
   }
 }
@@ -47,5 +73,4 @@ export default {
 <style lang="stylus" scoped>
 p
   font-size 1.2rem
-  letter-spacing 1px
 </style>
