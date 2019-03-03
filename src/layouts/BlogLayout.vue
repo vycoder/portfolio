@@ -5,9 +5,30 @@
 </template>
 
 <script>
+import BLOGS from 'statics/data/blogs.json'
 
 export default {
-  name: 'BlogLayout'
+  name: 'BlogLayout',
+  created () {
+    console.log(this.entry)
+  },
+  computed: {
+    entry () {
+      return Object
+        .keys(BLOGS)
+        .map(entry => BLOGS[entry])
+        .reduce((a, b) => a.concat(b), [])
+        .find(blog => blog.id === this.$route.name)
+    }
+  },
+  meta () {
+    return {
+      title: `| Blog - ${this.entry.title}`,
+      meta: {
+        description: { name: 'description', content: this.entry.description }
+      }
+    }
+  }
 }
 </script>
 

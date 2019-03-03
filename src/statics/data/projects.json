@@ -145,7 +145,7 @@
         "You can start or stop the operation of the machine using the app and the machine could also automatically stop upon determining the absence of rice grains."
       ],
       "image": "prjricemill.png",
-      "tags": ["android", "arduino", "µcontroller", "electronics"]
+      "tags": ["android", "arduino", "microcontroller", "electronics"]
     },
     {
       "title":  "swRtcheIoo",
@@ -286,7 +286,7 @@
         "PS: The name <b>Romeocito</b> was inspired by the cheapest industrial Braille printer that time, which was called: <b><i>Romeo</i></b>."
       ],
       "awards": "Ideaspace 2014 Qualifier, 2<sup>nd</sup> Best Design Project 2014, 1<sup>st</sup> Runner-up ICpEP Engbensyon Design Exhibit 2014, 2<sup>nd</sup> Runner-up TIP Science Fair Project 2014",
-      "tags": ["java", "android", "electronics", "µcontroller"]
+      "tags": ["java", "android", "electronics", "microcontroller"]
     },
     {
       "title": "Kirkos",

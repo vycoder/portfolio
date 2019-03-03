@@ -1,11 +1,11 @@
 <template>
-  <div class="q-px-lg">
+  <div class="q-px-lg q-pt-lg">
     <h2 class="q-mt-sm capitalize font-display" :class="`text-${$colors[chosenTag]}-9`">
       {{chosenTag}}
     </h2>
     <p class="q-mb-lg">
       Here are all projects that I've done with
-      <span class="capitalize text-bold" :class="`text-${$colors[chosenTag]}`">
+      <span class="capitalize text-bold" :class="`text-${$colors[chosenTag]}-9`">
         &nbsp;{{chosenTag}}&nbsp;
       </span>
       through out the years.
@@ -47,6 +47,18 @@ export default {
             label: tag, color: this.$colors[tag] || this.color
           }))
         }))
+    }
+  },
+  meta () {
+    return {
+      title: `- ${this.chosenTag.toUpperCase()}`,
+      meta: {
+        description: {
+          name: 'description',
+          content: `I like building stuff and trying things out. Here are all the projects I've done in ${this.chosenTag}`
+        },
+        keywords: { name: 'keywords', content: this.chosenTag }
+      }
     }
   }
 }

@@ -56,6 +56,14 @@ export default {
     getColor (id) {
       return this.$colors[id] || 'teal'
     }
+  },
+  meta () {
+    return {
+      title: `- ${this.category.title}`,
+      meta: {
+        description: { name: 'description', content: this.category.description }
+      }
+    }
   }
 }
 </script>

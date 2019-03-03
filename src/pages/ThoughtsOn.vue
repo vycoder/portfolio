@@ -51,6 +51,14 @@ export default {
           tags: entry.tags.map(tag => ({ name: tag, color: this.$colors[tag] }))
         }))
     }
+  },
+  meta () {
+    return {
+      title: `- ${this.category.title}`,
+      meta: {
+        description: { name: 'description', content: this.category.description }
+      }
+    }
   }
 }
 </script>

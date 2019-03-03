@@ -26,13 +26,14 @@ export default ({ Vue }) => {
     'javascript': 'teal',
     'cli': 'cyan',
     'bash': 'cyan',
-    'electronics': 'pink',
+    'electronics': 'purple',
     'raspberry-pi': 'purple',
     'arduino': 'pink',
     'android': 'teal',
     'python': 'green',
     'django': 'indigo',
     'typescript': 'blue',
+    'microcontroller': 'blue',
     'angular': 'red',
     'bootstrap': 'purple'
   }

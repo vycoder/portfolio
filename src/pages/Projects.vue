@@ -42,6 +42,14 @@ export default {
         }))
       }))
     }
+  },
+  meta () {
+    return {
+      title: `- ${this.category.title}`,
+      meta: {
+        description: { name: 'description', content: this.category.description }
+      }
+    }
   }
 }
 </script>
