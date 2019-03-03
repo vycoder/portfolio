@@ -81,10 +81,17 @@ nav
   width 350px
   li
     cursor pointer
+  @media (max-width: $breakpoint-xs) {
+    width: 320px;
+  }
 img
   border-radius 10rem
   transition all .3s ease-in-out
   cursor pointer
+  @media (max-width: $breakpoint-sm) {
+    width 120px;
+    height 120px;
+  }
   &:hover
     transform scale(.2)
     filter drop-shadow(0px 0px 12px white) blur(100px)
@@ -92,16 +99,35 @@ img
   font-size 1.2rem
   max-width 900px
   font-weight 500
-  text-shadow 0px 0px 5px black
+  text-shadow 2px 2px $grey
+  @media (max-width: $breakpoint-sm) {
+    font-size 1rem
+  }
+  @media (max-width: $breakpoint-xs) {
+    font-size .8rem
+    width 330px
+  }
 h1
   text-shadow 2px 2px black
   font-size 5rem
+  @media (max-width: $breakpoint-sm) {
+    font-size 4rem
+  }
+  @media (max-width: $breakpoint-xs) {
+    font-size 3rem
+  }
 .icon-tray
   width 420px
   position fixed
   bottom 30px
   left 50%
   transform translateX(-50%)
+  @media (max-width: $breakpoint-sm) {
+    width: 350px;
+  }
+  @media (max-width: $breakpoint-xs) {
+    width: 320px;
+  }
 .icon
   transition all .2s ease-in
   &:hover

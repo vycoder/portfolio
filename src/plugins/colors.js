@@ -33,6 +33,7 @@ export default ({ Vue }) => {
     'python': 'green',
     'django': 'indigo',
     'typescript': 'blue',
-    'angular': 'red'
+    'angular': 'red',
+    'bootstrap': 'purple'
   }
 }

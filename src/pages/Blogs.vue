@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pa-md">
+  <div class="q-px-lg">
     <h2 class="q-mb-lg capitalize"
       :class="`text-${getColor(section)}-9`">
       {{category.title}}

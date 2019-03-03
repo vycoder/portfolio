@@ -1,10 +1,10 @@
 <template>
-  <div class="q-pa-md">
+  <div class="q-px-lg">
     <h2 class="q-mt-sm capitalize font-display" :class="`text-${$colors[chosenTag]}-9`">
       {{chosenTag}}
     </h2>
     <p class="q-mb-lg">
-      Here are all projects that I've done in
+      Here are all projects that I've done with
       <span class="capitalize text-bold" :class="`text-${$colors[chosenTag]}`">
         &nbsp;{{chosenTag}}&nbsp;
       </span>

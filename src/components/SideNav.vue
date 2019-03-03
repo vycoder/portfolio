@@ -90,6 +90,12 @@ export default {
   max-width 280px
   position sticky
   top 0
+  @media (max-width: $breakpoint-sm) {
+    width 100%
+    height 100%
+    max-width 100%
+    margin 0 !important
+  }
 
 img
   max-width 100%
@@ -131,6 +137,9 @@ img
   background linear-gradient(150deg, $cyan, $teal, $deep-purple)
   border-bottom-left-radius .5rem
   border-bottom-right-radius .5rem
+  @media (max-width: $breakpoint-sm) {
+    border-radius 0px
+  }
 
 .icon
   transition all .2s ease-in

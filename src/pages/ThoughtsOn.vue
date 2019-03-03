@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pa-md">
+  <div class="q-px-lg">
     <div class="q-mt-xl q-headline uppercase text-grey text-bold thoughts-on">
       Thoughts on...
     </div>

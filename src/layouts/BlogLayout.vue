@@ -1,5 +1,7 @@
 <template>
-  <router-view />
+  <div style="max-width: 100vw" class="q-px-lg">
+    <router-view />
+  </div>
 </template>
 
 <script>

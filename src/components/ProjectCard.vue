@@ -1,6 +1,6 @@
 <template functional>
   <div class="card shadow-2 bg-white row q-mb-xl" :class="`border-left--${props.color}`">
-    <div v-if="props.project.image" class="img-side q-pa-md col-sm-12 col-md-4 self-stretch row justify-center items-start">
+    <div v-if="props.project.image" class="img-side q-pa-md col-xs-12 col-sm-4 self-stretch row justify-center items-start">
       <img :src="`statics/images/projects/${props.project.image}`" class="block" />
     </div>
     <div class="content-side col column justify-between q-pb-sm q-pt-lg q-px-lg">
@@ -36,7 +36,7 @@
             v-for="(tag, index) in props.project.tags"
             :key="index"
             @click="listeners.tag(tag.label)"
-            class="chip uppercase q-mr-sm"
+            class="chip uppercase q-mr-sm q-mb-sm"
             :class="`text-${tag.color}`">
             <span class="text">{{tag.label}}</span>
           </div>

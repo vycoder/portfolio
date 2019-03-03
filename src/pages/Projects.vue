@@ -1,5 +1,5 @@
 <template>
-  <q-page class="q-pa-md">
+  <q-page class="q-px-lg">
     <h2 class="q-mb-lg capitalize"
       :class="`text-${color}`">
       {{category.title}}
