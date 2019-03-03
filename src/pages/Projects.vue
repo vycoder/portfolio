@@ -9,7 +9,9 @@
       v-for="project in projectItems"
       :key="project.title"
       :project="project"
-      :color="color" />
+      :color="color"
+      @tag="(tag) => $router.push({name: 'projects-in', params: {tag} })"
+      />
   </q-page>
 </template>
 
@@ -22,32 +24,6 @@ import PROJECTS from 'statics/data/projects.json'
 export default {
   name: 'Projects',
   components: { ProjectCard },
-  data () {
-    return {
-      colors: {
-        'side': 'teal',
-        'archive': 'deep-purple',
-        'university': 'pink',
-        'web': 'pink',
-        'vue': 'green',
-        'quasar': 'indigo',
-        'java': 'blue',
-        'firebase': 'deep-orange',
-        'cordova': 'purple',
-        'javascript': 'teal',
-        'cli': 'cyan',
-        'bash': 'cyan',
-        'electronics': 'pink',
-        'raspberry-pi': 'purple',
-        'arduino': 'pink',
-        'android': 'teal',
-        'python': 'green',
-        'django': 'indigo',
-        'typescript': 'blue',
-        'angular': 'red'
-      }
-    }
-  },
   computed: {
     section () {
       return this.$route.params.id || 'client'
@@ -56,13 +32,13 @@ export default {
       return CATEGORIES[this.section]
     },
     color () {
-      return this.colors[this.section] || 'cyan'
+      return this.$colors[this.section] || 'cyan'
     },
     projectItems () {
       return PROJECTS[this.section].map(project => ({
         ...project,
         tags: project.tags.map(tag => ({
-          label: tag, color: this.colors[tag] || this.color
+          label: tag, color: this.$colors[tag] || this.color
         }))
       }))
     }

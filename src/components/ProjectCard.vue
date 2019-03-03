@@ -35,6 +35,7 @@
           <div
             v-for="(tag, index) in props.project.tags"
             :key="index"
+            @click="listeners.tag(tag.label)"
             class="chip uppercase q-mr-sm"
             :class="`text-${tag.color}`">
             <span class="text">{{tag.label}}</span>
@@ -78,8 +79,20 @@ export default {
     border-left 5px solid $cyan !important
   &--pink
     border-left 5px solid $pink !important
+  &--purple
+    border-left 5px solid $purple !important
   &--deep-purple
     border-left 5px solid $deep-purple !important
+  &--green
+    border-left 5px solid $green !important
+  &--indigo
+    border-left 5px solid $indigo !important
+  &--blue
+    border-left 5px solid $blue !important
+  &--deep-orange
+    border-left 5px solid $deep-orange !important
+  &--red
+    border-left 5px solid $red !important
 
 .card
   border 1px solid $grey-3
