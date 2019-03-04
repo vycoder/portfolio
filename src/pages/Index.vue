@@ -6,6 +6,7 @@
         <span>&laquo;</span>
         <router-link tag="li" exact class="link" to="/blog">Blog</router-link>
         <router-link tag="li" exact class="link" to="/projects">Projects</router-link>
+        <router-link tag="li" exact class="link" to="/about">About</router-link>
         <router-link tag="li" exact class="link" to="/contact">contact</router-link>
         <span>&raquo;</span>
       </ul>
@@ -78,11 +79,11 @@ nav
   top 20px
   left 50%
   transform translateX(-50%)
-  width 350px
+  width 500px
   li
     cursor pointer
   @media (max-width: $breakpoint-xs) {
-    width: 320px;
+    max-width 90vw
   }
 img
   border-radius 10rem

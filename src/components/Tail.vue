@@ -3,7 +3,7 @@
     :class="$q.platform.is.mobile ? `bg-${color}`: `bg text-${color}`">
     <div class="column justify-center content-center text-white">
       <q-icon name="mail_outline" size="1.5rem" />
-      <p class="text-center q-title q-ma-none q-my-lg">Email me for inquiries</p>
+      <p class="text-center q-title q-ma-none q-mt-sm q-mb-lg">Email me for inquiries</p>
       <form
         name="Inquiries"
         @submit.prevent="submit"
