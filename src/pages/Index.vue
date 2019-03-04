@@ -11,7 +11,7 @@
       </ul>
     </nav>
     <div class="column items-center absolute-center text-center">
-      <img src="~assets/profile.png" class="block shadow-20" width="170px"/>
+      <img src="~assets/images/profile.png" class="block shadow-20" width="170px"/>
       <h1 class="text-white q-my-md q-mb-xl">{{data.greeting}}</h1>
       <p v-for="(text, index) in data.introduction" :key="index"
         class="text-white text-center intro-text q-mx-auto">

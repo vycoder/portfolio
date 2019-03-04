@@ -2,7 +2,7 @@
   <q-list dense link no-border dark class="bg side-nav q-ml-xl q-px-md shadow-5">
     <q-list-header>
       <router-link to="/" class="row justify-center items-center q-py-md">
-        <img src="~assets/profile.png" alt="Joseph Harvey Angeles | Profile" class="shadow-5">
+        <img src="~assets/images/profile.png" alt="Joseph Harvey Angeles | Profile" class="shadow-5">
       </router-link>
     </q-list-header>
     <q-item-separator class="q-mb-md"/>
@@ -33,6 +33,9 @@
         </q-item>
       </q-list>
     </q-collapsible>
+    <q-item to="/about" exact>
+      <q-item-main label="About"/>
+    </q-item>
     <q-item to="/contact" exact>
       <q-item-main label="Contact"/>
     </q-item>
