@@ -1,6 +1,42 @@
 <template>
-  <div style="max-width: 100vw" class="q-px-lg">
+  <div style="max-width: 100vw" class="q-px-lg q-pb-xl">
     <router-view />
+    <social-sharing
+      class="row justify-around items-center socials q-my-xl q-pt-xl"
+      :url="fullUrl"
+      :title="entry.title"
+      :description="entry.description"
+      twitter-user="yhev"
+      inline-template
+      >
+      <div>
+        <network network="twitter">
+          <div class="social-icon">
+            <f-icon :icon="{ prefix: 'fab', iconName: 'twitter-square'}" size="2x" />
+          </div>
+        </network>
+        <network network="facebook">
+          <div class="social-icon">
+            <f-icon :icon="{ prefix: 'fab', iconName: 'facebook'}" size="2x" />
+          </div>
+        </network>
+        <network network="linkedin">
+          <div class="social-icon">
+            <f-icon :icon="{ prefix: 'fab', iconName: 'linkedin'}" size="2x" />
+          </div>
+        </network>
+        <network network="reddit">
+          <div class="social-icon">
+            <f-icon :icon="{ prefix: 'fab', iconName: 'reddit-square'}" size="2x"/>
+          </div>
+        </network>
+      </div>
+    </social-sharing>
+    <vue-disqus
+      shortname="josephharveyangeles"
+      :title="entry.title"
+      :identifier="$route.path"
+      :url="urlWithProtocol" />
   </div>
 </template>
 
@@ -9,9 +45,6 @@ import BLOGS from 'statics/data/blogs.json'
 
 export default {
   name: 'BlogLayout',
-  created () {
-    console.log(this.entry)
-  },
   computed: {
     entry () {
       return Object
@@ -19,6 +52,13 @@ export default {
         .map(entry => BLOGS[entry])
         .reduce((a, b) => a.concat(b), [])
         .find(blog => blog.id === this.$route.name)
+    },
+    urlWithProtocol () {
+      return window.location.protocol + '//' + this.fullUrl
+    },
+    fullUrl () {
+      const hostname = window.location.hostname
+      return `${hostname}${this.$route.fullPath}`
     }
   },
   meta () {
@@ -33,8 +73,19 @@ export default {
 </script>
 
 <style lang="stylus">
+@import '~variables'
+
+.social-icon
+  cursor pointer
+  color $cyan
+  transition .3s all ease
+  &:hover
+    color $teal
+    transform scale(1.3)
 h1
-  font-size 3.5rem
+  font-size 3.2rem
+p
+  font-size 1.2rem
 img
   max-width 100%
   border-radius 1rem

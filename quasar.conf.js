@@ -6,6 +6,7 @@ module.exports = function (ctx) {
     plugins: [
       'fontawesome',
       'vuelidate',
+      'disqus',
       'colors'
     ],
     css: [

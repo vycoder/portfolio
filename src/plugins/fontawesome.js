@@ -2,22 +2,28 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import {
-  faLinkedin,
+  faDev,
   faGithub,
   faMedium,
   faYoutube,
   faTwitter,
-  faDev
+  faLinkedin,
+  faFacebook,
+  faRedditSquare,
+  faTwitterSquare
 } from '@fortawesome/free-brands-svg-icons'
 
 export default ({ Vue }) => {
   library.add(
-    faLinkedin,
+    faDev,
     faGithub,
     faMedium,
     faYoutube,
     faTwitter,
-    faDev
+    faLinkedin,
+    faFacebook,
+    faRedditSquare,
+    faTwitterSquare
   )
   Vue.component('f-icon', FontAwesomeIcon)
 }

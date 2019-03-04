@@ -1,8 +1,8 @@
 <template>
   <div class="q-px-lg">
-    <h2>Get In touch</h2>
+    <h2>Get in touch</h2>
     <p>
-      Do you have something in mind? A business idea, a software problem, or perhaps expanding to the digital world? Or if you just happen to need a person with my skills, feel free to contact me, let's discuss! Email me at <a @click="openURL('mailto:josephharveyangeles@gmail.com')">josephharveyangeles@gmail.com</a>.
+      Do you have something in mind? A business idea, a software problem, or perhaps expanding your business to the digital world? Or if you just happen to need a person with my skills, feel free to contact me, let's discuss! Email me at <a @click="openURL('mailto:josephharveyangeles@gmail.com')">josephharveyangeles@gmail.com</a>.
     </p>
   </div>
 </template>
