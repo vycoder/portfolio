@@ -63,6 +63,13 @@ const routes = [
         component: () => import('pages/ProjectsIn.vue')
       }
     ]
+  },
+  {
+    path: '/contact',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', name: 'contact', component: () => import('pages/Contact.vue') }
+    ]
   }
 ]
 

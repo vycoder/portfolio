@@ -1,15 +1,15 @@
 <template functional>
   <div :class="['card q-pa-lg shadow-2 bg-white q-mb-xl', `border-bottom-right-${props.color}`]">
-    <div class="q-display-1 text-bold title" @click="listeners.click">
+    <a class="q-display-1 text-bold title" @click="listeners.click">
       {{props.title}}
-    </div>
+    </a>
     <div class="text-grey">{{props.date}}</div>
-    <div
+    <a
       v-for="(tag, index) in props.tags" :key="index"
       :class="['chip uppercase q-my-md q-mr-sm', `text-${tag.color}`]"
       @click="listeners.tag(tag.name)">
       <span class="text">{{tag.name}}</span>
-    </div>
+    </a>
     <p>{{props.description}}</p>
     <q-btn
       push

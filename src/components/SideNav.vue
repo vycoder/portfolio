@@ -33,8 +33,8 @@
         </q-item>
       </q-list>
     </q-collapsible>
-    <q-item>
-      <q-item-main label="Contact" />
+    <q-item to="/contact" exact>
+      <q-item-main label="Contact"/>
     </q-item>
     <q-item-separator class="q-mt-lg"/>
     <div class="icon-tray row justify-around items-center cursor-pointer text-white q-py-md">

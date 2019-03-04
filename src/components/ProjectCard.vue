@@ -32,14 +32,14 @@
           :key="index" class="q-mb-sm"
           v-html="paragraph" />
         <div class="q-my-md">
-          <div
+          <a
             v-for="(tag, index) in props.project.tags"
             :key="index"
             @click="listeners.tag(tag.label)"
             class="chip uppercase q-mr-sm q-mb-sm"
             :class="`text-${tag.color}`">
             <span class="text">{{tag.label}}</span>
-          </div>
+          </a>
         </div>
       </div>
       <div>
