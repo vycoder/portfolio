@@ -1,3 +1,6 @@
+const path = require('path')
+const PrerenderSPAPlugin = require('prerender-spa-plugin')
+
 module.exports = function (ctx) {
   return {
     plugins: [
@@ -30,6 +33,9 @@ module.exports = function (ctx) {
           loader: 'eslint-loader',
           exclude: /node_modules/
         })
+        if (ctx.prod) {
+          cfg.plugins.push(new PrerenderSPAPlugin(path.resolve(__dirname, 'dist/spa-mat'), ['/']))
+        }
       },
       chainWebpack (chain) {
         chain.module.rule('md')
@@ -42,8 +48,8 @@ module.exports = function (ctx) {
           .options({
             raw: true
           })
-        chain.resolve.alias.set('blogs', require('path').resolve(__dirname, './src/blogs'))
-        chain.resolve.alias.set('statics', require('path').resolve(__dirname, './src/statics'))
+        chain.resolve.alias.set('blogs', path.resolve(__dirname, './src/blogs'))
+        chain.resolve.alias.set('statics', path.resolve(__dirname, './src/statics'))
       }
     },
     devServer: {
