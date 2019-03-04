@@ -2,6 +2,7 @@ module.exports = function (ctx) {
   return {
     plugins: [
       'fontawesome',
+      'vuelidate',
       'colors'
     ],
     css: [
@@ -55,6 +56,7 @@ module.exports = function (ctx) {
       components: [
         'QLayout',
         'QLayoutHeader',
+        'QLayoutFooter',
         'QLayoutDrawer',
         'QPageContainer',
         'QPage',
@@ -67,8 +69,7 @@ module.exports = function (ctx) {
         'QItem',
         'QItemMain',
         'QItemSide',
-        'QItemSeparator',
-        'QCollapsible'
+        'QItemSeparator'
       ],
       directives: [
         'Ripple'

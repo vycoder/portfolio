@@ -61,12 +61,13 @@
   </q-list>
 </template>
 <script>
-import { openURL } from 'quasar'
+import { openURL, QCollapsible } from 'quasar'
 
 import BLOGENTRIES from 'statics/data/blogs.json'
 
 export default {
   name: 'SideNav',
+  components: { QCollapsible },
   created () {
     this.blogMenus = Object.keys(BLOGENTRIES)
   },
@@ -140,8 +141,10 @@ img
   background linear-gradient(150deg, $cyan, $teal, $deep-purple)
   border-bottom-left-radius .5rem
   border-bottom-right-radius .5rem
+  margin-bottom 10rem
   @media (max-width: $breakpoint-sm) {
     border-radius 0px
+    margin-bottom 0
   }
 
 .icon
