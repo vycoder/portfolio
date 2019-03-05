@@ -1,5 +1,5 @@
 <template>
-  <div style="max-width: 100vw" class="q-px-lg q-pb-xl">
+  <div style="max-width: 100vw" class="q-px-lg q-pb-xl blog">
     <router-view />
     <social-sharing
       class="row justify-around items-center socials q-my-xl q-pt-xl"
@@ -72,24 +72,15 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 @import '~variables'
+@import '../css/blog'
 
-.social-icon
+/deep/ .social-icon
   cursor pointer
   color $cyan
   transition .3s all ease
   &:hover
     color $teal
     transform scale(1.3)
-h1
-  font-size 3.2rem
-p
-  font-size 1.2rem
-img
-  max-width 100%
-  border-radius 1rem
-  display block
-  text-align center
-  margin 0 auto
 </style>
