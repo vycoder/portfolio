@@ -1,42 +1,84 @@
-import {blogRoutes} from 'statics/data/blogs.json'
-const getBlogRouteChildren = () => {
-  const routes = []
-  for (let elem of blogRoutes) {
-    for (let entry of elem.entries) {
-      const parentPath = elem.section ? `${elem.section.toLowerCase()}/` : ''
-      const name = elem.section ? `${elem.section.toLowerCase()}-${entry}` : entry
-      const path = `${parentPath}${entry}`
-      routes.push({
-        path,
-        name,
-        component: resolve => require([`blogs/${path}.md`], resolve)
-      })
-    }
+import BlogEntries from 'statics/data/blogs.json'
+
+const blogRoutes = Object.keys(BlogEntries).map(section => {
+  const children = BlogEntries[section].map(child => ({
+    path: child.id,
+    name: child.id,
+    component: resolve => require([`blogs/${section}/${child.id}.md`], resolve)
+  }))
+  return {
+    path: section,
+    name: section,
+    component: () => import('layouts/BlogLayout.vue'),
+    children
   }
-  return routes
-}
+})
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/RootLayout.vue'),
+    component: () => import('layouts/IndexLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') },
+      { path: '', component: () => import('pages/Index.vue') }
+    ]
+  },
+  {
+    path: '/blog',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
       {
-        path: 'blog',
-        component: () => import('layouts/BlogLayout.vue'),
-        children: getBlogRouteChildren()
+        path: '',
+        name: 'BlogRoot',
+        component: () => import('pages/Blogs.vue')
       },
       {
-        path: 'projects',
-        component: () => import('layouts/ProjectsLayout.vue'),
-        children: [
-          { path: '', name: 'Featured', component: () => import('pages/projects/ProjectsFeatured.vue') },
-          { path: 'archived', name: 'Archived', component: () => import('pages/projects/ProjectsArchived.vue') },
-          { path: 'unistuff', name: 'UniStuff', component: () => import('pages/projects/ProjectsUniStuff.vue') }
-        ]
+        path: ':id',
+        name: 'BlogIndex',
+        component: () => import('pages/Blogs.vue')
+      },
+      {
+        path: 'thoughts-on/:tag',
+        name: 'thoughts',
+        component: () => import('pages/ThoughtsOn.vue')
+      },
+      ...blogRoutes
+    ]
+  },
+  {
+    path: '/projects',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      {
+        path: '',
+        name: 'ClientProjects',
+        component: () => import('pages/Projects.vue')
+      },
+      {
+        path: ':id',
+        name: 'ProjectIndex',
+        component: () => import('pages/Projects.vue')
+      },
+      {
+        path: 'projects-in/:tag',
+        name: 'projects-in',
+        component: () => import('pages/ProjectsIn.vue')
       }
     ]
+  },
+  {
+    path: '/contact',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', name: 'contact', component: () => import('pages/Contact.vue') }
+    ]
+  },
+  {
+    path: '/about',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', name: 'about', component: () => import('pages/About.vue') }
+    ]
   }
+
 ]
 
 // Always leave this as last one

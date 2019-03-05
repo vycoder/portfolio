@@ -1,0 +1,92 @@
+@import '~variables'
+
+.blog /deep/
+  h1
+    font-size 3.2rem
+    word-break break-word
+
+    @media (max-width $breakpoint-xs) {
+      font-size 2.9rem
+    }
+
+  p
+    font-size 1.2rem
+
+  img
+    max-width 100%
+    border-radius 1rem
+    display block
+    text-align center
+    margin 0 auto
+
+  blockquote
+    border-color $teal
+
+  a
+    transition .3s color ease
+    &:link, &:visited
+      color $teal
+    &:hover
+      color $deep-purple
+      font-style italic
+
+  code
+    background-color $blue-grey-1
+    padding 2px 5px
+    border-radius 1rem
+    color $pink
+    font-size .9em
+  pre
+    background-color $blue-grey-8
+    padding 1rem
+    border-radius .5rem
+    box-shadow 0 5px 20px rgba(black, .12)
+    overflow-x auto
+    code
+      color $grey-1
+      background-color transparent
+      padding 0
+
+  table
+    border-width 1px
+    border-style solid
+    border-color $blue-grey-4
+    border-spacing 1px
+    width 100%
+    max-width 100%
+    display block
+    white-space nowrap
+    overflow-x auto
+    th
+      border 1px solid $blue-grey-4
+      background rgba($blue-grey-5, .5)
+      padding 1rem
+      width 100%
+    td
+      border 1px solid $blue-grey-4
+      padding .5rem
+      width 100%
+
+  ins
+    text-decoration none
+    text-align center
+    width 100%
+    display block
+    margin 3rem auto
+
+  pre, table
+    &::-webkit-scrollbar
+      -webkit-appearance none;
+    &::-webkit-scrollbar:vertical
+      width 4px
+    &::-webkit-scrollbar:horizontal
+      height 8px
+    &::-webkit-scrollbar-thumb
+      background linear-gradient(to left, $purple, $pink)
+      border-bottom-right-radius 3px
+      border-bottom-left-radius 3px
+    &::-webkit-scrollbar-track
+      box-shadow inset 0 0 6px rgba(0,0,0,0.3);
+      border-bottom-right-radius 3px
+      border-bottom-left-radius 3px
+      background-color $blue-grey-9

@@ -1,4 +1,7 @@
 import VueDisqus from 'vue-disqus'
-export default ({ app, router, Vue }) => {
+import SocialSharing from 'vue-social-sharing'
+
+export default ({ Vue }) => {
   Vue.use(VueDisqus)
+  Vue.use(SocialSharing)
 }
