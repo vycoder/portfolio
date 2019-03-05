@@ -72,6 +72,24 @@ export default {
 <style lang="stylus" scoped>
 @import '~variables'
 
+/deep/ a
+  transition .3s all ease
+  &:link, &:visited
+    color $teal
+    text-decoration none
+  &:hover
+    color $deep-purple
+    text-decoration underline
+    font-style italic
+
+/deep/ code
+  color $pink-9
+  background-color $blue-grey-1
+  padding 3px 5px
+  border-radius 1rem
+  color $pink
+  font-size .9em
+
 .border-left
   &--teal
     border-left 5px solid $teal !important

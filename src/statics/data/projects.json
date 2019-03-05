@@ -2,12 +2,16 @@
   "client": [
     {
       "title":  "DLDNation",
-      "subtitle": "Fitness App",
-      "description": [],
+      "subtitle": "Fitness Web App",
+      "description": [
+        "Sean and Dala are a husband and wife coaching team that takes no <em>BS</em> approach to health and fitness. They offer highly effective training programs, meal plans and over-all health and fitness coaching.",
+        "<a href=\"www.dldnation.com\" target=\"_blank\">www.dldnation.com</a> is an extension of their passionate work &mdash; an exclusive online platform that gives users access to what <strong>DlDNation</strong> is all about.",
+        "<code>Test</code>Regular health and fitness video content, training tips, meal diets, and latest trends. It's a platform where Dala can share her expertise to a wider audience."
+      ],
       "image": "dldnation.png",
       "links": [],
       "tags": ["web", "vue", "quasar", "firebase"],
-      "quote": {
+      "kuote": {
         "avatar": "https://lh3.googleusercontent.com/a-/AAuE7mBZuZ0q0aKT2bzDCXQZzq99J05WbjpEgNIZNuG0WA=s70-p-k-rw-no",
         "name": "Dala McDevitt",
         "role": "DLDNation LLC",
