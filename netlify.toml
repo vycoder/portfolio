@@ -1,6 +1,7 @@
 [build]
   command = "quasar build"
   publish = "dist/spa-mat"
+  environment = { YARN_VERSION = "1.6.0" }
 
 [[redirects]]
   from = "/*"
