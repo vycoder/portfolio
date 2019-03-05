@@ -1,12 +1,13 @@
-// Configuration for your app
+const path = require('path')
+const PrerenderSPAPlugin = require('prerender-spa-plugin')
+
 module.exports = function (ctx) {
   return {
-    // app plugins (/src/plugins)
     plugins: [
-      'particles',
       'fontawesome',
-      'social',
-      'disqus'
+      'vuelidate',
+      'disqus',
+      'colors'
     ],
     css: [
       'app.styl'
@@ -18,7 +19,7 @@ module.exports = function (ctx) {
       // 'mdi',
       // 'fontawesome'
     ],
-    supportIE: true,
+    supportIE: false,
     build: {
       scopeHoisting: true,
       vueRouterMode: 'history',
@@ -31,8 +32,12 @@ module.exports = function (ctx) {
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules|quasar)/
+          exclude: /node_modules/
         })
+        if (!ctx.prod) {
+          return
+        }
+        cfg.plugins.push(new PrerenderSPAPlugin(path.resolve(__dirname, 'dist/spa-mat'), ['/']))
       },
       chainWebpack (chain) {
         chain.module.rule('md')
@@ -45,8 +50,8 @@ module.exports = function (ctx) {
           .options({
             raw: true
           })
-        chain.resolve.alias.set('blogs', require('path').resolve(__dirname, './src/blogs'))
-        chain.resolve.alias.set('statics', require('path').resolve(__dirname, './src/statics'))
+        chain.resolve.alias.set('blogs', path.resolve(__dirname, './src/blogs'))
+        chain.resolve.alias.set('statics', path.resolve(__dirname, './src/statics'))
       }
     },
     devServer: {
@@ -59,6 +64,7 @@ module.exports = function (ctx) {
       components: [
         'QLayout',
         'QLayoutHeader',
+        'QLayoutFooter',
         'QLayoutDrawer',
         'QPageContainer',
         'QPage',
@@ -71,35 +77,21 @@ module.exports = function (ctx) {
         'QItem',
         'QItemMain',
         'QItemSide',
-        'QTimeline',
-        'QTimelineEntry',
-        'QSlideTransition',
-        'QCard',
-        'QCardMedia',
-        'QCardTitle',
-        'QCardMain',
-        'QModal'
+        'QItemSeparator'
       ],
       directives: [
-        'Ripple',
-        'CloseOverlay'
+        'Ripple'
       ],
       // Quasar plugins
       plugins: [
         'Notify',
-        'AddressbarColor',
         'Meta'
       ]
       // iconSet: ctx.theme.mat ? 'material-icons' : 'ionicons'
       // i18n: 'de' // Quasar language
     },
     // animations: 'all' --- includes all animations
-    animations: [
-      'fadeIn',
-      'fadeOut',
-      'zoomInUp',
-      'zoomOutDown'
-    ],
+    animations: [],
     ssr: {
       pwa: false
     },

@@ -3,6 +3,8 @@
 > my portfolio website hosted on https://josephharveyangeles.github.io
 
 ## Release History
+* 3/5/2019
+  * version 5: Redesigned. Tried a minimalistic vibrant modern approach
 * 8/3/2018
   * version 4: Used Quasar Framework added built-in blog
 * 1/28/2018 
