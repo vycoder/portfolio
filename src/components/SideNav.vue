@@ -63,13 +63,20 @@
 <script>
 import { openURL, QCollapsible } from 'quasar'
 
-import BLOGENTRIES from 'statics/data/blogs.json'
+import BLOGSECTIONS from 'statics/data/blogs.json'
 
 export default {
   name: 'SideNav',
   components: { QCollapsible },
   created () {
-    this.blogMenus = Object.keys(BLOGENTRIES)
+    this.blogMenus = Object
+      .keys(BLOGSECTIONS)
+      .sort((a, b) => {
+        if (!isNaN(a) && !isNaN(b)) {
+          return parseInt(b) - parseInt(a)
+        }
+        return a - b
+      })
   },
   data () {
     return {

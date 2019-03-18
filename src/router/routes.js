@@ -4,7 +4,7 @@ const blogRoutes = Object.keys(BlogEntries).map(section => {
   const children = BlogEntries[section].map(child => ({
     path: child.id,
     name: child.id,
-    component: resolve => require([`blogs/${section}/${child.id}.md`], resolve)
+    component: () => import(`blogs/${section}/${child.id}.md`)
   }))
   return {
     path: section,

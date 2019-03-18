@@ -1,5 +1,5 @@
 <template>
-  <footer class="q-pa-xl"
+  <footer class="q-pa-xl q-mt-xl"
     :class="$q.platform.is.mobile ? `bg-${color}`: `bg text-${color}`">
     <div class="column justify-center content-center text-white">
       <q-icon name="mail_outline" size="1.5rem" />
