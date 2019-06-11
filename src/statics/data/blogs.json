@@ -38,6 +38,13 @@
       "tags": ["learnings", "projects"],
       "title": "Creating a Simple Blog using Vue with Markdown",
       "description": "In this post, I tell the story of how I added a simple blogging feature on my website without the use of any third-party service."
+    },
+    {
+      "id": "kittynder",
+      "date": "June 11, 2019",
+      "tags": ["learnings", "projects"],
+      "title": "Creating a Tinder-like Swipe UI on Vue",
+      "description": "This post tells the story of my journey on trying to build a tinder-like user interface and eventually coming up with Kittynder! Tinder for cats."
     }
   ]
 }

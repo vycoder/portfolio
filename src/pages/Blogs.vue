@@ -40,7 +40,6 @@ export default {
         : Object.keys(BLOGENTRIES)
           .map(e => BLOGENTRIES[e].map(entry => ({...entry, section: e})))
           .reduce((a, b) => a.concat(b), [])
-          .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
 
       return entries.map(entry => ({
         id: entry.id,
@@ -50,6 +49,7 @@ export default {
         color: this.getColor(entry.section || this.section),
         tags: entry.tags.map(tag => ({ name: tag, color: this.getColor(tag) }))
       }))
+        .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
     }
   },
   methods: {
