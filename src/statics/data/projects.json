@@ -1,6 +1,18 @@
 {
   "client": [
     {
+      "title":  "Wilyfish",
+      "subtitle": "Brand Protection Platform",
+      "description": [
+        "WilyFish is a brand protection platform offering innovative search tools for locating the “unfindable” in databases and on the internet. WilyFish is the best tool for your trademark clearance, trademark policing and domain name availability because WilyFish can locate graphics, design images, logo images, words, and phrases.",
+        "I'm mainly responsible for the design and implementation of the mobile application as well as the frontend aspect of the Wilyfish platform.",
+        "<i>Interested about protecting your brand? Check out Wilyfish <a href=\"https://wilyfish.com\" target=\"_blank\">here</a></i>"
+      ],
+      "image": "wilyfish.png",
+      "links": [],
+      "tags": ["web", "vue", "quasar"]
+    },
+    {
       "title":  "DLDNation",
       "subtitle": "Fitness Web App",
       "description": [

@@ -431,7 +431,7 @@ Behold, Kittynder! Tinder for cats. Does it make sense? I don't know. But it's a
 You can check out the entire code on this github repository: [kittynder](https://github.com/josephharveyangeles/kittynder). I published a demo over at netlify: [kittynder.netlify.com](https://kittynder.netlify.com). I highly suggest viewing it on a mobile viewport.
 
 ### Epilogue
-In this simple activity, I realized how easy it actually is to build this swipeable, tinder-like UI thing today. This took me just less than two hours to complete. Now more than ever, the amount of tools and resources over the internet is enough for you to build a lot of things, things that seem like something so far out of your league before. This is the power   ̶u̶l̶t̶r̶a̶ ̶i̶n̶s̶t̶i̶n̶c̶t̶  open-source community. That's also one of the reason why I started writing tutorials like this. It's my way of giving back to the community. I might be just a lowly mediocre developer, but still, my thought-process and problem-solving approach could be valuable to people who are just starting out (and to future me, because I will completely forget everything after a year).
+In this simple activity, I realized how easy it actually is to build this swipeable, tinder-like UI thing today. This took me just less than two hours to complete. Now more than ever, the amount of tools and resources over the internet is enough for you to build a lot of things, things that seem like something so far out of your league before. This is the power of ̶u̶l̶t̶r̶a̶ ̶i̶n̶s̶t̶i̶n̶c̶t̶  open-source community. That's also one of the reason why I started writing tutorials like this. It's my way of giving back to the community. I might be just a lowly mediocre developer, but still, my thought-process and problem-solving approach could be valuable to people who are just starting out (and to future me, because I will completely forget everything after a year).
 ![honest-work](https://thepracticaldev.s3.amazonaws.com/i/jy5rsxi6hdchqfud6tsf.jpg)
 
 
@@ -439,6 +439,8 @@ In this simple activity, I realized how easy it actually is to build this swipea
 Of course, this is by no means production-ready. My css-game is pretty bad, you should probably consider using something like [tailwind.css](https://tailwindcss.com/), and pre-cache the images, check browser compatibility, etc.. But hey, it's a good exercise. Step-by-step, you'll eventually get there. Just _search, read, and build._
 
 I'm actually implementing something similar on a slightly larger personal project using [Quasar Framework](https://quasar-framework.org/) but that's a story for a different time.
+
+*This article is also published in my [dev.to account](https://dev.to/josephharveyangeles) over [here](https://dev.to/josephharveyangeles/creating-a-tinder-like-swipe-ui-on-vue-4aa4).*
 
 ### Useful Links
 - [Kittynder Demo](https://kittynder.netlify.com)
