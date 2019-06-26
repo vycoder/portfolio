@@ -112,8 +112,8 @@
       "title":  "Tessa",
       "subtitle": "Test-case Creation Tool",
       "description": [
-        "Tessa is a command-line utility tool written on Java that generates all possible test cases from a given tautology-based statements.",
-        "I made it to automate a specific task back when I was working at <a target=\"blank\" href=\"https://networks.nokia.com/\">Nokia Networks</a>. We implement configuration combinations and test with each possible scenarios to test it validity. The problem can be viewed as a tautology statement, &mdash; that's what I started with. Tessa parses an input into an equation then builds the tautology logic tree than can be easily manipulated and calculated. It automatically simplifies and applies De Morgan's Law as it sees fit. It will then output all possible scenarios including their validity into the console, text file or an html file.",
+        "Tessa is a command-line utility tool written in Java that generates all possible test cases from a given tautology-based statements.",
+        "I made it to automate a specific task back when I was working at <a target=\"blank\" href=\"https://networks.nokia.com/\">Nokia Networks</a>. We implement configuration combinations and test with each possible scenarios to verify it validity. The problem can be viewed as a tautology statement, &mdash; that's what I started with. Tessa parses an input into an equation then builds the tautology logic tree than can be easily manipulated and calculated. It automatically simplifies and applies De Morgan's Law as it sees fit. It will then output all possible scenarios including their validity into the console, text file or an html file.",
         "I also presented a talk and demo of Tessa as a finalist for <b>Nokia Manila TC Innovaton 2016</b>.",
         "PS: The name 'Tessa' is a word play on the words 'Test Case', in case that wasn't as obvious as I think. "
       ],
@@ -181,7 +181,7 @@
       "title":  "PingPonger",
       "subtitle": "A version of Pong written in Java Swing",
       "description": [
-        "PingPonger is just another implementation of the classing <a target=\"_blank\" href=\"http://www.ponggame.org/\">Pong game</a> that I wrote in Java for practice.",
+        "PingPonger is just another implementation of the classic <a target=\"_blank\" href=\"http://www.ponggame.org/\">Pong game</a> that I wrote in Java for practice.",
         "It taught me the basics of Java's shapes, graphics and colors. I was curious about <i>collision detection</i> mechanisms at that time, Pong seemed like a very good start to explore the concept."
       ],
       "image": "pingponger.png",
@@ -239,7 +239,7 @@
         "The user will play against my code which ensures that any match will end in either the player's loss or a tie.",
         "This is the first complete program that I wrote when I was first learning the C language. I learn the basics of computing and how to think about programming.",
         "A tic-tac-toe game has a fairly complex mechanics. Having a 9x9 board with two players, I had to think about all the possible plays for each cell whether you are the player or the opponent, extracted some patterns and built an algorithm that will never lose.",
-        "It's an incomplete algorithm. My code always gets the first pick and it always pick the center cell which improves its chancing of winning."
+        "It's an incomplete algorithm. My code always gets the first pick and it always pick the center cell which improves its chances of winning."
       ],
       "image": "smartac.png",
       "links": [
@@ -297,8 +297,8 @@
         "Our goal was to create a cheap, non-industrial, household alternative to enable more households with blind individuals have access to reading resources.",
         "The result is a low-cost Braille printer that consists of two soleniod printing heads controlled by <a href=\"https://www.microchip.com/wwwproducts/en/PIC16F877A\" target=\"_blank\">PIC16F877A microcontroller</a> that communicates with the computer via the Serial port. We have also created an accompanying custom document editor to use in conjuction with the printer. It also has a bluetooth interface that can directly communicate to an accompanying android application that can be used to print documents as well. Ultimately, all the components used only cost around Php 10,000.00.",
         "The biggest challenge in this project was using limited resources to achieve considerable results. Solenoids we're the most costly components that Romeocito has. It's the one component we would not compromise, we had the folks at RBI got us the same model of solenoids their industrial printers have.",
-        "<a href=\"https://en.wikipedia.org/wiki/Braille#Derivation\" target=\"_blank\">Braille characters</a> are composed of 6 dots to encode a letter, industrial printers have mechanical contraptions to emboss a Braille character in one motion using six solenoids. I have designed an algorithm to get around that problem that had greatly help in making Romeocito possible.",
-        "The algorithm make use of our custom encoding scheme that encodes characters into an array of dots. In Romeocito, we didn't make use of any costly mechanical contraptions and just arranged the solenoid in an array, each solenoid is responsible for embossing a dot on it's column range width and just leverage the use of software the control each solenoids until they were able to print the whole document. The tradeoff for the huge reduction of cost was the speed. Romeocito prints far slower as opposed to it's industrial counterparts, still we've considered it a good a sacrifice for a household alternative. I've also designed the software to be scalable into four or six more solenoids making it print more faster.",
+        "<a href=\"https://en.wikipedia.org/wiki/Braille#Derivation\" target=\"_blank\">Braille characters</a> are composed of 6 dots to encode a letter, industrial printers have mechanical contraptions to emboss a Braille character in one motion using six solenoids. I have designed an algorithm to get around that problem that had greatly helped in making Romeocito possible.",
+        "The algorithm makes use of our custom encoding scheme that encodes characters into an array of dots. In Romeocito, we didn't use of any costly mechanical contraptions and just arranged the solenoid in an array, each solenoid is responsible for embossing a dot on it's column range width and just leverage the use of software the control each solenoids until they were able to print the whole document. The tradeoff for the huge reduction of cost was the speed. Romeocito prints far slower as opposed to it's industrial counterparts, still we've considered it a good a sacrifice for a household alternative. I've also designed the software to be scalable into four or six more solenoids making it print more faster.",
         "PS: The name <b>Romeocito</b> was inspired by the cheapest industrial Braille printer that time, which was called: <b><i>Romeo</i></b>."
       ],
       "awards": "Ideaspace 2014 Qualifier, 2<sup>nd</sup> Best Design Project 2014, 1<sup>st</sup> Runner-up ICpEP Engbensyon Design Exhibit 2014, 2<sup>nd</sup> Runner-up TIP Science Fair Project 2014",
@@ -309,7 +309,7 @@
       "subtitle": "Sumobot",
       "description": [
         "Kirkos is created for the Annual Sumobot Robotics Competition where I competed as a school representative.",
-        "At this point I was fairly accustomed to be working with a lot constraints &mdash; with so little time for preparation and utter lack of high-powered motors, I decided to sought for creative solutions.",
+        "At this point I was fairly accustomed on working with a lot constraints &mdash; with so little time for preparation and utter lack of high-powered motors, I decided to seek for creative solutions.",
         "I know I wouldn't win with power, having a scoop would be useless on it that's why I decided to turn the problem on its head and just opt for a circular chassis instead (hence the name <i>Kirkos</i> from its greek word), retrofitted it with makeshift bump sensors and let it rolled. I also programmed some random maneuvers on startup.",
         "My general strategy: Just evade and hoped that the opponents high powered motors can't deal with an opponent they couldn't crash into at first contact. It did perform pretty well in the elimations round but got totally crushed on the next semi-final rounds."
       ],
