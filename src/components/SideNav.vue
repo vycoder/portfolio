@@ -33,9 +33,6 @@
         </q-item>
       </q-list>
     </q-collapsible>
-    <q-item to="/about" exact>
-      <q-item-main label="About"/>
-    </q-item>
     <q-item to="/contact" exact>
       <q-item-main label="Contact"/>
     </q-item>

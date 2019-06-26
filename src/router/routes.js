@@ -70,15 +70,7 @@ const routes = [
     children: [
       { path: '', name: 'contact', component: () => import('pages/Contact.vue') }
     ]
-  },
-  {
-    path: '/about',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '', name: 'about', component: () => import('pages/About.vue') }
-    ]
   }
-
 ]
 
 // Always leave this as last one
