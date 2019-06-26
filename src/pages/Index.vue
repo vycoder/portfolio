@@ -1,54 +1,102 @@
 <template>
-  <q-page class="bg">
+  <q-page>
     <div id="particles-js"></div>
     <nav class="uppercase font-text text-white text-weight-bold">
       <ul class="row justify-between q-ma-none q-pa-none" style="list-style:none;">
         <span class="text-pink">&laquo;</span>
         <router-link tag="li" exact class="link" to="/blog">Blog</router-link>
         <router-link tag="li" exact class="link" to="/projects">Projects</router-link>
-        <router-link tag="li" exact class="link" to="/about">About</router-link>
         <router-link tag="li" exact class="link" to="/contact">contact</router-link>
         <span class="text-pink">&raquo;</span>
       </ul>
     </nav>
-    <div class="column items-center absolute-center text-center">
-      <img src="~assets/images/profile.png" class="block shadow-20"/>
-      <h1 class="text-white q-my-md q-mb-xl">{{data.greeting}}</h1>
-      <p v-for="(text, index) in data.introduction" :key="index"
-        class="text-white text-center intro-text q-mx-auto">
-        {{text}}
-      </p>
+    <div class="row window-height">
+      <div class="col-lg-6 col-md-12 bg q-pa-md full-height">
+        <div class="column justify-center full-height">
+          <div class="q-pt-xl q-mt-xl">
+            <img src="~assets/images/profile.png" class="profile block shadow-20 q-mx-auto" />
+            <h1 class="text-white q-my-xl q-pb-lg text-center">{{data.greeting}}</h1>
+            <div class="q-mt-xl">
+              <p v-for="(text, index) in data.introduction" :key="index"
+                class="text-white intro-text q-mx-auto">
+                {{text}}
+              </p>
+            </div>
+          </div>
+          <div class="icon-tray q-mx-auto q-mt-md row justify-between items-center cursor-pointer text-white">
+            <template v-for="(social, index) in data.socials">
+              <f-icon
+                :key="index"
+                v-if="social.iconType === 'fa'"
+                @click="openURL(social.link)"
+                :icon="social.icon"
+                :class="social.class"
+                size="2x"/>
+              <q-icon
+                v-else
+                :key="index"
+                @click.native="openURL(social.link)"
+                :name="social.icon"
+                :class="social.class"
+                size="2rem" />
+            </template>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <div class="q-pa-xl column justify-center full-height">
+          <div>
+            <h6 class="text-cyan font-text q-mb-lg">About Me</h6>
+            <p
+              v-for="(text, index) in data.about"
+              :key="index"
+              v-html="text" />
+          </div>
+          <div>
+            <h6 class="text-cyan font-text q-mb-lg">Experience</h6>
+            <q-list no-border class="q-ma-none q-pa-none">
+              <q-item>
+                <q-item-side>
+                  <q-icon name="code" size="2.2rem" />
+                </q-item-side>
+                <q-item-main label="Full-Stack Sofware Engineer" sublabel="Freelance"/>
+                <q-item-side right class="">2018 - Now</q-item-side>
+              </q-item>
+              <q-item
+                v-for="(work, index) in data.experience"
+                :key="index">
+                <q-item-side>
+                  <q-item-tile avatar>
+                    <img :src="`statics/images/logos/${work.logo}`">
+                  </q-item-tile>
+                </q-item-side>
+                <q-item-main :label="work.title" :sublabel="work.company"/>
+                <q-item-side right class="">{{work.date}}</q-item-side>
+              </q-item>
+            </q-list>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="icon-tray row justify-between items-center cursor-pointer text-white">
-      <template v-for="(social, index) in data.socials">
-        <f-icon
-          :key="index"
-          v-if="social.iconType === 'fa'"
-          @click="openURL(social.link)"
-          :icon="social.icon"
-          :class="social.class"
-          size="2x"/>
-        <q-icon
-          v-else
-          :key="index"
-          @click.native="openURL(social.link)"
-          :name="social.icon"
-          :class="social.class"
-          size="2rem" />
-      </template>
-    </div>
-    <span class="copyright block text-white q-caption text-white">
-      &copy; {{new Date().getFullYear()}}
-    </span>
+    <q-page-sticky position="bottom-right" :offset="[18, 18]">
+      <q-btn
+        round
+        size="lg"
+        icon="email"
+        color="teal"
+        class="shadow-20"
+        @click="openURL('mailto:josephharveyangeles@gmail.com')"/>
+    </q-page-sticky>
   </q-page>
 </template>
 <script>
-import { openURL } from 'quasar'
+import { openURL, QItemTile, QPageSticky } from 'quasar'
 
 import DATA from '../statics/data/index.json'
 
 export default {
   name: 'PageIndex',
+  components: { QItemTile, QPageSticky },
   created () {
     window.particlesJS.load('particles-js', '/statics/config/particles-config.json', () => {})
     this.data = DATA
@@ -67,32 +115,38 @@ export default {
 @import '~variables'
 #particles-js
   height 100%
-  width 100%
+  width 50%
   position fixed
+  @media (max-width $breakpoint-md) {
+    width 100%
+  }
 .bg
   background $deep-purple
   background linear-gradient(150deg, rgba($purple, .1) 15%, rgba($cyan, .5) 70%, rgba($deep-purple, .3) 94%),
     url("/statics/bg.jpg") center no-repeat
   background-size cover
 nav
-  position fixed
-  top 20px
-  left 50%
+  position absolute
+  top 5%
+  left 26%
   transform translateX(-50%)
   width 500px
   font-size .9rem
   li
     cursor pointer
+  @media (max-width $breakpoint-md) {
+    left 50%
+  }
   @media (max-width: $breakpoint-xs) {
     font-size .78rem
     max-width 90vw
   }
-img
+img.profile
   border-radius 10rem
   transition all .3s ease-in-out
   cursor pointer
-  width 130px
-  height 130px
+  width 240px
+  height 240px
   @media (max-width $breakpoint-sm) {
     width 120px
     height 120px
@@ -101,11 +155,8 @@ img
     width 100px
     height 100px
   }
-  &:hover
-    transform scale(.2)
-    filter drop-shadow(0px 0px 12px white) blur(100px)
 .intro-text
-  font-size 1rem
+  font-size 1.2rem
   max-width 900px
   font-weight 500
   text-shadow 2px 2px $grey
@@ -118,7 +169,7 @@ img
   }
 h1
   text-shadow 2px 2px black
-  font-size 3.8rem
+  font-size 4.5rem
   @media (max-width: $breakpoint-sm) {
     font-size 3.5rem
   }
@@ -128,10 +179,7 @@ h1
   }
 .icon-tray
   width 420px
-  position fixed
-  bottom 30px
-  left 50%
-  transform translateX(-50%)
+  z-index 1
   @media (max-width: $breakpoint-sm) {
     width 350px
   }
@@ -178,4 +226,10 @@ h1
       width 100%
   &:active
     filter drop-shadow(0px 0px 12px white) blur(100px)
+
+h6
+  border-bottom 3px solid currentColor
+  display inline-block
+  text-transform uppercase
+  padding-bottom .5rem
 </style>
