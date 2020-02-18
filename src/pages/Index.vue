@@ -1,7 +1,7 @@
 <template>
-  <q-page>
-    <div id="particles-js"></div>
-    <nav class="uppercase font-text text-white text-weight-bold">
+  <q-page class="bg-deep-purple">
+    <div id="particles-js" style="z-index: 1"></div>
+    <nav class="uppercase font-text text-white text-weight-bold z-max">
       <ul class="row justify-between q-ma-none q-pa-none" style="list-style:none;">
         <span class="text-pink">&laquo;</span>
         <router-link tag="li" exact class="link" to="/blog">Blog</router-link>
@@ -10,8 +10,8 @@
         <span class="text-pink">&raquo;</span>
       </ul>
     </nav>
-    <div class="row window-height">
-      <div class="col-lg-6 col-md-12 bg q-pa-md full-height">
+    <div class="row absolute-top full-height">
+      <div class="col-xl-6 col-lg-12 q-pa-md q-py-xl bg">
         <div class="column justify-center full-height">
           <div class="q-pt-xl q-mt-xl">
             <img src="~assets/images/profile.png" class="profile block shadow-20 q-mx-auto" />
@@ -43,7 +43,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-6 col-md-12">
+      <div class="col-xl-6 col-lg-12 bg-white">
         <div class="q-pa-xl column justify-center full-height">
           <div>
             <h6 class="text-cyan font-text q-mb-lg">About Me</h6>
@@ -134,7 +134,7 @@ nav
   font-size .9rem
   li
     cursor pointer
-  @media (max-width $breakpoint-md) {
+  @media (max-width $breakpoint-lg) {
     left 50%
   }
   @media (max-width: $breakpoint-xs) {
