@@ -1,6 +1,17 @@
 {
   "client": [
     {
+      "title": "Sixgill Fishing App + (Admin CMS)",
+      "subtitle": "A social media platform for a line fishing community",
+      "description": [
+        "It's a social media platform for line fishing enthusiasts. Users can share their latest catch, fishing spots, tips and tricks. There's also a Question and Answer section that works much like Quora.",
+        "An admin CMS was also built to manage and moderate user activity. Client also regularly publish promos and giveaways directly to the app notifying all connected users via push notifications.",
+        "I designed everything from the UI/UX to the backend API architecture. This is one of those projects wherein I had a lot of fun building."
+      ],
+      "image": "sixgill.png",
+      "tags": ["vue", "quasar", "capacitor", "java", "vertx"]
+    },
+    {
       "title":  "Wilyfish",
       "subtitle": "Brand Protection Platform",
       "description": [
@@ -67,6 +78,16 @@
     }
   ],
   "side": [
+    {
+      "title": "Kittynder",
+      "subtitle": "Tinder for Cats",
+      "description": [
+        "It's a fun little side project that I'm currently working on that matches your feline babies to other feline babies.",
+        "I've also published a blog post detailing my journey on how I implemented the core UI swiping functionality."
+      ],
+      "image": "kittynder.gif",
+      "tags": ["vue", "quasar", "cordova"]
+    },
     {
       "title":  "Chronocross",
       "subtitle": "Time-management and TODO app",
