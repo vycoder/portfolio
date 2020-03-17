@@ -15,7 +15,7 @@
   * version 1
   
 ## Authors
-* [**Joseph Harvey Angeles**](https://github.com/josephharveyangeles)
+* [**Joseph Harvey Angeles**](https://github.com/vycoder)
   
   
 ## License

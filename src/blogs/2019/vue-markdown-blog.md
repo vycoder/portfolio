@@ -121,7 +121,7 @@ export default new Router({
 Notice in the above code, we are assigning the markdown filename to both `path` and `name`. And for better structure, we're placing all our markdowns inside it's own directory. In this setup, we'll never have to mess with `router.js` again whenever we add a new blog post. Now, the only thing left to do is to create actual links that will point to them.
 
 ### Putting it all together
-Using what we've learned, I've put things together and created a working demo on this [link](https://vue-markdown-blog.netlify.com). You can also check out the code in this [repository](https://github.com/josephharveyangeles/vue-markdown-blog). There our some minor changes compared to our previous experiments.
+Using what we've learned, I've put things together and created a working demo on this [link](https://vue-markdown-blog.netlify.com). You can also check out the code in this [repository](https://github.com/vycoder/vue-markdown-blog). There our some minor changes compared to our previous experiments.
 
 First, let's look at the directory structure:
 
@@ -287,7 +287,7 @@ If you want to take it a step further, you can add page metas using all those ad
 
 ### Useful Links
 - [Demo](https://vue-markdown-blog.netlify.com)
-- [Project Repository](https://github.com/josephharveyangeles/vue-markdown-blog)
+- [Project Repository](https://github.com/vycoder/vue-markdown-blog)
 - [Dynamic Components](https://vuejs.org/v2/guide/components-dynamic-async.html#Async-Components)
 - [vue-cli webpack guide](https://cli.vuejs.org/guide/webpack.html#simple-configuration)
 - [vue-markdown-loader](https://github.com/QingWei-Li/vue-markdown-loader)

@@ -78,7 +78,7 @@ export default {
   data () {
     return {
       socials: [
-        { 'iconType': 'fa', 'icon': ['fab', 'youtube'], 'class': 'icon-disabled', 'link': 'https://github.com/josephharveyangeles/' },
+        { 'iconType': 'fa', 'icon': ['fab', 'youtube'], 'class': 'icon-disabled', 'link': 'https://github.com/vycoder/' },
         { 'iconType': 'fa', 'icon': ['fab', 'dev'], 'class': 'icon', 'link': 'https://dev.to/josephharveyangeles' },
         { 'iconType': 'fa', 'icon': ['fab', 'medium'], 'class': 'icon', 'link': 'https://medium.com/@yhev' },
         { 'iconType': 'fa', 'icon': ['fab', 'twitter'], 'class': 'icon', 'link': 'https://twitter.com/yev' }

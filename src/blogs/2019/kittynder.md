@@ -428,7 +428,7 @@ After dropping in some more css magic, gradients, shadows and stuff. A google fo
 ![Kittynder](https://thepracticaldev.s3.amazonaws.com/i/mo2y24ub7fbyhr1700aa.gif)
 Behold, Kittynder! Tinder for cats. Does it make sense? I don't know. But it's a _pun_ opportunity. If this is a real app, my cat would probably _scratch right_ on Katrina, they're around the same age, I think they would hit it off.
 
-You can check out the entire code on this github repository: [kittynder](https://github.com/josephharveyangeles/kittynder). I published a demo over at netlify: [kittynder.netlify.com](https://kittynder.netlify.com). I highly suggest viewing it on a mobile viewport.
+You can check out the entire code on this github repository: [kittynder](https://github.com/vycoder/kittynder). I published a demo over at netlify: [kittynder.netlify.com](https://kittynder.netlify.com). I highly suggest viewing it on a mobile viewport.
 
 ### Epilogue
 In this simple activity, I realized how easy it actually is to build this swipeable, tinder-like UI thing today. This took me just less than two hours to complete. Now more than ever, the amount of tools and resources over the internet is enough for you to build a lot of things, things that seem like something so far out of your league before. This is the power of ̶u̶l̶t̶r̶a̶ ̶i̶n̶s̶t̶i̶n̶c̶t̶  open-source community. That's also one of the reason why I started writing tutorials like this. It's my way of giving back to the community. I might be just a lowly mediocre developer, but still, my thought-process and problem-solving approach could be valuable to people who are just starting out (and to future me, because I will completely forget everything after a year).
@@ -444,7 +444,7 @@ I'm actually implementing something similar on a slightly larger personal projec
 
 ### Useful Links
 - [Kittynder Demo](https://kittynder.netlify.com)
-- [Kittynder Project Repository](https://github.com/josephharveyangeles/kittynder)
+- [Kittynder Project Repository](https://github.com/vycoder/kittynder)
 - [Swipeable Card Stack Using Vue](https://css-tricks.com/swipeable-card-stack-using-vue-js-and-interact-js/)
 - [vue2-interact](https://www.npmjs.com/package/vue2-interact)
 - [vue2-interact Documentation](https://vue2-interact.netlify.com/)
