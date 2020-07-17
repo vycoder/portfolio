@@ -1,8 +1,11 @@
 .quasar
 .DS_Store
 .thumbs.db
+.cache
 node_modules
 /dist
+/src/.temp
+/static/rss.xml
 /src-cordova/node_modules
 /src-cordova/platforms
 /src-cordova/plugins

@@ -1,48 +1,26 @@
 {
-  "name": "portfolio",
-  "version": "5.1.0",
-  "description": "Joseph Harvey Angeles | Software Engineer",
-  "productName": "Joseph Harvey Angeles | Software Engineer",
-  "cordovaId": "org.cordova.quasar.app",
-  "author": "yev <josephharveyangeles@gmail.com>",
+  "name": "andremadarang",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js,.vue src",
-    "test": "echo \"No test specified\" && exit 0"
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.13",
-    "@fortawesome/free-brands-svg-icons": "^5.7.0",
-    "@fortawesome/vue-fontawesome": "^0.1.5",
-    "axios": "^0.18.0",
-    "vue-disqus": "^3.0.5",
-    "vue-social-sharing": "^2.4.2",
-    "vuelidate": "^0.7.4"
+    "@gridsome/plugin-sitemap": "^0.4.0",
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.6.1",
+    "@gridsome/vue-remark": "^0.2.2",
+    "axios": "^0.19.2",
+    "gridsome": "^0.7.18",
+    "gridsome-plugin-remark-shiki": "^0.3.1",
+    "gridsome-plugin-rss": "^1.2.0",
+    "vue-disqus": "^4.0.1",
+    "vue-fuse": "^2.2.1",
+    "vue-scrollto": "^2.18.1",
+    "vue-typed-js": "^0.1.2"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.1",
-    "eslint": "^4.18.2",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-friendly-formatter": "^4.0.1",
-    "eslint-loader": "^2.0.0",
-    "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "eslint-plugin-vue": "^4.3.0",
-    "prerender-spa-plugin": "^3.4.0",
-    "quasar-cli": "^0.17.0",
-    "strip-ansi": "=3.0.1",
-    "vue-markdown-loader": "^2.4.1"
-  },
-  "engines": {
-    "node": ">= 8.9.0",
-    "npm": ">= 5.6.0",
-    "yarn": ">= 1.6.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 10"
-  ]
+    "gridsome-plugin-tailwindcss": "^3.0.1"
+  }
 }

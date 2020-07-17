@@ -1,60 +1,57 @@
 <template>
-  <q-page class="q-px-lg">
-    <h2 class="q-mb-lg capitalize"
-      :class="`text-${color}`">
-      {{category.title}}
-    </h2>
-    <p class="q-mb-lg">{{category.description}}</p>
-    <project-card
-      v-for="project in projectItems"
-      :key="project.title"
-      :project="project"
-      :color="color"
-      @tag="(tag) => $router.push({name: 'projects-in', params: {tag} })"
+  <Layout>
+    <div class="container-inner mx-auto py-16">
+      <div v-for="project in $page.projects.edges" :key="project.id" class="post border-gray-400 border-b mb-12">
+        <h2 class="text-3xl font-bold"><g-link :to="project.node.path" class="text-copy-primary">{{ project.node.title }}</g-link></h2>
+
+        <div class="text-lg mb-4">
+          {{ project.node.description}}
+        </div>
+
+        <div class="mb-8">
+          <g-link :to="project.node.path" class="font-bold uppercase">Read More</g-link>
+        </div>
+      </div> <!-- end post -->
+
+      <pagination-posts
+        v-if="$page.projects.pageInfo.totalPages > 1"
+        base="/projects"
+        :totalPages="$page.projects.pageInfo.totalPages"
+        :currentPage="$page.projects.pageInfo.currentPage"
       />
-  </q-page>
+    </div>
+  </Layout>
 </template>
 
-<script>
-import ProjectCard from 'components/ProjectCard'
-
-import CATEGORIES from 'statics/data/project-category.json'
-import PROJECTS from 'statics/data/projects.json'
-
-export default {
-  name: 'Projects',
-  components: { ProjectCard },
-  computed: {
-    section () {
-      return this.$route.params.id || 'client'
-    },
-    category () {
-      return CATEGORIES[this.section]
-    },
-    color () {
-      return this.$colors[this.section] || 'cyan'
-    },
-    projectItems () {
-      return PROJECTS[this.section].map(project => ({
-        ...project,
-        tags: project.tags.map(tag => ({
-          label: tag, color: this.$colors[tag] || this.color
-        }))
-      }))
+<page-query>
+query Project ($page: Int) {
+  projects: allProject (sortBy: "date", order: DESC, perPage: 3, page: $page) @paginate {
+    totalCount
+    pageInfo {
+      totalPages
+      currentPage
     }
-  },
-  meta () {
-    return {
-      title: `- ${this.category.title}`,
-      meta: {
-        description: { name: 'description', content: this.category.description }
+    edges {
+      node {
+        id
+        path
+        title
+        description
       }
     }
   }
 }
-</script>
+</page-query>
 
-<style lang="stylus" scoped>
-p
-  font-size 1.2rem
-</style>
+<script>
+import PaginationPosts from '../components/PaginationPosts'
+
+export default {
+  metaInfo: {
+    title: 'Projects'
+  },
+  components: {
+    PaginationPosts
+  }
+}
+</script>
