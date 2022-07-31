@@ -1,3 +1,7 @@
 [build]
   publish = "dist"
   command = "gridsome build"
+[[redirects]]
+  from = "/vertex"
+  to = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  force = true
