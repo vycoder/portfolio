@@ -15,7 +15,7 @@ export default {
   metaInfo: {
     title: 'Vertex'
   },
-  created() {
+  mounted() {
     window.location.href = process.env.GRIDSOME_VERTEX_URL
   }
 }
