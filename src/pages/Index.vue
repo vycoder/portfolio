@@ -12,7 +12,7 @@
 
     <div class="container-inner mx-auto">
       <p class="text-lg sm:text-xl">
-        <span class="italic">Salute plurimam dicit.</span> I'm Yev, a Freelance Software Engineer based in Manila, Philippines, founder of <a href="https://nightowlstudios.com.ph/" target="_blank">Night Owl Studios</a>. I convert coffee into code. I'm very passionate about Software Engineering, learning, teaching and building stuff. I specialize in creating bespoke software applications using mostly <a href="https://vuejs.org" target="_blank">Vue.js</a> and <a href="https://quasar.dev" target="_blank">Quasar</a> on the frontend, <a href="https://oracle.com/java" target="_blank">Java</a> and <a href="https://vertx.io" target="_blank">Eclipse Vert.x</a> on the backend. When I'm not building stuff for a client or working on a side project, you'll find me tinkering with hobby electronics or playing with cats.
+        <span class="italic">Salute plurimam dicit.</span> I'm Yev, a Freelance Software Engineer based in Manila, Philippines, founder of <a href="https://nossdev.com" target="_blank">Night Owl Studios</a>. I convert coffee into code. I'm very passionate about Software Engineering, learning, teaching and building stuff. I specialize in creating bespoke software applications using mostly <a href="https://vuejs.org" target="_blank">Vue.js</a> and <a href="https://quasar.dev" target="_blank">Quasar</a> on the frontend, <a href="https://oracle.com/java" target="_blank">Java</a> and <a href="https://vertx.io" target="_blank">Eclipse Vert.x</a> on the backend. When I'm not building stuff for a client or working on a side project, you'll find me tinkering with hobby electronics or playing with cats.
       </p>
 
       <div class="flex justify-between items-center py-6">
